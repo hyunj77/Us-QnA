@@ -99,26 +99,32 @@ export default function CommunityPostDetail() {
       <TopAppBar title={post.category} onBack={() => navigate('/community')} />
 
       <div style={{ padding: '4px 20px 24px', display: 'flex', flexDirection: 'column', gap: 16 }}>
-        <div>
-          <div style={{ fontSize: 18, fontWeight: 800, color: 'var(--text)' }}>{post.title}</div>
-          <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginTop: 6 }}>
-            {post.author_nickname} · {timeAgo(post.created_at)}
+        <div className="card" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <span className="chip" style={{ minHeight: 'auto', width: 'fit-content', padding: '5px 12px', cursor: 'default' }}>
+            {post.category}
+          </span>
+
+          <div>
+            <div style={{ fontSize: 18, fontWeight: 800, color: 'var(--text)' }}>{post.title}</div>
+            <div style={{ fontSize: 12, color: 'var(--text-secondary)', marginTop: 6 }}>
+              {post.author_nickname} · {timeAgo(post.created_at)}
+            </div>
           </div>
+
+          {post.photo_url && (
+            <img src={post.photo_url} alt="" style={{ width: '100%', borderRadius: 'var(--r-md)', objectFit: 'cover' }} />
+          )}
+
+          <p style={{ fontSize: 14, color: 'var(--text)', lineHeight: 1.7, whiteSpace: 'pre-wrap', margin: 0 }}>{post.body}</p>
+
+          {post.tags?.length > 0 && (
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+              {post.tags.map((t) => (
+                <span key={t} className="chip" style={{ minHeight: 'auto', padding: '5px 12px', cursor: 'default' }}>{t}</span>
+              ))}
+            </div>
+          )}
         </div>
-
-        {post.photo_url && (
-          <img src={post.photo_url} alt="" style={{ width: '100%', borderRadius: 'var(--r-lg)', objectFit: 'cover' }} />
-        )}
-
-        <p style={{ fontSize: 14, color: 'var(--text)', lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>{post.body}</p>
-
-        {post.tags?.length > 0 && (
-          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {post.tags.map((t) => (
-              <span key={t} className="chip" style={{ minHeight: 'auto', padding: '5px 12px' }}>{t}</span>
-            ))}
-          </div>
-        )}
 
         {post.opponent_view && (
           <div className="card" style={{ background: 'var(--bg)' }}>
