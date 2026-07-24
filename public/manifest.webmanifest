@@ -1,0 +1,15 @@
+{
+  "name": "우리 사용 설명서",
+  "short_name": "우리 사용 설명서",
+  "description": "커플이 함께 답하는 연애 문답 앱",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF8FA",
+  "theme_color": "#FF5C93",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}
