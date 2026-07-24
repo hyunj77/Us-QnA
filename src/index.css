@@ -1480,12 +1480,6 @@ input:focus, textarea:focus {
   margin-top: 4px;
 }
 
-.qna-float-search {
-  display: flex;
-  justify-content: flex-end;
-  padding: calc(20px + env(safe-area-inset-top)) 12px 8px;
-}
-
 /* ===== 우리의 책 (Book) ===== */
 .book-tab-desc {
   font-size: 13px;
