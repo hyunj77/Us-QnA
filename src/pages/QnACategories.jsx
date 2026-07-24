@@ -3,7 +3,7 @@ import { Search } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import CategoryChip from '../components/CategoryChip'
 import ProgressCard from '../components/ProgressCard'
-import { getCategories, getQuestionsByCategory } from '../lib/questions'
+import { getCategories, getQuestionsByCategory, getSubGroups } from '../lib/questions'
 import { getAnsweredIds } from '../lib/answersStore'
 
 const CATEGORY_STYLE = {
@@ -20,6 +20,14 @@ const CATEGORY_DESC = {
   nineteen: '더 솔직하고 과감한 질문들 (19세 이상 이용가능)',
   ifonly: '만약에 ~한다면? 재미있는 상상 질문들',
   balance: '두 가지 중 하나만 선택한다면? 밸런스 게임 질문들',
+}
+
+const CATEGORY_SHORT_LABEL = {
+  guide: '❤️ 안내서',
+  couple: '💕 커플',
+  nineteen: '🔥 19금',
+  ifonly: '🤔 만약에',
+  balance: '⚖️ 밸런스',
 }
 
 export default function QnACategories() {
@@ -39,7 +47,7 @@ export default function QnACategories() {
       <div style={{ display: 'flex', gap: 8, padding: '0 20px 18px', overflowX: 'auto' }}>
         <CategoryChip label="전체" active />
         {categories.map((c) => (
-          <CategoryChip key={c.id} label={c.label} onClick={() => navigate(`/qna/${c.id}`)} />
+          <CategoryChip key={c.id} label={CATEGORY_SHORT_LABEL[c.id] || c.label} onClick={() => navigate(`/qna/${c.id}`)} />
         ))}
       </div>
 
@@ -47,13 +55,14 @@ export default function QnACategories() {
         {categories.map((c) => {
           const questions = getQuestionsByCategory(c.id)
           const done = questions.filter((q) => answeredIds.has(q.id)).length
+          const subCount = getSubGroups(c.id).filter(Boolean).length
           const style = CATEGORY_STYLE[c.id] || {}
           return (
             <ProgressCard
               key={c.id}
               emoji={c.emoji}
               title={c.label}
-              desc={CATEGORY_DESC[c.id]}
+              desc={`${CATEGORY_DESC[c.id]} · ${subCount}개 소분류`}
               done={done}
               total={questions.length}
               bg={style.bg}

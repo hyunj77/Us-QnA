@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { Camera, Smile, Mic } from 'lucide-react'
+import { Camera, Smile } from 'lucide-react'
 import TopAppBar from '../components/TopAppBar'
 import PrimaryButton from '../components/PrimaryButton'
 import AdultGate from '../components/AdultGate'
@@ -17,7 +17,6 @@ export default function AnswerCompose() {
   const question = findQuestion(questionId)
   const existing = getAnswer(questionId)
   const [body, setBody] = useState(existing?.body || '')
-  const [privateMode, setPrivateMode] = useState(false)
   const [notice, setNotice] = useState('')
   const [saving, setSaving] = useState(false)
   const [verified, setVerified] = useState(isAdultVerified())
@@ -50,7 +49,9 @@ export default function AnswerCompose() {
     <div className="screen">
       <TopAppBar title={`${index}/${questions.length}`} onBack={() => navigate(`/qna/${categoryId}/${questionId}`)} />
 
-      <div className="detail-breadcrumb">{category.label}{question.subcategory ? ` · ${question.subcategory}` : ''}</div>
+      <div className="detail-breadcrumb" style={{ background: `${category.color}22`, color: category.color }}>
+        {category.label}{question.subcategory ? ` · ${question.subcategory}` : ''}
+      </div>
       <div className="detail-title" style={{ fontSize: 20 }}>{question.question}</div>
       <div className="detail-desc" style={{ marginBottom: 20 }}>{hint}</div>
 
@@ -74,22 +75,9 @@ export default function AnswerCompose() {
           <button type="button" className="compose-tool-btn" onClick={() => setNotice('이모지 선택은 준비 중이에요.')}>
             <Smile size={16} /> 이모지
           </button>
-          <button type="button" className="compose-tool-btn" onClick={() => setNotice('음성 녹음은 준비 중이에요.')}>
-            <Mic size={16} /> 음성 녹음
-          </button>
         </div>
 
         {notice && <p className="auth-notice" style={{ margin: 0 }}>{notice}</p>}
-
-        <div className="compose-toggle-row">
-          <span>🔒 비공개로 저장하기</span>
-          <button
-            type="button"
-            className={`switch ${privateMode ? 'switch-on' : ''}`}
-            onClick={() => setPrivateMode((v) => !v)}
-            aria-label="비공개로 저장하기"
-          />
-        </div>
       </div>
 
       <div className="fixed-bottom-spacer" />

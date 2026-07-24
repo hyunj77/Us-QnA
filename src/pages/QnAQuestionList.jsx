@@ -11,13 +11,6 @@ import { getAnswer, getAnsweredIds, saveAnswer } from '../lib/answersStore'
 import { getMockPartnerChoice } from '../data/mock'
 import { isAdultVerified } from '../lib/adultGate'
 
-const ROW_ICONS = ['❤️', '💫', '🎬', '🍴', '⭐', '🎨', '🐰', '🎵', '💌', '🌙']
-function pickIcon(id) {
-  let hash = 0
-  for (let i = 0; i < id.length; i++) hash = (hash * 31 + id.charCodeAt(i)) >>> 0
-  return ROW_ICONS[hash % ROW_ICONS.length]
-}
-
 function BalanceRow({ question, selected, onSelect }) {
   const partnerChoice = selected ? getMockPartnerChoice(question) : null
   return (
@@ -110,7 +103,8 @@ export default function QnAQuestionList() {
           ) : (
             <QuestionCard
               key={q.id}
-              emoji={pickIcon(q.id)}
+              emoji={category.emoji}
+              iconBg={`${category.color}22`}
               title={q.question}
               desc={q.subcategory}
               done={answeredIds.has(q.id)}

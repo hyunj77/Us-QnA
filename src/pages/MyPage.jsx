@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom'
 import { Settings, Star, FileText, Mail, MessageCircle, ChevronRight } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import { MOCK_PROFILE } from '../data/mock'
-import { QUESTIONS } from '../lib/questions'
 import { getAnsweredCount } from '../lib/answersStore'
 
 export default function MyPage() {
@@ -39,9 +38,23 @@ export default function MyPage() {
         </div>
       </div>
 
+      <div className="card couple-stats-card" style={{ margin: '0 20px 16px', width: 'auto' }}>
+        <div className="couple-stats-title">우리의 문답 스타일</div>
+        <div className="couple-stats-row">
+          <div className="couple-stats-item">
+            <div className="couple-stats-value">{MOCK_PROFILE.topCategory}</div>
+            <div className="couple-stats-label">가장 많이 답한 카테고리</div>
+          </div>
+          <div className="couple-stats-item">
+            <div className="couple-stats-value">{MOCK_PROFILE.avgAnswerLength}자</div>
+            <div className="couple-stats-label">평균 답변 길이</div>
+          </div>
+        </div>
+      </div>
+
       <div className="card" style={{ margin: '0 20px 16px', width: 'auto', padding: 0, overflow: 'hidden' }}>
         <MenuRow Icon={Star} label="즐겨찾기" />
-        <MenuRow Icon={FileText} label="내 답변 모아보기" desc={`${answeredCount}/${QUESTIONS.length}`} />
+        <MenuRow Icon={FileText} label="내 답변 모아보기" desc={`${answeredCount}개 작성함`} />
         <MenuRow Icon={Mail} label="상대 답변 모아보기" />
       </div>
 

@@ -1,9 +1,10 @@
 import { useNavigate } from 'react-router-dom'
-import { Gift, Bell, ChevronRight } from 'lucide-react'
+import { Gift, Bell, ChevronRight, Lock } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import PrimaryButton from '../components/PrimaryButton'
 import { getTodayQuestion, getRandomQuestions, findQuestion, QUESTIONS } from '../lib/questions'
 import { getAnsweredCount, getRecentAnswers } from '../lib/answersStore'
+import { MOCK_PARTNER_RECENT } from '../data/mock'
 
 function timeAgo(iso) {
   const diffMs = Date.now() - new Date(iso).getTime()
@@ -19,7 +20,9 @@ export default function Home() {
   const navigate = useNavigate()
   const today = getTodayQuestion()
   const answeredCount = getAnsweredCount()
-  const pct = Math.round((answeredCount / QUESTIONS.length) * 100)
+  // 전체 500문항 기준 진행률. 답변이 1개라도 있으면 반올림으로 0%가 되어 "0%"와 "n개"가
+  // 모순처럼 보이지 않도록 최소 1%는 보장한다.
+  const pct = answeredCount === 0 ? 0 : Math.max(1, Math.round((answeredCount / QUESTIONS.length) * 100))
 
   const recent = getRecentAnswers(2)
     .map((r) => ({ ...r, q: findQuestion(r.questionId) }))
@@ -67,6 +70,20 @@ export default function Home() {
             <div className="stat-row-value">23일🔥</div>
             <div className="stat-row-label">연속 참여일</div>
           </div>
+        </div>
+
+        <div className="card partner-activity-card">
+          <div className="partner-activity-head">
+            <span className="icon-badge" style={{ background: 'var(--sub)' }}>💌</span>
+            <div>
+              <div className="partner-activity-title">상대방의 최근 활동</div>
+              <div className="partner-activity-time">{MOCK_PARTNER_RECENT.time}</div>
+            </div>
+          </div>
+          <div className="partner-activity-body">
+            <Lock size={13} /> {MOCK_PARTNER_RECENT.question}
+          </div>
+          <div className="partner-activity-hint">내가 이 질문에 답하면 상대방 답변을 볼 수 있어요</div>
         </div>
 
         <div>

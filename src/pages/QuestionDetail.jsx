@@ -53,7 +53,9 @@ export default function QuestionDetail() {
         }
       />
 
-      <div className="detail-breadcrumb">{category.label}{question.subcategory ? ` · ${question.subcategory}` : ''}</div>
+      <div className="detail-breadcrumb" style={{ background: `${category.color}22`, color: category.color }}>
+        {category.label}{question.subcategory ? ` · ${question.subcategory}` : ''}
+      </div>
       <div className="detail-title">{question.question}</div>
       <div className="detail-desc">{hint}</div>
 
