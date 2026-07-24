@@ -158,7 +158,7 @@ export default function Home() {
 
         <button className="random-q-card" style={{ width: '100%' }} onClick={goRandom}>
           <span className="random-q-badge"><span>?</span></span>
-          <div>
+          <div className="random-q-body">
             <div className="random-q-title">랜덤 질문</div>
             <div className="random-q-text">랜덤으로 질문을 뽑아보세요!</div>
           </div>

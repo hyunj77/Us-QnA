@@ -678,6 +678,10 @@ input:focus, textarea:focus {
   box-shadow: var(--shadow-card);
 }
 
+.random-q-body {
+  text-align: left;
+}
+
 .random-q-title {
   font-size: 15px;
   font-weight: 800;
