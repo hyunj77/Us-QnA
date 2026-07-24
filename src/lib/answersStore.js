@@ -31,3 +31,11 @@ export function getAnsweredIds() {
 export function getAnsweredCount() {
   return Object.keys(readAll()).length
 }
+
+export function getRecentAnswers(limit = 3) {
+  const all = readAll()
+  return Object.entries(all)
+    .map(([questionId, entry]) => ({ questionId, ...entry }))
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+    .slice(0, limit)
+}

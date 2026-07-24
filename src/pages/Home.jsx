@@ -2,13 +2,18 @@ import { useNavigate } from 'react-router-dom'
 import { Gift, Bell, ChevronRight, Dice5 } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import PrimaryButton from '../components/PrimaryButton'
-import { getTodayQuestion, getRandomQuestion, QUESTIONS } from '../lib/questions'
-import { getAnsweredCount } from '../lib/answersStore'
+import { getTodayQuestion, getRandomQuestion, findQuestion, QUESTIONS } from '../lib/questions'
+import { getAnsweredCount, getRecentAnswers } from '../lib/answersStore'
 
-const RECENT_FALLBACK = [
-  { id: 'couple-034', time: '방금 답변 완료' },
-  { id: 'couple-035', time: '어제 답변 완료' },
-]
+function timeAgo(iso) {
+  const diffMs = Date.now() - new Date(iso).getTime()
+  const min = Math.floor(diffMs / 60000)
+  if (min < 1) return '방금 답변 완료'
+  if (min < 60) return `${min}분 전 답변 완료`
+  const hr = Math.floor(min / 60)
+  if (hr < 24) return `${hr}시간 전 답변 완료`
+  return `${Math.floor(hr / 24)}일 전 답변 완료`
+}
 
 export default function Home() {
   const navigate = useNavigate()
@@ -16,7 +21,8 @@ export default function Home() {
   const answeredCount = getAnsweredCount()
   const pct = Math.round((answeredCount / QUESTIONS.length) * 100)
 
-  const recent = RECENT_FALLBACK.map((r) => ({ ...r, q: QUESTIONS.find((q) => q.id === r.id) }))
+  const recent = getRecentAnswers(2)
+    .map((r) => ({ ...r, q: findQuestion(r.questionId) }))
     .filter((r) => r.q)
 
   const goRandom = () => {
@@ -63,25 +69,37 @@ export default function Home() {
           </div>
         </div>
 
-        {recent.length > 0 && (
-          <div>
-            <div className="section-head">
-              <span className="section-title">최근 답변</span>
+        <div>
+          <div className="section-head">
+            <span className="section-title">최근 답변</span>
+            {recent.length > 0 && (
               <button className="btn-text" onClick={() => navigate('/qna')}>더보기 <ChevronRight size={12} /></button>
-            </div>
+            )}
+          </div>
+          {recent.length > 0 ? (
             <div className="card">
-              {recent.map(({ q, time }) => (
+              {recent.map(({ q, createdAt }) => (
                 <div key={q.id} className="recent-item">
                   <span className="icon-badge" style={{ background: 'var(--sub)' }}>💗</span>
                   <div>
                     <div className="recent-item-title">{q.title}</div>
-                    <div className="recent-item-time">{time}</div>
+                    <div className="recent-item-time">{timeAgo(createdAt)}</div>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-        )}
+          ) : (
+            <div className="card" style={{ textAlign: 'center', padding: '28px 20px' }}>
+              <p style={{ fontSize: 14, fontWeight: 600, color: 'var(--text)', marginBottom: 4 }}>
+                아직 답변한 질문이 없어요.
+              </p>
+              <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginBottom: 16 }}>
+                첫 번째 질문을 시작해 보세요!
+              </p>
+              <PrimaryButton onClick={() => navigate(`/qna/${today.category}/${today.id}`)}>답변 시작</PrimaryButton>
+            </div>
+          )}
+        </div>
 
         <button className="random-q-card" style={{ width: '100%', textAlign: 'left' }} onClick={goRandom}>
           <span className="random-q-emoji"><Dice5 size={26} /></span>

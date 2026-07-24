@@ -17,6 +17,7 @@ export default function AnswerCompose() {
   const [body, setBody] = useState(existing?.body || '')
   const [privateMode, setPrivateMode] = useState(false)
   const [notice, setNotice] = useState('')
+  const [saving, setSaving] = useState(false)
 
   if (!category || !question) return <div className="page-center"><p>존재하지 않는 질문이에요.</p></div>
 
@@ -25,9 +26,12 @@ export default function AnswerCompose() {
   const hint = question.type === 'choice' ? '둘 중 하나를 골라주세요!' : '솔직하게 답변해주세요!'
 
   const handleSave = () => {
-    if (body.trim().length < 1) return
-    saveAnswer(questionId, body.trim())
-    navigate(`/qna/${categoryId}/${questionId}`)
+    if (body.trim().length < 1 || saving) return
+    setSaving(true)
+    setTimeout(() => {
+      saveAnswer(questionId, body.trim())
+      navigate(`/qna/${categoryId}/${questionId}`, { state: { justSaved: true } })
+    }, 400)
   }
 
   return (
@@ -76,8 +80,12 @@ export default function AnswerCompose() {
         </div>
       </div>
 
-      <div style={{ padding: 20 }}>
-        <PrimaryButton onClick={handleSave} disabled={body.trim().length < 1}>답변 저장</PrimaryButton>
+      <div className="fixed-bottom-spacer" />
+
+      <div className="fixed-bottom-bar">
+        <PrimaryButton onClick={handleSave} disabled={body.trim().length < 1 || saving}>
+          {saving ? '저장 중...' : '답변 저장'}
+        </PrimaryButton>
       </div>
     </div>
   )
