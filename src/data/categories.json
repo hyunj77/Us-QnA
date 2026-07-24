@@ -47,7 +47,7 @@
   {
     "id": "nineteen",
     "category": 3,
-    "order": 7,
+    "order": 8,
     "emoji": "🔥",
     "label": "19금 문답",
     "color": "#B25CFF",
@@ -60,6 +60,15 @@
     "emoji": "📖",
     "label": "하트페어링 북 질문 리스트",
     "color": "#F06595",
+    "isAdult": false
+  },
+  {
+    "id": "marriage",
+    "category": 8,
+    "order": 7,
+    "emoji": "💍",
+    "label": "결혼 가치관",
+    "color": "#C9184A",
     "isAdult": false
   }
 ]

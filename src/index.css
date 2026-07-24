@@ -1119,6 +1119,18 @@ input:focus, textarea:focus {
   gap: 10px;
 }
 
+.detail-actions-row {
+  display: flex;
+  gap: 10px;
+}
+
+.detail-actions-row .btn-secondary {
+  width: auto;
+  flex: 1;
+  min-width: 0;
+  padding: 0 8px;
+}
+
 .detail-secondary-hint {
   text-align: center;
   font-size: 11px;

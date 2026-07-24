@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
-import { Bookmark, Camera, Lock, Smile, X } from 'lucide-react'
+import { ArrowRight, Bookmark, Camera, Lock, Smile, X } from 'lucide-react'
 import TopAppBar from '../components/TopAppBar'
 import PrimaryButton from '../components/PrimaryButton'
 import SecondaryButton from '../components/SecondaryButton'
@@ -58,9 +58,11 @@ export default function QuestionDetail() {
 
   const questions = getQuestionsByCategory(categoryId)
   const index = questions.findIndex((q) => q.id === questionId) + 1
+  const nextQuestion = questions[index] // index가 1-based 현재 위치라 questions[index]가 바로 다음 문항
   const answered = !!getAnswer(questionId)
   const isChoice = question.type === 'choice' && question.options?.length > 0
   const hint = question.type === 'balance' || isChoice ? '하나를 골라주세요!' : '솔직하게 답변해주세요!'
+  const canProceed = isChoice ? answered : body.trim().length > 0
 
   const handleSave = () => {
     if (body.trim().length < 1 || saving) return
@@ -70,6 +72,12 @@ export default function QuestionDetail() {
       setSaving(false)
       setToast('💗 답변이 저장되었습니다')
     }, 400)
+  }
+
+  const handleSaveAndNext = () => {
+    if (!canProceed) return
+    if (!isChoice) saveAnswer(questionId, body.trim(), photos)
+    navigate(nextQuestion ? `/qna/${categoryId}/${nextQuestion.id}` : `/qna/${categoryId}`)
   }
 
   const handleChooseOption = (option) => {
@@ -212,12 +220,17 @@ export default function QuestionDetail() {
               {saving ? '저장 중...' : answered ? '답변 수정 저장' : '답변 저장'}
             </PrimaryButton>
           )}
-          <SecondaryButton
-            disabled={!answered}
-            onClick={() => answered && navigate(`/qna/${categoryId}/${questionId}/result`)}
-          >
-            <Lock size={14} style={{ marginRight: 4 }} /> 답변 결과 보기
-          </SecondaryButton>
+          <div className="detail-actions-row">
+            <SecondaryButton onClick={handleSaveAndNext} disabled={!canProceed}>
+              {nextQuestion ? '다음 질문' : '목록으로'} <ArrowRight size={14} style={{ marginLeft: 2 }} />
+            </SecondaryButton>
+            <SecondaryButton
+              disabled={!answered}
+              onClick={() => answered && navigate(`/qna/${categoryId}/${questionId}/result`)}
+            >
+              <Lock size={13} style={{ marginRight: 4 }} /> 결과 보기
+            </SecondaryButton>
+          </div>
           <div className="detail-secondary-hint">둘 다 답변 완료 후 확인 가능해요</div>
         </div>
       </div>

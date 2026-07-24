@@ -9,6 +9,7 @@ const DEFAULT_ILLUST = {
   'ifonly-mine': '🎈', 'ifonly-partner': '🎨',
   'balance-mine': '⚖️', 'balance-partner': '🧭',
   'heartpairing-mine': '📖', 'heartpairing-partner': '📔',
+  'marriage-mine': '💍', 'marriage-partner': '👰',
   'nineteen-mine': '🔥', 'nineteen-partner': '🌙',
 }
 
