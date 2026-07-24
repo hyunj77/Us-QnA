@@ -2,7 +2,15 @@
 const KEY = 'us-qna-book-config'
 
 const DEFAULT_NICKNAME = { mine: '나', partner: '상대', shared: '우리' }
-const DEFAULT_ILLUST = { 'guide-mine': '🌷', 'guide-partner': '🌼', couple: '💌', 'nineteen-mine': '🔥', 'nineteen-partner': '🌙' }
+const DEFAULT_ILLUST = {
+  'myself-mine': '🙋', 'myself-partner': '🙆',
+  'guide-mine': '🌷', 'guide-partner': '🌼',
+  couple: '💌',
+  'ifonly-mine': '🎈', 'ifonly-partner': '🎨',
+  'balance-mine': '⚖️', 'balance-partner': '🧭',
+  'heartpairing-mine': '📖', 'heartpairing-partner': '📔',
+  'nineteen-mine': '🔥', 'nineteen-partner': '🌙',
+}
 
 function defaultsFor(bookId, who) {
   return {
