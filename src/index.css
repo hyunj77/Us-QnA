@@ -431,6 +431,31 @@ input:focus, textarea:focus {
 }
 
 /* ===== Auth ===== */
+.auth-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.auth-brand-logo {
+  font-size: 34px;
+}
+
+.auth-brand-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
 .auth-card {
   width: 100%;
   max-width: 360px;
