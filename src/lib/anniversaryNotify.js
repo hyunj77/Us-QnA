@@ -64,12 +64,12 @@ export function checkTodayAnniversary() {
   if (auto) {
     const title = `오늘은 ${auto} 기념일이에요! 🎉`
     addNotification({ emoji: '🎉', bg: '#FFF3D6', title, sub: '특별한 하루를 보내보세요.', kind: 'anniversary' })
-    firePhoneNotification(title, '너안내서에서 확인해보세요.')
+    firePhoneNotification(title, '우리 사용 설명서에서 확인해보세요.')
     markNotified(key)
   } else if (custom) {
     const title = `오늘은 ${custom.label}이에요! 💗`
     addNotification({ emoji: '💗', bg: 'var(--sub)', title, sub: '오늘을 기억해주세요.', kind: 'anniversary' })
-    firePhoneNotification(title, '너안내서에서 확인해보세요.')
+    firePhoneNotification(title, '우리 사용 설명서에서 확인해보세요.')
     markNotified(key)
   }
 }
