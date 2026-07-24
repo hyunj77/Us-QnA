@@ -1,1060 +1,4414 @@
 [
   {
     "id": "guide-001",
-    "category": "guide",
-    "sub": "나를 소개해요",
-    "type": "open",
-    "title": "나를 한 단어로 표현하면?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "나를 한 단어로 표현하면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-002",
-    "category": "guide",
-    "sub": "나를 소개해요",
-    "type": "open",
-    "title": "성공의 기준은 무엇이라고 생각해?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "성공의 기준은 무엇이라고 생각해?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-003",
-    "category": "guide",
-    "sub": "나를 소개해요",
-    "type": "open",
-    "title": "아침형 인간 vs 저녁형 인간?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "아침형 인간 vs 저녁형 인간?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-004",
-    "category": "guide",
-    "sub": "나를 소개해요",
-    "type": "open",
-    "title": "여행을 간다면 휴양 vs 관광?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "여행을 간다면 휴양 vs 관광?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-005",
-    "category": "guide",
-    "sub": "나를 소개해요",
-    "type": "open",
-    "title": "인생의 좌우명은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "인생의 좌우명은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-006",
-    "category": "guide",
-    "sub": "나를 소개해요",
-    "type": "open",
-    "title": "쉬는 날에는 보통 무엇을 해?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "쉬는 날에는 보통 무엇을 해?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-007",
-    "category": "guide",
-    "sub": "나를 소개해요",
-    "type": "open",
-    "title": "초능력을 하나 가질 수 있다면?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "초능력을 하나 가질 수 있다면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-008",
-    "category": "guide",
-    "sub": "나를 소개해요",
-    "type": "open",
-    "title": "과거로 갈래, 미래로 갈래?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "과거로 갈래, 미래로 갈래?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-009",
-    "category": "guide",
-    "sub": "나를 소개해요",
-    "type": "open",
-    "title": "내가 가장 감동받는 말은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "내가 가장 감동받는 말은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-010",
-    "category": "guide",
-    "sub": "나를 소개해요",
-    "type": "open",
-    "title": "가장 듣기 싫은 말은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "가장 듣기 싫은 말은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-011",
-    "category": "guide",
-    "sub": "나의 연애 스타일",
-    "type": "open",
-    "title": "좋아하는 사람에게 먼저 다가가는 편이야?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "스트레스가 쌓이면 푸는 나만의 방법은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-012",
-    "category": "guide",
-    "sub": "나의 연애 스타일",
-    "type": "open",
-    "title": "하루 중 언제 연락하는 게 가장 좋아?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "최근에 나를 웃게 만든 가장 사소한 일은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-013",
-    "category": "guide",
-    "sub": "나의 연애 스타일",
-    "type": "open",
-    "title": "데이트는 계획형이 좋아, 즉흥형이 좋아?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "남들은 잘 모르는 나의 의외의 모습 하나",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-014",
-    "category": "guide",
-    "sub": "나의 연애 스타일",
-    "type": "open",
-    "title": "기념일을 잘 챙기는 편이야?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "어릴 때 꿈과 지금의 꿈, 어떻게 달라졌어?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-015",
-    "category": "guide",
-    "sub": "나의 연애 스타일",
-    "type": "open",
-    "title": "연인과 취미를 함께하는 게 중요해?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "인생에서 가장 잘한 선택 하나를 꼽는다면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-016",
-    "category": "guide",
-    "sub": "나의 연애 스타일",
-    "type": "open",
-    "title": "커플 사진 많이 찍는 편이 좋아?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "돈, 시간, 체력 중 지금 나에게 가장 부족한 건?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-017",
-    "category": "guide",
-    "sub": "나의 연애 스타일",
-    "type": "open",
-    "title": "가장 로맨틱하다고 생각하는 장소는?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "기분이 바닥일 때 듣는 음악은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-018",
-    "category": "guide",
-    "sub": "사랑 표현",
-    "type": "open",
-    "title": "연인에게 가장 듣고 싶은 칭찬은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "나를 영화 장르로 표현하면 어떤 장르일까?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-019",
-    "category": "guide",
-    "sub": "사랑 표현",
-    "type": "open",
-    "title": "좋아하는 사람이 해주면 기분 좋은 행동은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "절대 못 버리는 물건이 하나 있다면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-020",
-    "category": "guide",
-    "sub": "사랑 표현",
-    "type": "open",
-    "title": "사랑을 표현하는 편이야, 표현받는 걸 더 좋아해?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "처음 만난 사람이 나를 오해하기 쉬운 부분은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-021",
-    "category": "guide",
-    "sub": "사랑 표현",
-    "type": "open",
-    "title": "연인이 힘들어하면 어떻게 위로해 주는 편이야?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "요즘 나를 가장 설레게 하는 건 뭐야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-022",
-    "category": "guide",
-    "sub": "사랑 표현",
-    "type": "open",
-    "title": "연애하면 가장 행복한 순간은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "스무 살의 나에게 한마디 해줄 수 있다면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-023",
-    "category": "guide",
-    "sub": "사랑 표현",
-    "type": "open",
-    "title": "연인이 기억해 주면 좋겠는 작은 것은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "하루가 48시간이 된다면 늘어난 시간에 뭘 하고 싶어?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-024",
-    "category": "guide",
-    "sub": "사랑 표현",
-    "type": "open",
-    "title": "선물보다 더 감동받는 것은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "내가 생각하는 나의 최대 장점과 최대 단점은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-025",
-    "category": "guide",
-    "sub": "사랑 표현",
-    "type": "open",
-    "title": "나만의 애정 표현은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나를 소개해요",
+    "question": "휴대폰 사진첩에서 가장 큰 비중을 차지하는 사진은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-026",
-    "category": "guide",
-    "sub": "연애 가치관",
-    "type": "open",
-    "title": "다투면 먼저 이야기하는 편이야?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "좋아하는 사람에게 먼저 다가가는 편이야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-027",
-    "category": "guide",
-    "sub": "연애 가치관",
-    "type": "open",
-    "title": "서운한 일이 생기면 바로 말하는 편이야?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "하루 중 언제 연락하는 게 가장 좋아?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-028",
-    "category": "guide",
-    "sub": "연애 가치관",
-    "type": "open",
-    "title": "연애에서 가장 중요하게 생각하는 약속은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "데이트는 계획형이 좋아, 즉흥형이 좋아?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-029",
-    "category": "guide",
-    "sub": "연애 가치관",
-    "type": "open",
-    "title": "서로의 개인 시간을 존중하는 편이야?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "기념일을 잘 챙기는 편이야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-030",
-    "category": "guide",
-    "sub": "연애 가치관",
-    "type": "open",
-    "title": "연애하면서 꼭 지키고 싶은 원칙이 있어?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "연인과 취미를 함께하는 게 중요해?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-031",
-    "category": "guide",
-    "sub": "연애 가치관",
-    "type": "open",
-    "title": "연애에서 절대 양보할 수 없는 기준은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "커플 사진 많이 찍는 편이 좋아?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-032",
-    "category": "guide",
-    "sub": "연애 가치관",
-    "type": "open",
-    "title": "장거리 연애를 할 수 있어?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "가장 로맨틱하다고 생각하는 장소는?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-033",
-    "category": "guide",
-    "sub": "연애 가치관",
-    "type": "open",
-    "title": "연애 중 이성 친구는 어디까지 괜찮아?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "연락이 뜸해지면 불안한 편이야, 무던한 편이야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-034",
-    "category": "guide",
-    "sub": "연애 가치관",
-    "type": "open",
-    "title": "연애에서 가장 두려운 것은?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "싸운 날은 잠들기 전에 꼭 화해해야 하는 타입이야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-035",
-    "category": "guide",
-    "sub": "연애 가치관",
-    "type": "open",
-    "title": "이별 후에도 친구로 지낼 수 있다고 생각해?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "애인의 SNS를 자주 확인하는 편이야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-036",
-    "category": "guide",
-    "sub": "미래의 연애",
-    "type": "open",
-    "title": "운명적인 사랑을 믿어?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "썸 기간은 짧은 게 좋아, 긴 게 좋아?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-037",
-    "category": "guide",
-    "sub": "미래의 연애",
-    "type": "open",
-    "title": "결혼은 꼭 하고 싶어?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "연애하면 친구들에게 애인 얘기를 많이 하는 편이야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-038",
-    "category": "guide",
-    "sub": "미래의 연애",
-    "type": "open",
-    "title": "아이에 대한 생각은? 낳는다면 몇명?"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "데이트 비용은 어떻게 나누는 게 마음 편해?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-039",
-    "category": "guide",
-    "sub": "내가 원하는 숫자",
-    "type": "open",
-    "title": "우리의 하루 평균 연락 횟수"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "질투가 나면 티를 내는 편이야, 숨기는 편이야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-040",
-    "category": "guide",
-    "sub": "내가 원하는 숫자",
-    "type": "open",
-    "title": "우리의 한 달 평균 데이트 횟수"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "애인 앞에서 우는 모습을 보여줄 수 있어?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "guide-041",
-    "category": "guide",
-    "sub": "내가 원하는 숫자",
-    "type": "open",
-    "title": "우리의 평균 취침 시간"
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "연애 중 혼자만의 시간이 필요하다고 느낄 때는 언제야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "guide-042",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "밀당은 필요하다고 생각해, 필요 없다고 생각해?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "guide-043",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "애칭 부르는 것에 대해 어떻게 생각해?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "guide-044",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "나의 연애 스타일",
+    "question": "첫 데이트에서 상대의 어떤 모습을 가장 유심히 봐?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "guide-045",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "연인에게 가장 듣고 싶은 칭찬은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-046",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "좋아하는 사람이 해주면 기분 좋은 행동은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-047",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "사랑을 표현하는 편이야, 표현받는 걸 더 좋아해?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-048",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "연인이 힘들어하면 어떻게 위로해 주는 편이야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-049",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "연애하면 가장 행복한 순간은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-050",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "연인이 기억해 주면 좋겠는 작은 것은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-051",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "선물보다 더 감동받는 것은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-052",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "나만의 애정 표현은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-053",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "말로 하는 표현과 행동으로 하는 표현 중 뭐가 더 편해?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-054",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "애정 표현이 어색해지는 순간이 있다면 언제야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-055",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "사랑한다는 말 대신 쓰는 나만의 말이 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-056",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "상대가 나를 좋아한다고 확신하게 되는 순간은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-057",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "편지는 쓰는 걸 좋아해, 받는 걸 좋아해?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-058",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "서프라이즈를 준비하는 편이야, 부담스러워하는 편이야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-059",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "화해할 때 쓰는 나만의 방식이 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-060",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "기분이 안 좋을 때 애인이 어떻게 해주면 풀려?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-061",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "공개적인 애정 표현은 어디까지 괜찮아?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-062",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "사랑 표현",
+    "question": "오글거려도 꼭 한번 해보고 싶은 애정 표현이 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-063",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "다투면 먼저 이야기하는 편이야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-064",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "서운한 일이 생기면 바로 말하는 편이야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-065",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "연애에서 가장 중요하게 생각하는 약속은?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-066",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "서로의 개인 시간을 존중하는 편이야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-067",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "연애하면서 꼭 지키고 싶은 원칙이 있어?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-068",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "연애에서 절대 양보할 수 없는 기준은?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-069",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "장거리 연애를 할 수 있어?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-070",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "연애 중 이성 친구는 어디까지 괜찮아?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-071",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "연애에서 가장 두려운 것은?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-072",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "이별 후에도 친구로 지낼 수 있다고 생각해?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-073",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "사랑과 신뢰 중 하나가 먼저 무너진다면 뭐가 더 치명적일까?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-074",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "연인 사이에도 지켜야 할 예의가 있다면 뭐라고 생각해?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-075",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "애인의 휴대폰을 보는 것에 대해 어떻게 생각해?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-076",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "권태기가 온다면 어떻게 극복해야 한다고 생각해?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-077",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "연애할 때 거짓말은 어디까지 허용될 수 있을까?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-078",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "사랑이 식었다는 건 어떤 신호로 알 수 있을까?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-079",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "연인의 과거 연애사, 알고 싶어 모르고 싶어?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-080",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "헤어짐을 결심하게 만드는 결정적인 순간은 뭘까?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-081",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "상대를 바꾸려는 노력, 사랑일까 욕심일까?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-082",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "오래 만난 커플일수록 더 중요해지는 건 뭐라고 생각해?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-083",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "연애와 우정이 충돌하면 어떻게 균형을 잡아야 할까?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-084",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "연애 가치관",
+    "question": "'좋은 연애'를 한 문장으로 정의한다면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "guide-085",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "미래의 연애",
+    "question": "운명적인 사랑을 믿어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-086",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "미래의 연애",
+    "question": "결혼은 꼭 하고 싶어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-087",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "미래의 연애",
+    "question": "아이에 대한 생각은? 낳는다면 몇명?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-088",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "미래의 연애",
+    "question": "결혼 전 동거에 대해 어떻게 생각해?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-089",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "미래의 연애",
+    "question": "프로포즈는 받고 싶어, 하고 싶어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-090",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "미래의 연애",
+    "question": "결혼식은 어떤 분위기였으면 좋겠어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-091",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "미래의 연애",
+    "question": "나이 들어서도 연인과 꼭 하고 싶은 게 있다면?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-092",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "미래의 연애",
+    "question": "배우자를 고를 때 절대 포기 못 하는 조건 하나는?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-093",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "미래의 연애",
+    "question": "결혼 후에도 지키고 싶은 나만의 생활이 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-094",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "미래의 연애",
+    "question": "10년 뒤 나는 어떤 사랑을 하고 있을까?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "guide-095",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "내가 원하는 숫자",
+    "question": "우리의 하루 평균 연락 횟수",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "guide-096",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "내가 원하는 숫자",
+    "question": "우리의 한 달 평균 데이트 횟수",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "guide-097",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "내가 원하는 숫자",
+    "question": "우리의 평균 취침 시간",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "guide-098",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "내가 원하는 숫자",
+    "question": "내가 원하는 1년 커플 여행 횟수",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "guide-099",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "내가 원하는 숫자",
+    "question": "내가 원하는 애인의 답장 속도",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "guide-100",
+    "category": 1,
+    "categoryId": "guide",
+    "categoryName": "나의 연애 안내서",
+    "subcategory": "내가 원하는 숫자",
+    "question": "내가 생각하는 연애 후 적당한 결혼 시점",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-001",
-    "category": "couple",
-    "sub": "서로 소개",
-    "type": "open",
-    "title": "서로의 호칭은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "서로의 호칭은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-002",
-    "category": "couple",
-    "sub": "서로 소개",
-    "type": "open",
-    "title": "서로의 MBTI 유형은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "서로의 MBTI 유형은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-003",
-    "category": "couple",
-    "sub": "서로 소개",
-    "type": "open",
-    "title": "가장 선호하는 영화 장르"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "가장 선호하는 영화 장르",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-004",
-    "category": "couple",
-    "sub": "서로 소개",
-    "type": "open",
-    "title": "내가 가장 좋아하는 음식 3가지"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "내가 가장 좋아하는 음식 3가지",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-005",
-    "category": "couple",
-    "sub": "서로 소개",
-    "type": "open",
-    "title": "나에게 가장 잘 어울리는 별명은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "나에게 가장 잘 어울리는 별명은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-006",
-    "category": "couple",
-    "sub": "서로 소개",
-    "type": "open",
-    "title": "애인을 보면 떠오르는 색깔은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "애인을 보면 떠오르는 색깔은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-007",
-    "category": "couple",
-    "sub": "서로 소개",
-    "type": "open",
-    "title": "애인과 닮은 동물이 있다면?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "애인과 닮은 동물이 있다면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-008",
-    "category": "couple",
-    "sub": "서로 소개",
-    "type": "open",
-    "title": "서로에게 어울리는 노래 제목은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "서로에게 어울리는 노래 제목은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-009",
-    "category": "couple",
-    "sub": "서로 소개",
-    "type": "open",
-    "title": "서로의 닮은점은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "서로의 닮은점은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-010",
-    "category": "couple",
-    "sub": "서로 소개",
-    "type": "open",
-    "title": "서로의 가장 다른 점은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "서로의 가장 다른 점은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-011",
-    "category": "couple",
-    "sub": "첫 만남",
-    "type": "open",
-    "title": "우리의 첫 키스 장소는?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "내 휴대폰에 저장된 너의 이름, 왜 그렇게 지었어?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-012",
-    "category": "couple",
-    "sub": "첫 만남",
-    "type": "open",
-    "title": "애인을 처음 봤을 때 내가 느꼈던 감정"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "나의 웃음소리를 흉내 낸다면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-013",
-    "category": "couple",
-    "sub": "첫 만남",
-    "type": "open",
-    "title": "고백 받았던(했던)날 내가 느꼈던 감정은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로 소개",
+    "question": "서로의 어린 시절 사진을 보고 가장 하고 싶은 말은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-014",
-    "category": "couple",
-    "sub": "첫 만남",
-    "type": "open",
-    "title": "처음 보고 가장 끌렸던 부분은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "첫 만남",
+    "question": "우리의 첫 키스 장소는?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-015",
-    "category": "couple",
-    "sub": "첫 만남",
-    "type": "open",
-    "title": "나와 처음 만난 날로 돌아간다면 다시 만날 거야?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "첫 만남",
+    "question": "애인을 처음 봤을 때 내가 느꼈던 감정",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-016",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "내가 선호하는 애인과의 데이트 스타일"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "첫 만남",
+    "question": "고백 받았던(했던)날 내가 느꼈던 감정은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-017",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "7일 중 애인과 만남 빈도수와 나의 생각은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "첫 만남",
+    "question": "처음 보고 가장 끌렸던 부분은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-018",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "내가 선호하는 데이트 유형은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "첫 만남",
+    "question": "나와 처음 만난 날로 돌아간다면 다시 만날 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-019",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "가장 기억에 남는 우리의 데이트"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "첫 만남",
+    "question": "우리가 처음으로 같이 먹은 음식 기억나?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-020",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "데이트 중 가장 기억에 남는 순간은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "첫 만남",
+    "question": "지난 연애 중 다시 돌아가고 싶은 계절은 언제야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-021",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "비 오는 날 데이트하면 뭐 하고 싶어?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "내가 선호하는 애인과의 데이트 스타일",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-022",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "나랑 영화 본다면 어떤 장르의 영화를 보고 싶어?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "7일 중 애인과 만남 빈도수와 나의 생각은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-023",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "나랑 커플 게임하면 누가 더 잘할 것 같아?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "내가 선호하는 데이트 유형은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-024",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "내가 좋아할 것 같은 데이트 코스는?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "가장 기억에 남는 우리의 데이트",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-025",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "데이트가 끝날 때 가장 아쉬운 순간은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "데이트 중 가장 기억에 남는 순간은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-026",
-    "category": "couple",
-    "sub": "데이트",
-    "type": "open",
-    "title": "애인과 가장 찍고 싶은 커플 포즈 사진은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "비 오는 날 데이트하면 뭐 하고 싶어?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-027",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "애인이 가장 보고싶었던 순간은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "나랑 영화 본다면 어떤 장르의 영화를 보고 싶어?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-028",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "애인에게 궁금한 19금 질문 한 가지"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "나랑 커플 게임하면 누가 더 잘할 것 같아?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-029",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "내가 가장 좋아하는 스킨쉽은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "내가 좋아할 것 같은 데이트 코스는?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-030",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "내가 반하게 된 애인의 모습"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "데이트가 끝날 때 가장 아쉬운 순간은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-031",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "애인에게 가장 감동 받았던 순간"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "데이트",
+    "question": "애인과 가장 찍고 싶은 커플 포즈 사진은?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "couple-032",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "요즘 우리의 애정지수는 몇 %?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "애인이 가장 보고싶었던 순간은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-033",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "애인에게 마지막으로 하고 싶은 한마디"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "애인에게 궁금한 19금 질문 한 가지",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-034",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "나한테 애교를 부려줬으면 하는 순간은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "내가 가장 좋아하는 스킨쉽은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-035",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "나한테 가장 심쿵했던 행동은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "내가 반하게 된 애인의 모습",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-036",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "나에게 가장 듣고 싶은 말은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "애인에게 가장 감동 받았던 순간",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-037",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "우리 관계에서 가장 행복했던 순간은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "요즘 우리의 애정지수는 몇 %?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-038",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "사랑받고 있다고 느끼는 행동은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "애인에게 마지막으로 하고 싶은 한마디",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-039",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "내가 하루 종일 안기고 있으면 어때?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "나한테 애교를 부려줬으면 하는 순간은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-040",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "나에게 가장 고마웠던 순간은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "나한테 가장 심쿵했던 행동은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-041",
-    "category": "couple",
-    "sub": "서로의 마음",
-    "type": "open",
-    "title": "나를 보면 가장 먼저 하고 싶은 행동은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "나에게 가장 듣고 싶은 말은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-042",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "애인의 얼굴 중 내가 가장 좋아하는 부위는?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "우리 관계에서 가장 행복했던 순간은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-043",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "애인의 성격 중 내가 가장 좋아하는 것"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "사랑받고 있다고 느끼는 행동은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-044",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "애인에게 나는 애인만의 향기는?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "내가 하루 종일 안기고 있으면 어때?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-045",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "애인의 옷 입는 스타일은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "나에게 가장 고마웠던 순간은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-046",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "우리 커플의 장점은 뭐라고 생각해?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "나를 보면 가장 먼저 하고 싶은 행동은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-047",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "현재 나의 연애 장점은 무엇이라고 생각해?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "나 몰래 캡처해 둔 내 사진이나 메시지 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-048",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "현재 나의 연애 단점은 무엇이라고 생각해?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "내가 자는 모습을 보면 무슨 생각이 들어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-049",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "나의 연애 가치관"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "내가 아플 때 네가 해줬던 것 중 기억에 남는 게 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-050",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "내가 생각하는 바람의 기준"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로의 마음",
+    "question": "네가 나를 부를 때 목소리가 달라지는 거 알고 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-051",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "애인의 몸으로 일주일을 살 수 있다면?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "애인의 얼굴 중 내가 가장 좋아하는 부위는?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-052",
-    "category": "couple",
-    "sub": "서로에 대한 생각",
-    "type": "open",
-    "title": "내가 생각하는 사랑이란?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "애인의 성격 중 내가 가장 좋아하는 것",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-053",
-    "category": "couple",
-    "sub": "생활 습관",
-    "type": "open",
-    "title": "애인의 술버릇과 주량은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "애인에게 나는 애인만의 향기는?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-054",
-    "category": "couple",
-    "sub": "생활 습관",
-    "type": "open",
-    "title": "애인이 터치하지 않았으면 하는 것"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "애인의 옷 입는 스타일은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-055",
-    "category": "couple",
-    "sub": "생활 습관",
-    "type": "open",
-    "title": "애인이 고쳤으면 하는 습관"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "우리 커플의 장점은 뭐라고 생각해?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-056",
-    "category": "couple",
-    "sub": "생활 습관",
-    "type": "open",
-    "title": "애인의 평균 취침 시간은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "현재 나의 연애 장점은 무엇이라고 생각해?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-057",
-    "category": "couple",
-    "sub": "생활 습관",
-    "type": "open",
-    "title": "하루에 애인과 전화 빈도"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "현재 나의 연애 단점은 무엇이라고 생각해?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-058",
-    "category": "couple",
-    "sub": "생활 습관",
-    "type": "open",
-    "title": "애인의 평균 답장 속도"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "나의 연애 가치관",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-059",
-    "category": "couple",
-    "sub": "생활 습관",
-    "type": "open",
-    "title": "애인이 고쳤으면 하는 부분은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "내가 생각하는 바람의 기준",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-060",
-    "category": "couple",
-    "sub": "갈등과 서운함",
-    "type": "open",
-    "title": "가장 최근에 싸웠던 일은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "애인의 몸으로 일주일을 살 수 있다면?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-061",
-    "category": "couple",
-    "sub": "갈등과 서운함",
-    "type": "open",
-    "title": "애인의 전애인을 마주친다면?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "내가 생각하는 사랑이란?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-062",
-    "category": "couple",
-    "sub": "갈등과 서운함",
-    "type": "open",
-    "title": "애인에게 최근에 가장 서운했던 순간"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "우리의 연애를 영화 제목으로 짓는다면?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-063",
-    "category": "couple",
-    "sub": "갈등과 서운함",
-    "type": "open",
-    "title": "나에게 질투했던 적 있어?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "우리 커플만 아는 유행어나 단어가 있다면?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-064",
-    "category": "couple",
-    "sub": "갈등과 서운함",
-    "type": "open",
-    "title": "나에게 미안했던 순간은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "나에게 하루 동안 명령할 수 있다면 뭘 시킬 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-065",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "애인과 가장 하고 싶은 나의 버킷리스트는?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "내가 요즘 가장 열심히 하는 게 뭔지 알아?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-066",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "애인과 가장 가고 싶은 해외 여행지"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "내 친구들 중에서 가장 기억에 남는 사람은 누구야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-067",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "애인과 가장 가고 싶은 국내 여행지"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "서로에 대한 생각",
+    "question": "나의 최근 고민이 뭔지 맞혀볼래?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-068",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "내가 가장 결혼 하고 싶은 나이는?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "생활 습관",
+    "question": "애인의 술버릇과 주량은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-069",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "애인에게 가장 받고 싶은 프로포즈는?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "생활 습관",
+    "question": "애인이 터치하지 않았으면 하는 것",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-070",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "가장 하고 싶은 우리의 커플템은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "생활 습관",
+    "question": "애인이 고쳤으면 하는 습관",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-071",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "앞으로 꼭 같이 이루고 싶은 꿈은?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "생활 습관",
+    "question": "애인의 평균 취침 시간은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-072",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "커플룩 입어보고 싶어?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "생활 습관",
+    "question": "하루에 애인과 전화 빈도",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-073",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "커플 아이템 하나 맞춘다면?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "생활 습관",
+    "question": "애인의 평균 답장 속도",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-074",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "내가 해주는 요리를 먹어보고 싶어?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "생활 습관",
+    "question": "애인이 고쳤으면 하는 부분은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-075",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "나에게 깜짝 선물을 준다면?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "생활 습관",
+    "question": "우리 둘 다 없어서 다행이라고 생각하는 습관은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "couple-076",
-    "category": "couple",
-    "sub": "미래 이야기",
-    "type": "open",
-    "title": "애인이 어떤 소원이든 다 들어준다고 한다면?"
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "갈등과 서운함",
+    "question": "가장 최근에 싸웠던 일은?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "couple-077",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "갈등과 서운함",
+    "question": "애인의 전애인을 마주친다면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "couple-078",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "갈등과 서운함",
+    "question": "애인에게 최근에 가장 서운했던 순간",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "couple-079",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "갈등과 서운함",
+    "question": "나에게 질투했던 적 있어?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "couple-080",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "갈등과 서운함",
+    "question": "나에게 미안했던 순간은?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "couple-081",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "갈등과 서운함",
+    "question": "우리가 함께 극복했다고 생각하는 일이 있다면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "couple-082",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "갈등과 서운함",
+    "question": "헤어질 뻔했지만 다시 잡게 된 이유가 있었다면 뭐야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "couple-083",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "갈등과 서운함",
+    "question": "싸우고 나서 먼저 연락하기까지 무슨 생각을 해?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "couple-084",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "애인과 가장 하고 싶은 나의 버킷리스트는?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-085",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "애인과 가장 가고 싶은 해외 여행지",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-086",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "애인과 가장 가고 싶은 국내 여행지",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-087",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "내가 가장 결혼 하고 싶은 나이는?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-088",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "애인에게 가장 받고 싶은 프로포즈는?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-089",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "가장 하고 싶은 우리의 커플템은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-090",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "앞으로 꼭 같이 이루고 싶은 꿈은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-091",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "커플룩 입어보고 싶어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-092",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "커플 아이템 하나 맞춘다면?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-093",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "내가 해주는 요리를 먹어보고 싶어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-094",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "나에게 깜짝 선물을 준다면?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-095",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "애인이 어떤 소원이든 다 들어준다고 한다면?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-096",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "서로의 부모님께 가장 먼저 자랑하고 싶은 나의 모습은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-097",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "함께 살게 된다면 가장 걱정되는 부분은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-098",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "우리가 70살이 되어도 하고 있을 것 같은 일은?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-099",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "서로의 월급을 합친다면 가장 먼저 뭘 하고 싶어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "couple-100",
+    "category": 2,
+    "categoryId": "couple",
+    "categoryName": "커플 문답",
+    "subcategory": "미래 이야기",
+    "question": "우리 커플의 올해 목표를 하나 정한다면?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
   },
   {
     "id": "nineteen-001",
-    "category": "nineteen",
-    "sub": "설렘",
-    "type": "open",
-    "title": "내가 가장 귀엽다고 느껴질 때는?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "내가 가장 귀엽다고 느껴질 때는?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-002",
-    "category": "nineteen",
-    "sub": "설렘",
-    "type": "open",
-    "title": "내가 가장 섹시할 때는 언제야?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "내가 가장 섹시할 때는 언제야?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-003",
-    "category": "nineteen",
-    "sub": "스킨십",
-    "type": "open",
-    "title": "가장 좋아하는 스킨십은?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "나에게 처음으로 이성적인 긴장감을 느낀 순간은 언제였어?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-004",
-    "category": "nineteen",
-    "sub": "스킨십",
-    "type": "open",
-    "title": "손잡기, 포옹, 뽀뽀 중 하나만 고른다면?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "손만 잡았는데 심장이 뛰었던 적 있어?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-005",
-    "category": "nineteen",
-    "sub": "스킨십",
-    "type": "open",
-    "title": "나를 안고 있으면 어떤 기분이 들어?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "내 목소리 중에 유독 설레는 톤이 있어?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-006",
-    "category": "nineteen",
-    "sub": "취향",
-    "type": "open",
-    "title": "내가 어떤 옷을 입으면 가장 예뻐(멋있어) 보여?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "예상 못 한 순간에 심쿵했던 스킨십이 있다면?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-007",
-    "category": "nineteen",
-    "sub": "취향",
-    "type": "open",
-    "title": "내가 향수를 뿌리면 어떤 향이 어울릴 것 같아?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "나랑 눈이 오래 마주치면 무슨 생각을 해?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-008",
-    "category": "nineteen",
-    "sub": "취향",
-    "type": "open",
-    "title": "애인의 신체부위 중 가장 좋은 곳은?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "데이트 전날 밤, 나를 생각하며 상상해 본 적 있어?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-009",
-    "category": "nineteen",
-    "sub": "솔직한 질문",
-    "type": "open",
-    "title": "우리 둘만의 비밀을 하나 만든다면?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "나의 어떤 행동이 무의식적으로 섹시하다고 느껴져?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-010",
-    "category": "nineteen",
-    "sub": "솔직한 질문",
-    "type": "open",
-    "title": "가장 자신있는 신체부위는 어디야?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "같이 있다가 갑자기 안고 싶어지는 순간은?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-011",
-    "category": "nineteen",
-    "sub": "솔직한 질문",
-    "type": "open",
-    "title": "가장 최근에 야동 언제 봤어?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "귀에 대고 속삭이면 어떤 기분이 들어?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-012",
-    "category": "nineteen",
-    "sub": "솔직한 질문",
-    "type": "open",
-    "title": "나랑 어디서 했을 때 제일 좋았어?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "우리 사이에 묘한 긴장감이 흘렀던 순간이 있었다면?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-013",
-    "category": "nineteen",
-    "sub": "솔직한 질문",
-    "type": "open",
-    "title": "좋았던 척 연기한 적 있어?"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "나의 잠옷 차림을 보면 무슨 생각이 들어?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-014",
-    "category": "nineteen",
-    "sub": "내가 원하는 숫자",
-    "type": "open",
-    "title": "내가 원하는 평균 사랑 횟수 :"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "스킨십 직전의 망설이는 그 순간, 좋아 싫어?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-015",
-    "category": "nineteen",
-    "sub": "내가 원하는 숫자",
-    "type": "open",
-    "title": "내가 원하는 평균 사랑 시간 :"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "사람들 몰래 하는 은밀한 스킨십에 대해 어떻게 생각해?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "nineteen-016",
-    "category": "nineteen",
-    "sub": "내가 원하는 숫자",
-    "type": "open",
-    "title": "내가 원하는 19금 로망 :"
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "내가 머리를 넘길 때 쳐다본 적 있어?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-017",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "취기가 살짝 오른 나, 평소보다 더 끌려?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-018",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "연애 초반의 그 긴장감이 그리울 때가 있어?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-019",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "나를 처음 안았던 날 기억나?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-020",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "밤에 하는 전화 통화가 낮과 다르게 느껴질 때 있어?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-021",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "운동 직후의 내 모습, 어때 보여?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-022",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "설렘",
+    "question": "갑자기 손을 잡아끌면 어떤 기분이야?",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-023",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "가장 좋아하는 스킨십은?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-024",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "손잡기, 포옹, 뽀뽀 중 하나만 고른다면?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-025",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "나를 안고 있으면 어떤 기분이 들어?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-026",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "스킨십을 하고 싶을 때 나는 어떤 신호를 보내는 것 같아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-027",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "포옹이 말보다 위로가 됐던 적 있어?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-028",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "뒤에서 안기는 것과 마주 보고 안는 것 중 뭐가 더 좋아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-029",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "머리를 쓰다듬어 주면 어떤 기분이야?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-030",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "우리의 스킨십 속도, 서로 잘 맞는 것 같아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-031",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "뽀뽀할 때 눈을 감는 타입이야, 뜨는 타입이야?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-032",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "잘 때는 붙어서 자는 게 좋아, 각자 편하게 자는 게 좋아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-033",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "손, 어깨, 허리 중 어디에 손이 닿을 때 가장 설레?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-034",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "스킨십 중에 웃음이 터진 적 있어?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-035",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "이마, 볼, 손등 뽀뽀 중 가장 좋아하는 건?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-036",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "내 손이 닿으면 유독 간지러운 부위 있어?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-037",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "공공장소에서 허용 가능한 스킨십은 어디까지야?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-038",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "스킨십이 어색했던 순간이 있었다면 언제야?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-039",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "마사지는 해주는 게 좋아, 받는 게 좋아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-040",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "무릎베개는 해주는 편이야, 눕는 편이야?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-041",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "키스에도 기분에 따라 종류가 있다고 생각해?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-042",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "스킨십으로 화해가 된다고 생각해?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-043",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "손깍지와 그냥 잡기, 뭐가 더 좋아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-044",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "하루 중 스킨십이 가장 하고 싶어지는 시간대는?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-045",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "스킨십",
+    "question": "내가 먼저 다가갈 때와 네가 먼저 다가올 때, 뭐가 더 설레?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-046",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "내가 어떤 옷을 입으면 가장 예뻐(멋있어) 보여?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-047",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "내가 향수를 뿌리면 어떤 향이 어울릴 것 같아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-048",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "애인의 신체부위 중 가장 좋은 곳은?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-049",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "둘만 있을 때는 은은한 조명이 좋아, 밝은 조명이 좋아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-050",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "분위기를 만들어 주는 음악이 있다면?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-051",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "나에게 어울린다고 생각하는 속옷 색깔은?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-052",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "향, 조명, 음악 중 분위기에서 가장 중요한 건?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-053",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "로맨틱한 분위기가 저절로 만들어지는 장소는 어디라고 생각해?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-054",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "아침과 밤 중 언제가 더 애정이 샘솟아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-055",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "샤워 직후의 모습과 꾸민 모습 중 어느 쪽이 더 좋아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-056",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "내가 안경을 쓰면 느낌이 달라져?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-057",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "함께 목욕하는 것에 대한 로망 있어?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-058",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "귀여운 매력과 섹시한 매력, 나는 어느 쪽에 가까워?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-059",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "팔베개에 대한 로망이 있어?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-060",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "야한 농담, 우리 사이에 어느 정도까지 괜찮아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-061",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "함께 보고 싶은 로맨스 영화의 수위는 어느 정도야?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-062",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "호텔 데이트에 대한 로망이 있어?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-063",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "커플 잠옷을 맞춘다면 어떤 스타일이 좋아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-064",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "서로의 옷을 하루 바꿔 입어보는 건 어때?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-065",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "여행지에서의 밤은 평소와 뭐가 다른 것 같아?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-066",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "와인, 맥주, 소주 중 분위기에 가장 어울리는 술은?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-067",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "새벽 감성의 대화가 위험하다고 느낀 적 있어?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-068",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "취향",
+    "question": "겨울 이불 속과 여름 에어컨 아래, 껴안기 좋은 계절은?",
+    "type": "adult",
+    "difficulty": "medium",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-069",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "우리 둘만의 비밀을 하나 만든다면?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-070",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "가장 자신있는 신체부위는 어디야?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-071",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "가장 최근에 야동 언제 봤어?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-072",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "나랑 어디서 했을 때 제일 좋았어?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-073",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "좋았던 척 연기한 적 있어?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-074",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "우리의 속도에 대해 솔직히 만족해?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-075",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "표현하지 못했지만 시도해 보고 싶은 게 있어?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-076",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "부끄러워서 말 못 했던 로망 하나만 말해줄래?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-077",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "스킨십 중에 해줬으면 하는 말이 있어?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-078",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "반대로, 하지 않았으면 하는 행동이 있어?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-079",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "첫인상과 지금, 나의 이성적인 매력이 달라졌어?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-080",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "우리에게 더 많은 대화가 필요한 부분이 있다면?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-081",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "피곤해서 스킨십을 거절하는 것, 서운해 안 서운해?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-082",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "원하는 게 있을 때 솔직하게 말하는 편이야, 돌려 말하는 편이야?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-083",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "지금까지 못 물어봤지만 궁금했던 것, 하나만 물어봐도 돼?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-084",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "나와의 궁합을 점수로 매긴다면? 이유도 함께",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-085",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "서로의 만족을 위해 우리가 노력할 점이 있다면?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-086",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "영화나 영상에서 본 것 중 따라 해보고 싶었던 게 있어?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-087",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "분위기를 깨는 나의 행동이 있다면 솔직하게 말해줘",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-088",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "스킨십과 사랑의 크기는 비례한다고 생각해?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-089",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "몸이 먼저야 마음이 먼저야, 너의 솔직한 생각은?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-090",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "우리만의 신호나 암호를 만든다면 뭐가 좋을까?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-091",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "거절하고 싶을 때 어떻게 말하는 게 서로 편할까?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-092",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "나에게 바라는 점을 딱 하나만 말한다면?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-093",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "각자 혼자 해결하는 것에 대해 어떻게 생각해?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-094",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "나의 몸에 대한 칭찬 하나만 해줄래?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-095",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "성에 대한 대화, 우리는 충분히 열려 있다고 생각해?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-096",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "둘만의 밤을 위해 포기할 수 있는 약속은 어디까지야?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-097",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "솔직한 질문",
+    "question": "10년 뒤에도 지금처럼 설레려면 뭐가 필요할까?",
+    "type": "adult",
+    "difficulty": "hard",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-098",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "내가 원하는 숫자",
+    "question": "내가 원하는 평균 사랑 횟수 :",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-099",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "내가 원하는 숫자",
+    "question": "내가 원하는 평균 사랑 시간 :",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
+  },
+  {
+    "id": "nineteen-100",
+    "category": 3,
+    "categoryId": "nineteen",
+    "categoryName": "19금 문답",
+    "subcategory": "내가 원하는 숫자",
+    "question": "내가 원하는 19금 로망 :",
+    "type": "adult",
+    "difficulty": "easy",
+    "isAdult": true
   },
   {
     "id": "ifonly-001",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 술 한 잔도 못마시면 어떨 것 같아?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "만약에 내가 대머리여도 계속 만날거야? 지금은 안 그래도 유전이라면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-002",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 하루종일 연락 안하면 어떻게 할거야?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "만약에 사람 많은 장소에서 내가 방구 뀌면 어떻게 할거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-003",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 대머리여도 계속 만날거야? 지금은 안 그래도 유전이라면?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "만약에 내가 닭다리 2개를 다 먹는다고 한다면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-004",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 백만원만 빌려달라고 하면 빌려줄거야?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "만약에 내가 롤 아이디 빌려달라고 하면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-005",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 범죄를 저질렀는데 모른척 해달라고 한다면?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "만약에 내가 날 위해 요리 해달라고 하면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-006",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 사람 많은 장소에서 내가 방구 뀌면 어떻게 할거야?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 갑자기 사투리를 쓰기 시작하면 어떨 것 같아?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-007",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 동성이였어도 나랑 계속 만날거야?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "길에서 내가 넘어졌는데 사람들이 다 쳐다보면 어떻게 할 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-008",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 자기 차로 사고내면 어떻게 할거야?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "둘이 무인도에 떨어졌는데 라면이 딱 한 개라면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-009",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 남사친(여사친)이랑 둘이 술 먹는다고 하면?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 갑자기 아이돌 춤에 빠져서 매일 같이 연습하자고 하면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-010",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 통장 비밀번호 알려달라고 한다면?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "자고 일어났는데 서로 몸이 바뀌어 있다면 제일 먼저 뭘 할 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-011",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 닭다리 2개를 다 먹는다고 한다면?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 코를 심하게 골면 어떻게 할 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-012",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 롤 아이디 빌려달라고 하면?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내 별명을 평생 하나로만 불러야 한다면 뭐라고 부를 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-013",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 내가 날 위해 요리 해달라고 하면?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "데이트 중에 내 신발 밑창이 떨어져서 절뚝거리면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-014",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 다른 사람한테 대쉬 받으면 나한테 말할거야?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 복권 1등에 당첨되면 너한테 제일 먼저 뭐라고 말할 것 같아?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-015",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 누가 나랑 헤어지면 100억 준다면 헤어질거야?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "결혼식 날 내가 30분 지각하면 어떻게 할 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-016",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 가장 친한 친구랑 나랑 싸우면 누구 편 들거야?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "서로의 검색 기록을 공개해야 한다면 자신 있어?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
   },
   {
     "id": "ifonly-017",
-    "category": "ifonly",
-    "sub": null,
-    "type": "open",
-    "title": "만약에 전여친한테 연락 오면 나한테 말할거야?"
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 게임에 져서 삐지면 어떻게 풀어줄 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-018",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "하루 동안 서로 애칭 금지, 이름만 불러야 한다면 어색할 것 같아?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-019",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "노래방에서 내가 100점 나올 때까지 못 나간다고 하면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-020",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "길에서 연예인을 만난 내가 팬이라고 소리 지르면 창피할 것 같아?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-021",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 갑자기 채식을 선언하면 데이트 메뉴는 어떻게 할 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-022",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "우리 데이트를 유튜브로 찍어서 올리자고 하면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-023",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 반려동물 다섯 마리를 키우자고 하면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-024",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "여행 가서 내가 계획 없이 발 닿는 대로 다니자고 하면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-025",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 갑자기 랩으로만 대화하자고 하면 받아줄 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-026",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "놀이공원에서 내가 무서워서 못 타겠다고 하면 혼자라도 탈 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-027",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내 휴대폰 배경화면이 연예인 사진이면 어떨 것 같아?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-028",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "새벽에 벌레 잡아달라고 전화하면 와줄 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-029",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "마트에서 서로 사고 싶은 게 완전히 다르면 누가 양보해?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-030",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 갑자기 초록색으로 염색하고 나타나면 뭐라고 할 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-031",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "커플 티셔츠를 내가 직접 디자인해서 입자고 하면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-032",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 마라톤 풀코스를 같이 뛰자고 몰래 등록해 버리면?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-033",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "하루 종일 서로 존댓말만 써야 한다면 몇 분 만에 웃음이 터질까?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-034",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 귀신을 봤다고 진지하게 말하면 믿어줄 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-035",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 팔씨름에서 이기면 소원 하나 들어주기, 받아들일 거야?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-036",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "웃긴 상황",
+    "question": "내가 만든 이상한 규칙 하나를 평생 지켜야 한다면 어떤 규칙이면 좋겠어?",
+    "type": "normal",
+    "difficulty": "easy",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-037",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "만약에 내가 술 한 잔도 못마시면 어떨 것 같아?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-038",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "만약에 내가 하루종일 연락 안하면 어떻게 할거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-039",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "만약에 내가 백만원만 빌려달라고 하면 빌려줄거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-040",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "만약에 내가 자기 차로 사고내면 어떻게 할거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-041",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "만약에 내가 남사친(여사친)이랑 둘이 술 먹는다고 하면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-042",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 직장 때문에 다른 지역으로 가야 한다면 어떻게 할 거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-043",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 갑자기 퇴사하고 창업하겠다고 하면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-044",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내 부모님이 우리 사이를 반대하신다면 어떻게 할 거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-045",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 크게 아프면 곁에서 오래 간호해 줄 수 있어?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-046",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 힘든 일을 말 안 하고 혼자 앓고 있으면 어떻게 알아챌 거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-047",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "결혼 준비 중에 크게 싸우면 어떻게 해결할 거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-048",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내 월급이 너의 절반이라면 신경 쓰일 것 같아?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-049",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 유학이나 워킹홀리데이로 1년 떠난다고 하면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-050",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "친구들이 너 몰래 나에 대해 안 좋게 말하는 걸 들었다면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-051",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 술자리에서 늦게까지 연락이 안 되면 몇 시까지 기다릴 수 있어?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-052",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "명절에 서로의 집안 문화가 너무 다르다는 걸 알게 되면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-053",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 모아둔 돈이 하나도 없다는 걸 알게 된다면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-054",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내 근무 형태가 바뀌어서 주말에 못 만나게 된다면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-055",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "우리가 같은 회사에 다니게 된다면 좋을까, 불편할까?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-056",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 SNS를 다 지워달라고 부탁하면 지울 수 있어?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-057",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "결혼 후 맞벌이와 외벌이, 상황이 허락한다면 어떤 게 좋아?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-058",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 너의 친한 친구와 크게 오해가 생기면 어떻게 중재할 거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-059",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "결혼기념일과 중요한 회사 일정이 겹치면 어떻게 할 거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-060",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 반대하는 위험한 취미를 시작하겠다고 하면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-061",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 갑자기 시골로 내려가 살자고 하면 따라올 수 있어?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-062",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "현실적인 상황",
+    "question": "내가 밤늦게 갑자기 보고 싶다고 연락하면 나와줄 수 있어?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-063",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "만약에 내가 동성이였어도 나랑 계속 만날거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-064",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "만약에 누가 나랑 헤어지면 100억 준다면 헤어질거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-065",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "기억을 잃은 나를 처음부터 다시 사랑하게 만들 자신 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-066",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "딱 하루만 과거의 우리를 볼 수 있다면 어느 날로 갈 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-067",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "내 마음을 읽는 능력이 생긴다면 쓸 거야, 안 쓸 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-068",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "우리가 헤어질 미래를 미리 볼 수 있다면 보고 싶어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-069",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "서로의 수명을 나눠 가질 수 있다면 나눠줄 수 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-070",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "세상에 우리 둘만 남는다면 첫날 뭐부터 할 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-071",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "나의 과거를 전부 볼 수 있는 영상이 있다면 볼 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-072",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "다시 태어나도 나를 알아볼 수 있을 것 같아?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-073",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "거짓말 탐지기를 서로에게 딱 한 번 쓸 수 있다면 뭘 물어볼 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-074",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "우리가 싸운 기억만 지울 수 있다면 지울 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-075",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "나를 위한 서프라이즈를 1년 동안 준비해야 한다면 비밀을 지킬 수 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-076",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "내가 유명해져서 사생활이 사라진다면 견딜 수 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-077",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "신이 우리 관계의 문제 하나를 없애준다면 뭘 없애달라고 할 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-078",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "첫눈 오는 날 무조건 만나기로 약속한다면 평생 지킬 수 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-079",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "갑자기 정전이 된 밤, 나랑 뭐 하면서 시간 보낼 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-080",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "캠핑 갔는데 비가 쏟아지면 어떻게 할 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-081",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "일주일 동안 휴대폰 없이 둘이서만 여행을 간다면 버틸 수 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-082",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "한 달 동안 서로의 취미를 바꿔서 해야 한다면 자신 있어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-083",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "헤어진 지 10년 뒤 우연히 다시 만난다면 우리는 어떻게 될까?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-084",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "오늘이 우리의 마지막 날이라면 뭘 하고 싶어?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-085",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "상상과 극단",
+    "question": "10년 뒤 열어볼 타임캡슐에 우리 물건 딱 하나만 넣는다면 뭘 넣을 거야?",
+    "type": "normal",
+    "difficulty": "medium",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-086",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "만약에 내가 범죄를 저질렀는데 모른척 해달라고 한다면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-087",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "만약에 내가 통장 비밀번호 알려달라고 한다면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-088",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "만약에 다른 사람한테 대쉬 받으면 나한테 말할거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-089",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "만약에 가장 친한 친구랑 나랑 싸우면 누구 편 들거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-090",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "만약에 전여친한테 연락 오면 나한테 말할거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-091",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "내가 전 재산을 기부하겠다고 하면 동의할 거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-092",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "로또 당첨 사실을 우리 둘만 알기로 하자고 하면?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-093",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "내 꿈을 위해 5년 장거리를 해야 한다면 기다릴 수 있어?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-094",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "부모님과 나, 동시에 아프면 누구에게 먼저 갈 거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-095",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "우리 아이가 나랑 성격이 똑같다면 어떨 것 같아?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-096",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "10년 뒤 우리가 완전히 다른 사람이 되어 있어도, 그건 여전히 사랑일까?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-097",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "서로의 단점을 딱 하나씩 고칠 수 있는 버튼이 있다면 누를 거야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-098",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "평생 요리는 내 담당, 설거지는 너 담당이라면 공평하다고 생각해?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-099",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "매일 한 가지씩 서로에게 솔직해져야 하는 규칙이 생긴다면 찬성이야?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly-100",
+    "category": 4,
+    "categoryId": "ifonly",
+    "categoryName": "만약에 문답",
+    "subcategory": "가치관 테스트",
+    "question": "내가 갑자기 종교를 갖겠다고 하면 어떨 것 같아?",
+    "type": "normal",
+    "difficulty": "hard",
+    "isAdult": false
   },
   {
     "id": "balance-001",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "겨울 데이트 vs 여름 데이트?",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "겨울 데이트 vs 여름 데이트?",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "겨울 데이트",
       "여름 데이트"
@@ -1062,10 +4416,14 @@
   },
   {
     "id": "balance-002",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "매일 손잡기 vs 매일 포옹",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "매일 손잡기 vs 매일 포옹",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "매일 손잡기",
       "매일 포옹"
@@ -1073,10 +4431,14 @@
   },
   {
     "id": "balance-003",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "낮 데이트 vs 밤 데이트",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "낮 데이트 vs 밤 데이트",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "낮 데이트",
       "밤 데이트"
@@ -1084,10 +4446,14 @@
   },
   {
     "id": "balance-004",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "집 데이트 vs 여행 데이트",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "집 데이트 vs 여행 데이트",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "집 데이트",
       "여행 데이트"
@@ -1095,10 +4461,14 @@
   },
   {
     "id": "balance-005",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "영화 보기 vs 맛집 가기",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "영화 보기 vs 맛집 가기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "영화 보기",
       "맛집 가기"
@@ -1106,10 +4476,14 @@
   },
   {
     "id": "balance-006",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "커플룩 맞추기 vs 커플링 맞추기",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "커플룩 맞추기 vs 커플링 맞추기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "커플룩 맞추기",
       "커플링 맞추기"
@@ -1117,10 +4491,14 @@
   },
   {
     "id": "balance-007",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "애교 많은 연인 vs 츤데레 연인",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "애교 많은 연인 vs 츤데레 연인",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "애교 많은 연인",
       "츤데레 연인"
@@ -1128,10 +4506,14 @@
   },
   {
     "id": "balance-008",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "문자 자주 하기 vs 전화 오래 하기",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "문자 자주 하기 vs 전화 오래 하기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "문자 자주 하기",
       "전화 오래 하기"
@@ -1139,10 +4521,14 @@
   },
   {
     "id": "balance-009",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "먼저 안기기 vs 먼저 손잡기",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "먼저 안기기 vs 먼저 손잡기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "먼저 안기기",
       "먼저 손잡기"
@@ -1150,10 +4536,14 @@
   },
   {
     "id": "balance-010",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "하루 종일 붙어 있기 vs 각자 시간 보내기",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "하루 종일 붙어 있기 vs 각자 시간 보내기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "하루 종일 붙어 있기",
       "각자 시간 보내기"
@@ -1161,10 +4551,14 @@
   },
   {
     "id": "balance-011",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "기념일 크게 챙기기 vs 평소 자주 챙기기",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "기념일 크게 챙기기 vs 평소 자주 챙기기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "기념일 크게 챙기기",
       "평소 자주 챙기기"
@@ -1172,10 +4566,14 @@
   },
   {
     "id": "balance-012",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "같이 운동하기 vs 같이 게임하기",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "같이 운동하기 vs 같이 게임하기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "같이 운동하기",
       "같이 게임하기"
@@ -1183,10 +4581,14 @@
   },
   {
     "id": "balance-013",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "사진 많이 찍기 vs 추억만 남기기",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "사진 많이 찍기 vs 추억만 남기기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "사진 많이 찍기",
       "추억만 남기기"
@@ -1194,10 +4596,14 @@
   },
   {
     "id": "balance-014",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "바다 여행 vs 산 여행",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "바다 여행 vs 산 여행",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "바다 여행",
       "산 여행"
@@ -1205,10 +4611,14 @@
   },
   {
     "id": "balance-015",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "즉흥 여행 vs 계획 여행",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "즉흥 여행 vs 계획 여행",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "즉흥 여행",
       "계획 여행"
@@ -1216,10 +4626,14 @@
   },
   {
     "id": "balance-016",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "연애 초반으로 돌아가기 vs 지금 그대로 계속하기",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "연애 초반으로 돌아가기 vs 지금 그대로 계속하기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "연애 초반으로 돌아가기",
       "지금 그대로 계속하기"
@@ -1227,10 +4641,14 @@
   },
   {
     "id": "balance-017",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "무뚝뚝한 연인 vs 표현 해주는 연인",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "무뚝뚝한 연인 vs 표현 해주는 연인",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
     "options": [
       "무뚝뚝한 연인",
       "표현 해주는 연인"
@@ -1238,68 +4656,1247 @@
   },
   {
     "id": "balance-018",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "내 팬티속 베프 손 VS 베프 팬티 속 내 손",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "서운한 거 바로 말하는 연인 vs 며칠 뒤 정리해서 말하는 연인",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "서운한 거 바로 말하는 연인",
+      "며칠 뒤 정리해서 말하는 연인"
+    ]
+  },
+  {
+    "id": "balance-019",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "모든 걸 공유하는 연애 vs 적당한 비밀이 있는 연애",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "모든 걸 공유하는 연애",
+      "적당한 비밀이 있는 연애"
+    ]
+  },
+  {
+    "id": "balance-020",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "매일 30분 통화 vs 일주일에 한 번 3시간 통화",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "매일 30분 통화",
+      "일주일에 한 번 3시간 통화"
+    ]
+  },
+  {
+    "id": "balance-021",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "싸우고 바로 화해 vs 하루 식히고 화해",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "싸우고 바로 화해",
+      "하루 식히고 화해"
+    ]
+  },
+  {
+    "id": "balance-022",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "첫눈에 반한 사랑 vs 서서히 스며든 사랑",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "첫눈에 반한 사랑",
+      "서서히 스며든 사랑"
+    ]
+  },
+  {
+    "id": "balance-023",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "존댓말 연애 3개월 vs 첫날부터 반말",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "존댓말 연애 3개월",
+      "첫날부터 반말"
+    ]
+  },
+  {
+    "id": "balance-024",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "애인의 과거 다 알기 vs 하나도 모르기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "애인의 과거 다 알기",
+      "하나도 모르기"
+    ]
+  },
+  {
+    "id": "balance-025",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "요리 잘하는 연인 vs 청소 잘하는 연인",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "요리 잘하는 연인",
+      "청소 잘하는 연인"
+    ]
+  },
+  {
+    "id": "balance-026",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "길치 연인 vs 음치 연인",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "길치 연인",
+      "음치 연인"
+    ]
+  },
+  {
+    "id": "balance-027",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "연락은 먼저 오는 게 좋다 vs 내가 먼저 하는 게 편하다",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "연락은 먼저 오는 게 좋다",
+      "내가 먼저 하는 게 편하다"
+    ]
+  },
+  {
+    "id": "balance-028",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "100일마다 작은 이벤트 vs 1년에 한 번 크게",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "100일마다 작은 이벤트",
+      "1년에 한 번 크게"
+    ]
+  },
+  {
+    "id": "balance-029",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "커플 통장 만들기 vs 각자 관리하기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "커플 통장 만들기",
+      "각자 관리하기"
+    ]
+  },
+  {
+    "id": "balance-030",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "손편지 받기 vs 장문의 카톡 받기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "손편지 받기",
+      "장문의 카톡 받기"
+    ]
+  },
+  {
+    "id": "balance-031",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "아침 모닝콜 해주기 vs 밤 굿나잇 전화 받기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "아침 모닝콜 해주기",
+      "밤 굿나잇 전화 받기"
+    ]
+  },
+  {
+    "id": "balance-032",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "매일 셀카 남기기 vs 한 달에 한 번 스튜디오 촬영",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "매일 셀카 남기기",
+      "한 달에 한 번 스튜디오 촬영"
+    ]
+  },
+  {
+    "id": "balance-033",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "취미가 똑같은 연인 vs 취미가 달라 배울 게 많은 연인",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "취미가 똑같은 연인",
+      "취미가 달라 배울 게 많은 연인"
+    ]
+  },
+  {
+    "id": "balance-034",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "서프라이즈 해주기 vs 서프라이즈 받기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "서프라이즈 해주기",
+      "서프라이즈 받기"
+    ]
+  },
+  {
+    "id": "balance-035",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "데이트 코스 내가 다 정하기 vs 애인이 다 정해주기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "데이트 코스 내가 다 정하기",
+      "애인이 다 정해주기"
+    ]
+  },
+  {
+    "id": "balance-036",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "연애",
+    "question": "싸운 얘기 친구한테 털어놓기 vs 절대 둘만 알기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "싸운 얘기 친구한테 털어놓기",
+      "절대 둘만 알기"
+    ]
+  },
+  {
+    "id": "balance-037",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "평생 라면 금지 vs 평생 치킨 금지",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "평생 라면 금지",
+      "평생 치킨 금지"
+    ]
+  },
+  {
+    "id": "balance-038",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "평생 여름만 살기 vs 평생 겨울만 살기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "평생 여름만 살기",
+      "평생 겨울만 살기"
+    ]
+  },
+  {
+    "id": "balance-039",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "민트초코 호 vs 불호 (상대를 설득해 보기)",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "민트초코 호",
+      "불호 (상대를 설득해 보기)"
+    ]
+  },
+  {
+    "id": "balance-040",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "부먹 vs 찍먹",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "부먹",
+      "찍먹"
+    ]
+  },
+  {
+    "id": "balance-041",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "브런치 데이트 vs 심야 드라이브",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "브런치 데이트",
+      "심야 드라이브"
+    ]
+  },
+  {
+    "id": "balance-042",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "호캉스 vs 캠핑",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "호캉스",
+      "캠핑"
+    ]
+  },
+  {
+    "id": "balance-043",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "평생 한 나라만 여행 vs 매번 다른 나라 한 번씩만",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "평생 한 나라만 여행",
+      "매번 다른 나라 한 번씩만"
+    ]
+  },
+  {
+    "id": "balance-044",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "팝콘 카라멜맛 vs 어니언맛",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "팝콘 카라멜맛",
+      "어니언맛"
+    ]
+  },
+  {
+    "id": "balance-045",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "늦잠 자고 브런치 vs 일찍 일어나 조조영화",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "늦잠 자고 브런치",
+      "일찍 일어나 조조영화"
+    ]
+  },
+  {
+    "id": "balance-046",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "드라이브 데이트 vs 뚜벅이 도보 데이트",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "드라이브 데이트",
+      "뚜벅이 도보 데이트"
+    ]
+  },
+  {
+    "id": "balance-047",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "맛집 웨이팅 1시간 vs 아무 데나 바로 입장",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "맛집 웨이팅 1시간",
+      "아무 데나 바로 입장"
+    ]
+  },
+  {
+    "id": "balance-048",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "노래방 2시간 vs 보드게임 카페 2시간",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "노래방 2시간",
+      "보드게임 카페 2시간"
+    ]
+  },
+  {
+    "id": "balance-049",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "강아지와 산책 데이트 vs 고양이와 집 데이트",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "강아지와 산책 데이트",
+      "고양이와 집 데이트"
+    ]
+  },
+  {
+    "id": "balance-050",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "매운맛 도전 커플 vs 순한맛 지키는 커플",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "매운맛 도전 커플",
+      "순한맛 지키는 커플"
+    ]
+  },
+  {
+    "id": "balance-051",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "한강 치킨 피크닉 vs 루프탑 칵테일",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "한강 치킨 피크닉",
+      "루프탑 칵테일"
+    ]
+  },
+  {
+    "id": "balance-052",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "평생 커피 금지 vs 평생 탄산 금지",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "평생 커피 금지",
+      "평생 탄산 금지"
+    ]
+  },
+  {
+    "id": "balance-053",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "요리 같이 하기 vs 설거지 같이 하기",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "요리 같이 하기",
+      "설거지 같이 하기"
+    ]
+  },
+  {
+    "id": "balance-054",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "폰 배경화면은 서로의 사진 vs 우리 여행 풍경",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "폰 배경화면은 서로의 사진",
+      "우리 여행 풍경"
+    ]
+  },
+  {
+    "id": "balance-055",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "전시회 데이트 vs 스포츠 직관 데이트",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "전시회 데이트",
+      "스포츠 직관 데이트"
+    ]
+  },
+  {
+    "id": "balance-056",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "일상·취향",
+    "question": "옷 선물은 내 취향으로 vs 애인 취향으로",
+    "type": "balance",
+    "difficulty": "easy",
+    "isAdult": false,
+    "options": [
+      "옷 선물은 내 취향으로",
+      "애인 취향으로"
+    ]
+  },
+  {
+    "id": "balance-057",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "애인 앞에서 평생 트림 참기 vs 방귀 참기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "애인 앞에서 평생 트림 참기",
+      "방귀 참기"
+    ]
+  },
+  {
+    "id": "balance-058",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "애인의 흑역사 영상 같이 보기 vs 내 흑역사 영상 보여주기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "애인의 흑역사 영상 같이 보기",
+      "내 흑역사 영상 보여주기"
+    ]
+  },
+  {
+    "id": "balance-059",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "데이트마다 비 오기 vs 데이트마다 미세먼지 최악",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "데이트마다 비 오기",
+      "데이트마다 미세먼지 최악"
+    ]
+  },
+  {
+    "id": "balance-060",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "애인이 내 옛날 싸이월드 보기 vs 부모님이 내 카톡 보기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "애인이 내 옛날 싸이월드 보기",
+      "부모님이 내 카톡 보기"
+    ]
+  },
+  {
+    "id": "balance-061",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "애인 앞에서만 평생 노래 못 부르기 vs 애인 앞에서만 평생 몸치 되기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "애인 앞에서만 평생 노래 못 부르기",
+      "애인 앞에서만 평생 몸치 되기"
+    ]
+  },
+  {
+    "id": "balance-062",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "길 한복판에서 애인의 공개 고백 받기 vs 내가 무릎 꿇고 세레나데 하기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "길 한복판에서 애인의 공개 고백 받기",
+      "내가 무릎 꿇고 세레나데 하기"
+    ]
+  },
+  {
+    "id": "balance-063",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "하루 동안 애인 말투 따라 하기 vs 하루 동안 애인 옷 입기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "하루 동안 애인 말투 따라 하기",
+      "하루 동안 애인 옷 입기"
+    ]
+  },
+  {
+    "id": "balance-064",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "침묵 데이트 3시간 vs 쉬지 않고 말하는 데이트 3시간",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "침묵 데이트 3시간",
+      "쉬지 않고 말하는 데이트 3시간"
+    ]
+  },
+  {
+    "id": "balance-065",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "애인의 발 냄새 vs 나의 입 냄새 (하나는 평생)",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "애인의 발 냄새",
+      "나의 입 냄새 (하나는 평생)"
+    ]
+  },
+  {
+    "id": "balance-066",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "커플 문신 손등에 하기 vs 커플 삭발 하기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "커플 문신 손등에 하기",
+      "커플 삭발 하기"
+    ]
+  },
+  {
+    "id": "balance-067",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "애인 앞에서 코털 들키기 vs 이 사이 고춧가루 들키기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "애인 앞에서 코털 들키기",
+      "이 사이 고춧가루 들키기"
+    ]
+  },
+  {
+    "id": "balance-068",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "여행 가서 지갑 잃어버리기 vs 휴대폰 잃어버리기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "여행 가서 지갑 잃어버리기",
+      "휴대폰 잃어버리기"
+    ]
+  },
+  {
+    "id": "balance-069",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "평생 왼손으로만 밥 먹기 vs 평생 서서 밥 먹기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "평생 왼손으로만 밥 먹기",
+      "평생 서서 밥 먹기"
+    ]
+  },
+  {
+    "id": "balance-070",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "놀이기구 10연속 vs 귀신의 집 10연속",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "놀이기구 10연속",
+      "귀신의 집 10연속"
+    ]
+  },
+  {
+    "id": "balance-071",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "애인의 첫사랑과 저녁 식사 vs 애인의 첫사랑 이야기 3시간 듣기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "애인의 첫사랑과 저녁 식사",
+      "애인의 첫사랑 이야기 3시간 듣기"
+    ]
+  },
+  {
+    "id": "balance-072",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "재채기가 사이렌 소리 vs 웃음소리가 염소 소리",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "재채기가 사이렌 소리",
+      "웃음소리가 염소 소리"
+    ]
+  },
+  {
+    "id": "balance-073",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "매일 같은 옷 입는 애인 vs 매일 2시간 꾸미는 애인",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "매일 같은 옷 입는 애인",
+      "매일 2시간 꾸미는 애인"
+    ]
+  },
+  {
+    "id": "balance-074",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "데이트 중 폰 배터리 1% vs 지갑에 현금 카드 0원",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "데이트 중 폰 배터리 1%",
+      "지갑에 현금 카드 0원"
+    ]
+  },
+  {
+    "id": "balance-075",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "노래방에서 마이크 안 놓는 애인 vs 탬버린만 치는 애인",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "노래방에서 마이크 안 놓는 애인",
+      "탬버린만 치는 애인"
+    ]
+  },
+  {
+    "id": "balance-076",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "극한의 선택",
+    "question": "짜장면 먹을 때마다 흘리기 vs 아이스크림 먹을 때마다 떨어뜨리기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": false,
+    "options": [
+      "짜장면 먹을 때마다 흘리기",
+      "아이스크림 먹을 때마다 떨어뜨리기"
+    ]
+  },
+  {
+    "id": "balance-077",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "사랑하지만 가난한 연애 vs 편안하지만 설렘 없는 연애",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "사랑하지만 가난한 연애",
+      "편안하지만 설렘 없는 연애"
+    ]
+  },
+  {
+    "id": "balance-078",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "10년 연애 후 이별 vs 1년 연애 후 결혼",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "10년 연애 후 이별",
+      "1년 연애 후 결혼"
+    ]
+  },
+  {
+    "id": "balance-079",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "기념일 다 기억하는 무뚝뚝 애인 vs 다 까먹는 다정한 애인",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "기념일 다 기억하는 무뚝뚝 애인",
+      "다 까먹는 다정한 애인"
+    ]
+  },
+  {
+    "id": "balance-080",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "과거를 묻지 않는 사랑 vs 모든 걸 아는 사랑",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "과거를 묻지 않는 사랑",
+      "모든 걸 아는 사랑"
+    ]
+  },
+  {
+    "id": "balance-081",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "일이 우선인 성공한 애인 vs 내가 우선인 평범한 애인",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "일이 우선인 성공한 애인",
+      "내가 우선인 평범한 애인"
+    ]
+  },
+  {
+    "id": "balance-082",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "싸울 때 논리적인 애인 vs 무조건 미안하다는 애인",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "싸울 때 논리적인 애인",
+      "무조건 미안하다는 애인"
+    ]
+  },
+  {
+    "id": "balance-083",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "말은 없지만 행동하는 사랑 vs 말은 다정하지만 서툰 행동",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "말은 없지만 행동하는 사랑",
+      "말은 다정하지만 서툰 행동"
+    ]
+  },
+  {
+    "id": "balance-084",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "편안한 친구 같은 연인 vs 늘 긴장되는 설레는 연인",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "편안한 친구 같은 연인",
+      "늘 긴장되는 설레는 연인"
+    ]
+  },
+  {
+    "id": "balance-085",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "애인의 거짓말 다 알게 되기 vs 모른 채 행복하기",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "애인의 거짓말 다 알게 되기",
+      "모른 채 행복하기"
+    ]
+  },
+  {
+    "id": "balance-086",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "반대 많은 뜨거운 사랑 vs 모두가 축복하는 무난한 사랑",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "반대 많은 뜨거운 사랑",
+      "모두가 축복하는 무난한 사랑"
+    ]
+  },
+  {
+    "id": "balance-087",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "결혼식 없이 혼인신고만 vs 혼인신고 없이 결혼식만",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "결혼식 없이 혼인신고만",
+      "혼인신고 없이 결혼식만"
+    ]
+  },
+  {
+    "id": "balance-088",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "가치관",
+    "question": "함께 늙어가는 80년 vs 청춘에 멈춘 8년",
+    "type": "balance",
+    "difficulty": "hard",
+    "isAdult": false,
+    "options": [
+      "함께 늙어가는 80년",
+      "청춘에 멈춘 8년"
+    ]
+  },
+  {
+    "id": "balance-089",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "내 팬티속 베프 손 VS 베프 팬티 속 내 손",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
     "options": [
       "내 팬티속 베프 손",
       "베프 팬티 속 내 손"
     ]
   },
   {
-    "id": "balance-019",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "남자와 술 마시기 VS 1박 2일 여행 다녀오기",
+    "id": "balance-090",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "남자와 술 마시기 VS 1박 2일 여행 다녀오기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
     "options": [
       "남자와 술 마시기",
       "1박 2일 여행 다녀오기"
     ]
   },
   {
-    "id": "balance-020",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "우리 집에 다른 이성 속옷 VS 다른 이성 집에 내 속옷",
+    "id": "balance-091",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "우리 집에 다른 이성 속옷 VS 다른 이성 집에 내 속옷",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
     "options": [
       "우리 집에 다른 이성 속옷",
       "다른 이성 집에 내 속옷"
     ]
   },
   {
-    "id": "balance-021",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "피시방 게임 평생 끊기 VS 애인 평생 끊기",
+    "id": "balance-092",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "피시방 게임 평생 끊기 VS 애인 평생 끊기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
     "options": [
       "피시방 게임 평생 끊기",
       "애인 평생 끊기"
     ]
   },
   {
-    "id": "balance-022",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "하루에 1번 하기 VS 1년에 1번 하기",
+    "id": "balance-093",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "하루에 1번 하기 VS 1년에 1번 하기",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
     "options": [
       "하루에 1번 하기",
       "1년에 1번 하기"
     ]
   },
   {
-    "id": "balance-023",
-    "category": "balance",
-    "sub": null,
-    "type": "choice",
-    "title": "한 달 동안 뽀뽀 금지 VS 한 달 동안 손잡기 금지",
+    "id": "balance-094",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "한 달 동안 뽀뽀 금지 VS 한 달 동안 손잡기 금지",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
     "options": [
       "한 달 동안 뽀뽀 금지",
       "한 달 동안 손잡기 금지"
+    ]
+  },
+  {
+    "id": "balance-095",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "표현이 확실한 애인 vs 은근하게 리드하는 애인",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
+    "options": [
+      "표현이 확실한 애인",
+      "은근하게 리드하는 애인"
+    ]
+  },
+  {
+    "id": "balance-096",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "불 켜고 vs 불 끄고",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
+    "options": [
+      "불 켜고",
+      "불 끄고"
+    ]
+  },
+  {
+    "id": "balance-097",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "아침형 vs 밤형 (사랑에도 시간대 취향이 있다면)",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
+    "options": [
+      "아침형",
+      "밤형 (사랑에도 시간대 취향이 있다면)"
+    ]
+  },
+  {
+    "id": "balance-098",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "먼저 시작하는 쪽 vs 기다리는 쪽",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
+    "options": [
+      "먼저 시작하는 쪽",
+      "기다리는 쪽"
+    ]
+  },
+  {
+    "id": "balance-099",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "스킨십 많은 무뚝뚝 애인 vs 스킨십 없는 다정한 애인",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
+    "options": [
+      "스킨십 많은 무뚝뚝 애인",
+      "스킨십 없는 다정한 애인"
+    ]
+  },
+  {
+    "id": "balance-100",
+    "category": 5,
+    "categoryId": "balance",
+    "categoryName": "밸런스 게임",
+    "subcategory": "성인",
+    "question": "여행 가서 분위기 내기 vs 익숙한 우리 집이 최고",
+    "type": "balance",
+    "difficulty": "medium",
+    "isAdult": true,
+    "options": [
+      "여행 가서 분위기 내기",
+      "익숙한 우리 집이 최고"
     ]
   }
 ]

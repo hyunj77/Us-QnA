@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { Gift, Bell, ChevronRight } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import PrimaryButton from '../components/PrimaryButton'
-import { getTodayQuestion, getRandomQuestion, findQuestion, QUESTIONS } from '../lib/questions'
+import { getTodayQuestion, getRandomQuestions, findQuestion, QUESTIONS } from '../lib/questions'
 import { getAnsweredCount, getRecentAnswers } from '../lib/answersStore'
 
 function timeAgo(iso) {
@@ -26,8 +26,8 @@ export default function Home() {
     .filter((r) => r.q)
 
   const goRandom = () => {
-    const q = getRandomQuestion()
-    navigate(`/qna/${q.category}/${q.id}`)
+    const [q] = getRandomQuestions(1, { excludeAdult: true })
+    navigate(`/qna/${q.categoryId}/${q.id}`)
   }
 
   return (
@@ -46,8 +46,8 @@ export default function Home() {
             <span className="today-q-label">💗 오늘의 질문</span>
             <span className="today-q-dday">D-12</span>
           </div>
-          <div className="today-q-title">{today.title}</div>
-          <PrimaryButton onClick={() => navigate(`/qna/${today.category}/${today.id}`)}>답변하기</PrimaryButton>
+          <div className="today-q-title">{today.question}</div>
+          <PrimaryButton onClick={() => navigate(`/qna/${today.categoryId}/${today.id}`)}>답변하기</PrimaryButton>
           <div className="today-q-hint">
             <span className="avatar-pair"><span>🧑</span><span>👩</span></span>
             오늘의 답변을 완료하면 서로의 답변을 볼 수 있어요!
@@ -82,7 +82,7 @@ export default function Home() {
                 <div key={q.id} className="recent-item">
                   <span className="icon-badge" style={{ background: 'var(--sub)' }}>💗</span>
                   <div>
-                    <div className="recent-item-title">{q.title}</div>
+                    <div className="recent-item-title">{q.question}</div>
                     <div className="recent-item-time">{timeAgo(createdAt)}</div>
                   </div>
                 </div>
@@ -96,7 +96,7 @@ export default function Home() {
               <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginBottom: 16 }}>
                 첫 번째 질문을 시작해 보세요!
               </p>
-              <PrimaryButton onClick={() => navigate(`/qna/${today.category}/${today.id}`)}>답변 시작</PrimaryButton>
+              <PrimaryButton onClick={() => navigate(`/qna/${today.categoryId}/${today.id}`)}>답변 시작</PrimaryButton>
             </div>
           )}
         </div>

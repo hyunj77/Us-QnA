@@ -1,7 +1,7 @@
 [
-  { "id": "guide", "order": 1, "emoji": "❤️", "label": "나의 연애 안내서", "color": "#FF8FA3" },
-  { "id": "couple", "order": 2, "emoji": "💕", "label": "커플 문답", "color": "#FF6FA5" },
-  { "id": "nineteen", "order": 3, "emoji": "🔥", "label": "19금 문답", "color": "#B25CFF" },
-  { "id": "ifonly", "order": 4, "emoji": "🤔", "label": "만약에 문답", "color": "#5C8DFF" },
-  { "id": "balance", "order": 5, "emoji": "⚖️", "label": "밸런스 게임", "color": "#37C99A" }
+  { "id": "guide", "category": 1, "order": 1, "emoji": "❤️", "label": "나의 연애 안내서", "color": "#FF8FA3", "isAdult": false },
+  { "id": "couple", "category": 2, "order": 2, "emoji": "💕", "label": "커플 문답", "color": "#FF6FA5", "isAdult": false },
+  { "id": "ifonly", "category": 4, "order": 3, "emoji": "🤔", "label": "만약에 문답", "color": "#5C8DFF", "isAdult": false },
+  { "id": "balance", "category": 5, "order": 4, "emoji": "⚖️", "label": "밸런스 게임", "color": "#37C99A", "isAdult": false },
+  { "id": "nineteen", "category": 3, "order": 5, "emoji": "🔥", "label": "19금 문답", "color": "#B25CFF", "isAdult": true }
 ]

@@ -4,8 +4,10 @@ import { Bookmark, Lock } from 'lucide-react'
 import TopAppBar from '../components/TopAppBar'
 import PrimaryButton from '../components/PrimaryButton'
 import SecondaryButton from '../components/SecondaryButton'
+import AdultGate from '../components/AdultGate'
 import { findCategory, findQuestion, getQuestionsByCategory } from '../lib/questions'
 import { getAnswer } from '../lib/answersStore'
+import { isAdultVerified } from '../lib/adultGate'
 
 export default function QuestionDetail() {
   const { categoryId, questionId } = useParams()
@@ -13,6 +15,7 @@ export default function QuestionDetail() {
   const location = useLocation()
   const [bookmarked, setBookmarked] = useState(false)
   const [toast, setToast] = useState(location.state?.justSaved ? '💗 답변이 저장되었습니다' : '')
+  const [verified, setVerified] = useState(isAdultVerified())
   const category = findCategory(categoryId)
   const question = findQuestion(questionId)
 
@@ -24,10 +27,19 @@ export default function QuestionDetail() {
 
   if (!category || !question) return <div className="page-center"><p>존재하지 않는 질문이에요.</p></div>
 
+  if (question.isAdult && !verified) {
+    return (
+      <div className="screen">
+        <TopAppBar title={category.label} onBack={() => navigate(`/qna/${categoryId}`)} />
+        <AdultGate onVerified={() => setVerified(true)} onBack={() => navigate(`/qna/${categoryId}`)} />
+      </div>
+    )
+  }
+
   const questions = getQuestionsByCategory(categoryId)
   const index = questions.findIndex((q) => q.id === questionId) + 1
   const answered = !!getAnswer(questionId)
-  const hint = question.type === 'choice' ? '둘 중 하나를 골라주세요!' : '솔직하게 답변해주세요!'
+  const hint = question.type === 'balance' ? '둘 중 하나를 골라주세요!' : '솔직하게 답변해주세요!'
 
   return (
     <div className="screen">
@@ -41,8 +53,8 @@ export default function QuestionDetail() {
         }
       />
 
-      <div className="detail-breadcrumb">{category.label}{question.sub ? ` · ${question.sub}` : ''}</div>
-      <div className="detail-title">{question.title}</div>
+      <div className="detail-breadcrumb">{category.label}{question.subcategory ? ` · ${question.subcategory}` : ''}</div>
+      <div className="detail-title">{question.question}</div>
       <div className="detail-desc">{hint}</div>
 
       <div className="detail-illustration">{category.emoji}</div>

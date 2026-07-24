@@ -1254,3 +1254,36 @@ input:focus, textarea:focus {
 .menu-row-chevron {
   color: #C9C9CD;
 }
+
+/* ===== Adult gate ===== */
+.adult-gate {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 40px 32px;
+}
+
+.adult-gate-emoji {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.adult-gate-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.adult-gate-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.adult-gate .btn-primary {
+  width: 220px;
+}

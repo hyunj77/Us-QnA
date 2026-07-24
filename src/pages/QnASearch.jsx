@@ -33,15 +33,15 @@ export default function QnASearch() {
           <p style={{ color: 'var(--text-secondary)', textAlign: 'center', marginTop: 40 }}>검색 결과가 없어요.</p>
         )}
         {results.map((q) => {
-          const cat = findCategory(q.category)
+          const cat = findCategory(q.categoryId)
           return (
             <QuestionCard
               key={q.id}
               emoji={cat?.emoji}
-              title={q.title}
+              title={q.question}
               desc={cat?.label}
               done={answeredIds.has(q.id)}
-              onClick={() => navigate(`/qna/${q.category}/${q.id}`)}
+              onClick={() => navigate(`/qna/${q.categoryId}/${q.id}`)}
             />
           )
         })}

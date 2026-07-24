@@ -5,9 +5,11 @@ import TopAppBar from '../components/TopAppBar'
 import BottomNav from '../components/BottomNav'
 import CategoryChip from '../components/CategoryChip'
 import QuestionCard from '../components/QuestionCard'
+import AdultGate from '../components/AdultGate'
 import { findCategory, getQuestionsByCategory, getSubGroups } from '../lib/questions'
 import { getAnswer, getAnsweredIds, saveAnswer } from '../lib/answersStore'
 import { getMockPartnerChoice } from '../data/mock'
+import { isAdultVerified } from '../lib/adultGate'
 
 const ROW_ICONS = ['❤️', '💫', '🎬', '🍴', '⭐', '🎨', '🐰', '🎵', '💌', '🌙']
 function pickIcon(id) {
@@ -20,7 +22,7 @@ function BalanceRow({ question, selected, onSelect }) {
   const partnerChoice = selected ? getMockPartnerChoice(question) : null
   return (
     <div className="balance-row">
-      <div className="balance-row-title">{question.title.replace(/\?$/, '').replace(/\s*(vs|VS)\s*/, ' vs ')}</div>
+      <div className="balance-row-title">{question.question.replace(/\?$/, '').replace(/\s*(vs|VS)\s*/, ' vs ')}</div>
       <div className="balance-choice-row">
         {question.options.map((opt) => (
           <button
@@ -52,12 +54,22 @@ export default function QnAQuestionList() {
   const category = findCategory(categoryId)
   const [activeSub, setActiveSub] = useState('전체')
   const [answeredIds, setAnsweredIds] = useState(() => getAnsweredIds())
+  const [verified, setVerified] = useState(isAdultVerified())
 
   const subGroups = useMemo(() => getSubGroups(categoryId).filter(Boolean), [categoryId])
   const questions = getQuestionsByCategory(categoryId)
-  const shown = activeSub === '전체' ? questions : questions.filter((q) => q.sub === activeSub)
+  const shown = activeSub === '전체' ? questions : questions.filter((q) => q.subcategory === activeSub)
 
   if (!category) return <div className="page-center"><p>존재하지 않는 카테고리예요.</p></div>
+
+  if (category.isAdult && !verified) {
+    return (
+      <div className="screen">
+        <TopAppBar title={category.label} onBack={() => navigate('/qna')} />
+        <AdultGate onVerified={() => setVerified(true)} onBack={() => navigate('/qna')} />
+      </div>
+    )
+  }
 
   const handleBalanceSelect = (question, option) => {
     saveAnswer(question.id, option)
@@ -88,7 +100,7 @@ export default function QnAQuestionList() {
 
       <div style={{ padding: '0 20px' }}>
         {shown.map((q) =>
-          q.type === 'choice' ? (
+          q.type === 'balance' ? (
             <BalanceRow
               key={q.id}
               question={q}
@@ -99,8 +111,8 @@ export default function QnAQuestionList() {
             <QuestionCard
               key={q.id}
               emoji={pickIcon(q.id)}
-              title={q.title}
-              desc={q.sub}
+              title={q.question}
+              desc={q.subcategory}
               done={answeredIds.has(q.id)}
               onClick={() => navigate(`/qna/${categoryId}/${q.id}`)}
             />

@@ -3,8 +3,10 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { Camera, Smile, Mic } from 'lucide-react'
 import TopAppBar from '../components/TopAppBar'
 import PrimaryButton from '../components/PrimaryButton'
+import AdultGate from '../components/AdultGate'
 import { findCategory, findQuestion, getQuestionsByCategory } from '../lib/questions'
 import { getAnswer, saveAnswer } from '../lib/answersStore'
+import { isAdultVerified } from '../lib/adultGate'
 
 const MAX_LEN = 500
 
@@ -18,12 +20,22 @@ export default function AnswerCompose() {
   const [privateMode, setPrivateMode] = useState(false)
   const [notice, setNotice] = useState('')
   const [saving, setSaving] = useState(false)
+  const [verified, setVerified] = useState(isAdultVerified())
 
   if (!category || !question) return <div className="page-center"><p>존재하지 않는 질문이에요.</p></div>
 
+  if (question.isAdult && !verified) {
+    return (
+      <div className="screen">
+        <TopAppBar title={category.label} onBack={() => navigate(`/qna/${categoryId}/${questionId}`)} />
+        <AdultGate onVerified={() => setVerified(true)} onBack={() => navigate(`/qna/${categoryId}/${questionId}`)} />
+      </div>
+    )
+  }
+
   const questions = getQuestionsByCategory(categoryId)
   const index = questions.findIndex((q) => q.id === questionId) + 1
-  const hint = question.type === 'choice' ? '둘 중 하나를 골라주세요!' : '솔직하게 답변해주세요!'
+  const hint = question.type === 'balance' ? '둘 중 하나를 골라주세요!' : '솔직하게 답변해주세요!'
 
   const handleSave = () => {
     if (body.trim().length < 1 || saving) return
@@ -38,8 +50,8 @@ export default function AnswerCompose() {
     <div className="screen">
       <TopAppBar title={`${index}/${questions.length}`} onBack={() => navigate(`/qna/${categoryId}/${questionId}`)} />
 
-      <div className="detail-breadcrumb">{category.label}{question.sub ? ` · ${question.sub}` : ''}</div>
-      <div className="detail-title" style={{ fontSize: 20 }}>{question.title}</div>
+      <div className="detail-breadcrumb">{category.label}{question.subcategory ? ` · ${question.subcategory}` : ''}</div>
+      <div className="detail-title" style={{ fontSize: 20 }}>{question.question}</div>
       <div className="detail-desc" style={{ marginBottom: 20 }}>{hint}</div>
 
       <div className="compose-wrap">
