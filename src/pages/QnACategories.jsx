@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import ProgressCard from '../components/ProgressCard'
-import { getCategories, getQuestionsByCategory, getSubGroups, getCategoryDisplayLabel } from '../lib/questions'
+import { getCategories, getQuestionsByCategory, getSubGroups, getCategoryDisplayLabel, getRandomQuestions } from '../lib/questions'
 import { getAnsweredIds } from '../lib/answersStore'
 
 const CATEGORY_STYLE = {
@@ -32,6 +32,11 @@ export default function QnACategories() {
   const categories = getCategories()
   const answeredIds = getAnsweredIds()
 
+  const goRandom = () => {
+    const [q] = getRandomQuestions(1, { excludeAdult: true })
+    navigate(`/qna/${q.categoryId}/${q.id}`)
+  }
+
   return (
     <div className="screen">
       <div className="topbar">
@@ -42,6 +47,14 @@ export default function QnACategories() {
       </div>
 
       <div style={{ padding: '0 20px 20px', display: 'flex', flexDirection: 'column', gap: 14 }}>
+        <button className="random-q-card" style={{ width: '100%' }} onClick={goRandom}>
+          <span className="random-q-badge"><span>?</span></span>
+          <div className="random-q-body">
+            <div className="random-q-title">랜덤 질문</div>
+            <div className="random-q-text">랜덤으로 질문을 뽑아보세요!</div>
+          </div>
+        </button>
+
         {categories.map((c) => {
           const questions = getQuestionsByCategory(c.id)
           const done = questions.filter((q) => answeredIds.has(q.id)).length
