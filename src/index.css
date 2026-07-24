@@ -781,6 +781,35 @@ input:focus, textarea:focus {
   color: var(--text-secondary);
 }
 
+.poke-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border-radius: var(--r-lg);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.poke-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.poke-card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.poke-card-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
 /* ===== Category list (Q&A) ===== */
 .category-card {
   border-radius: var(--r-lg);

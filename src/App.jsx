@@ -4,6 +4,7 @@ import { checkTodayAnniversary } from './lib/anniversaryNotify'
 import { getSession } from './lib/auth'
 import { ensureProfile } from './lib/coupleStore'
 import { refreshCoupleState } from './lib/coupleState'
+import { subscribePokes } from './lib/pokeStore'
 import Splash from './pages/Splash'
 import Onboarding from './pages/Onboarding'
 import Signup from './pages/Signup'
@@ -32,17 +33,20 @@ function AppRoutes() {
     checkTodayAnniversary()
   }, [])
 
-  // 카카오/구글 로그인 후 돌아왔을 때(또는 세션이 남아있는 재방문 시) 스플래시를 건너뛴다.
-  // 프로필이 없으면 만들고, 아직 커플 연결 전이면 연결 화면으로, 연결됐으면 바로 홈으로 보낸다.
+  // 로그인 세션이 있으면 앱을 어느 경로로 열었든 프로필/커플 캐시를 채우고 찌르기 구독을 건다.
+  // 스플래시('/')로 들어온 경우에만 프로필/커플 연결 여부에 따라 알맞은 화면으로 자동 이동시킨다.
   useEffect(() => {
-    if (location.pathname !== '/') return
     getSession().then(async (session) => {
       if (!session) return
       const profile = await ensureProfile(session.user)
       await refreshCoupleState()
-      navigate(profile?.couple_id ? '/home' : '/couple-connect', { replace: true })
+      if (profile?.couple_id) subscribePokes()
+      if (location.pathname === '/') {
+        navigate(profile?.couple_id ? '/home' : '/couple-connect', { replace: true })
+      }
     })
-  }, [location.pathname, navigate])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="app-shell">

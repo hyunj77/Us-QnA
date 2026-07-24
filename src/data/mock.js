@@ -13,6 +13,7 @@ export const NOTIF_KIND_LABEL = {
   partner: { label: '상대방', color: '#4CAF50' },
   anniversary: { label: '기념일', color: '#D9A400' },
   new: { label: '새 질문', color: '#5C7CFA' },
+  poke: { label: '콕 찌르기', color: '#FF5C93' },
 }
 
 export const MOCK_MEMORIES = [

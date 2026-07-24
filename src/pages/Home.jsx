@@ -1,5 +1,6 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Gift, Bell, ChevronRight, Lock } from 'lucide-react'
+import { Gift, Bell, ChevronRight, Lock, Hand } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import PrimaryButton from '../components/PrimaryButton'
 import { getTodayQuestion, getRandomQuestions, findQuestion, findCategory, QUESTIONS } from '../lib/questions'
@@ -10,6 +11,10 @@ import { getBookConfig } from '../lib/bookStore'
 import { isAdultVerified } from '../lib/adultGate'
 import { getNextAnniversary } from '../lib/anniversary'
 import { isLoggedIn } from '../lib/authState'
+import { canPoke, sendPoke } from '../lib/pokeStore'
+
+const POKE_COOLDOWN_MS = 60000
+const POKE_KEY = 'us-qna-last-poke-at'
 
 function timeAgo(iso) {
   const diffMs = Date.now() - new Date(iso).getTime()
@@ -23,6 +28,8 @@ function timeAgo(iso) {
 
 export default function Home() {
   const navigate = useNavigate()
+  const [poking, setPoking] = useState(false)
+  const [pokeToast, setPokeToast] = useState('')
   const today = getTodayQuestion()
   const answeredCount = getAnsweredCount()
   // 전체 500문항 기준 진행률. 답변이 1개라도 있으면 반올림으로 0%가 되어 "0%"와 "n개"가
@@ -38,6 +45,26 @@ export default function Home() {
   const goRandom = () => {
     const [q] = getRandomQuestions(1, { excludeAdult: true })
     navigate(`/qna/${q.categoryId}/${q.id}`)
+  }
+
+  const handlePoke = async () => {
+    const lastAt = Number(localStorage.getItem(POKE_KEY) || 0)
+    if (Date.now() - lastAt < POKE_COOLDOWN_MS) {
+      setPokeToast('잠시 후 다시 찔러보세요 👋')
+      setTimeout(() => setPokeToast(''), 1800)
+      return
+    }
+    setPoking(true)
+    try {
+      await sendPoke()
+      localStorage.setItem(POKE_KEY, String(Date.now()))
+      setPokeToast('콕! 상대방에게 알림을 보냈어요')
+    } catch {
+      setPokeToast('찌르기에 실패했어요')
+    } finally {
+      setPoking(false)
+      setTimeout(() => setPokeToast(''), 1800)
+    }
   }
 
   return (
@@ -127,6 +154,16 @@ export default function Home() {
           </div>
         )}
 
+        {isLoggedIn() && canPoke() && (
+          <button className="poke-card" onClick={handlePoke} disabled={poking}>
+            <span className="icon-badge" style={{ background: 'var(--sub)' }}><Hand size={18} color="var(--main)" /></span>
+            <div className="poke-card-body">
+              <div className="poke-card-title">상대방 콕 찌르기</div>
+              <div className="poke-card-desc">답장을 기다리거나, 화해하고 싶을 때 눌러보세요</div>
+            </div>
+          </button>
+        )}
+
         <div>
           <div className="section-head">
             <span className="section-title">최근 답변</span>
@@ -167,6 +204,8 @@ export default function Home() {
           </div>
         </button>
       </div>
+
+      {pokeToast && <div className="toast">{pokeToast}</div>}
 
       <BottomNav />
     </div>

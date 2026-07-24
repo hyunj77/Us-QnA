@@ -1,6 +1,7 @@
 import { getAnniversaryLabel } from './anniversary'
 import { getAllCustomAnniversaries, dateKey } from './customAnniversaries'
 import { addNotification } from './notificationsStore'
+import { firePhoneNotification } from './pushNotify'
 
 const NOTIFIED_KEY = 'us-qna-notified-dates'
 
@@ -20,31 +21,6 @@ function markNotified(key) {
     localStorage.setItem(NOTIFIED_KEY, JSON.stringify(list.slice(-60)))
   } catch {
     // localStorage unavailable, skip persisting
-  }
-}
-
-async function firePhoneNotification(title, body) {
-  if (!('Notification' in window)) return
-  if (Notification.permission === 'default') {
-    try {
-      await Notification.requestPermission()
-    } catch {
-      return
-    }
-  }
-  if (Notification.permission !== 'granted') return
-
-  const icon = `${import.meta.env.BASE_URL}favicon.svg`
-  try {
-    if ('serviceWorker' in navigator) {
-      const reg = await navigator.serviceWorker.ready
-      reg.showNotification(title, { body, icon, tag: 'anniversary' })
-      return
-    }
-    // eslint-disable-next-line no-new
-    new Notification(title, { body, icon })
-  } catch {
-    // 알림 권한/환경이 지원되지 않으면 앱 내 알림함 기록만 남긴다
   }
 }
 

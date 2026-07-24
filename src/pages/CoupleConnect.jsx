@@ -4,6 +4,8 @@ import { Copy } from 'lucide-react'
 import PrimaryButton from '../components/PrimaryButton'
 import { createInviteCode, joinByCode } from '../lib/coupleStore'
 import { signOut } from '../lib/auth'
+import { refreshCoupleState } from '../lib/coupleState'
+import { subscribePokes } from '../lib/pokeStore'
 
 export default function CoupleConnect() {
   const navigate = useNavigate()
@@ -20,6 +22,8 @@ export default function CoupleConnect() {
     try {
       const couple = await createInviteCode()
       setMyCode(couple.invite_code)
+      await refreshCoupleState()
+      subscribePokes()
     } catch (err) {
       setError(err.message || '코드를 만들지 못했어요.')
     } finally {
@@ -44,6 +48,8 @@ export default function CoupleConnect() {
     setError('')
     try {
       await joinByCode(inputCode)
+      await refreshCoupleState()
+      subscribePokes()
       navigate('/home', { replace: true })
     } catch (err) {
       setError(err.message || '연결하지 못했어요.')
