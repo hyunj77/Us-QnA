@@ -90,10 +90,16 @@ export default function Home() {
           </button>
         )}
 
+        <div className="card dday-card">
+          <span className="dday-card-label">📅 다음 기념일</span>
+          <span className="dday-card-value">
+            {nextAnniv.daysLeft == null ? nextAnniv.label : `${nextAnniv.label} D-${nextAnniv.daysLeft}`}
+          </span>
+        </div>
+
         <div className="today-q-card">
           <div className="today-q-head">
             <span className="today-q-label">💗 오늘의 질문</span>
-            <span className="today-q-dday">{nextAnniv.daysLeft == null ? nextAnniv.label : `${nextAnniv.label} D-${nextAnniv.daysLeft}`}</span>
           </div>
           <div className="today-q-title">{today.question}</div>
           <PrimaryButton onClick={() => navigate(`/qna/${today.categoryId}/${today.id}`)}>답변하기</PrimaryButton>

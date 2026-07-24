@@ -573,12 +573,24 @@ input:focus, textarea:focus {
   gap: 5px;
 }
 
-.today-q-dday {
-  font-size: 12px;
+.dday-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dday-card-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.dday-card-value {
+  font-size: 13px;
   font-weight: 800;
   color: var(--main);
-  background: #fff;
-  padding: 4px 10px;
+  background: var(--sub);
+  padding: 6px 12px;
   border-radius: var(--r-pill);
 }
 
