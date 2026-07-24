@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
-import CategoryChip from '../components/CategoryChip'
 import ProgressCard from '../components/ProgressCard'
 import { getCategories, getQuestionsByCategory, getSubGroups } from '../lib/questions'
 import { getAnsweredIds } from '../lib/answersStore'
@@ -22,14 +21,6 @@ const CATEGORY_DESC = {
   balance: '두 가지 중 하나만 선택한다면? 밸런스 게임 질문들',
 }
 
-const CATEGORY_SHORT_LABEL = {
-  guide: '❤️ 안내서',
-  couple: '💕 커플',
-  nineteen: '🔥 19금',
-  ifonly: '🤔 만약에',
-  balance: '⚖️ 밸런스',
-}
-
 export default function QnACategories() {
   const navigate = useNavigate()
   const categories = getCategories()
@@ -41,13 +32,6 @@ export default function QnACategories() {
         <button className="topbar-icon-btn" onClick={() => navigate('/qna/search')}>
           <Search size={20} />
         </button>
-      </div>
-
-      <div style={{ display: 'flex', gap: 8, padding: '0 20px 18px', overflowX: 'auto' }}>
-        <CategoryChip label="전체" active />
-        {categories.map((c) => (
-          <CategoryChip key={c.id} label={CATEGORY_SHORT_LABEL[c.id] || c.label} onClick={() => navigate(`/qna/${c.id}`)} />
-        ))}
       </div>
 
       <div style={{ padding: '0 20px 20px', display: 'flex', flexDirection: 'column', gap: 14 }}>

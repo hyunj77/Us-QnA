@@ -77,7 +77,7 @@ export default function Home() {
 
         <div>
           <div className="section-head">
-            <span className="section-title">📚 우리의 책</span>
+            <span className="section-title">우리의 책</span>
             <button className="btn-text" onClick={() => navigate('/memories')}>더보기 <ChevronRight size={12} /></button>
           </div>
           <div className="bookshelf-row">
