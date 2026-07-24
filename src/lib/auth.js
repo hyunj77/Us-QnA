@@ -8,6 +8,14 @@ export function signInWithKakao() {
   })
 }
 
+export function signInWithGoogle() {
+  if (!supabase) return Promise.reject(new Error('Supabase가 아직 설정되지 않았어요.'))
+  return supabase.auth.signInWithOAuth({
+    provider: 'google',
+    options: { redirectTo: window.location.origin + import.meta.env.BASE_URL },
+  })
+}
+
 export function signOut() {
   if (!supabase) return Promise.resolve()
   return supabase.auth.signOut()

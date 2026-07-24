@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { signInWithKakao, signInWithGoogle } from '../lib/auth'
+import { isSupabaseConfigured } from '../lib/supabaseClient'
 
 const SOCIALS = [
-  { id: 'kakao', label: '카카오', emoji: '💬', bg: '#FEE500', fg: '#3A2929' },
-  { id: 'google', label: '구글', emoji: 'G', bg: '#fff', fg: '#3A2B30' },
-  { id: 'apple', label: 'Apple', emoji: '🍎', bg: '#000', fg: '#fff' },
+  { id: 'kakao', label: '카카오', emoji: '💬', bg: '#FEE500', fg: '#3A2929', onSignIn: signInWithKakao },
+  { id: 'google', label: '구글', emoji: 'G', bg: '#fff', fg: '#3A2B30', onSignIn: signInWithGoogle },
 ]
 
 export default function Signup() {
@@ -74,8 +75,8 @@ export default function Signup() {
               type="button"
               className="auth-social-btn"
               style={{ background: s.bg, color: s.fg }}
-              onClick={() => navigate('/home')}
-              title={`${s.label} (준비 중 - 화면 검토용으로 바로 진입)`}
+              onClick={() => (isSupabaseConfigured ? s.onSignIn() : navigate('/home'))}
+              title={isSupabaseConfigured ? `${s.label}로 시작하기` : `${s.label} (준비 중 - 화면 검토용으로 바로 진입)`}
             >
               {s.emoji}
             </button>
