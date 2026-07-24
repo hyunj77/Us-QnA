@@ -47,6 +47,19 @@ export async function getMyProfile() {
   return data
 }
 
+// 프로필 화면 등에서 내가 불리고 싶은 이름(예: "여자친구", "지현")을 직접 정할 수 있게 한다.
+// 카테고리 제목("OO 안내서") 등 여러 화면에서 이 닉네임을 그대로 가져다 쓴다.
+export async function updateNickname(nickname) {
+  if (!supabase) return null
+  const trimmed = nickname.trim()
+  if (!trimmed) throw new Error('닉네임을 입력해주세요.')
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) throw new Error('로그인이 필요해요.')
+  const { error } = await supabase.from('profiles').update({ nickname: trimmed }).eq('id', user.id)
+  if (error) throw error
+  return trimmed
+}
+
 export async function createInviteCode() {
   if (!supabase) throw new Error('Supabase가 설정되지 않았어요.')
   const { data: { user } } = await supabase.auth.getUser()
@@ -63,6 +76,13 @@ export async function createInviteCode() {
   const { error: profileError } = await supabase.from('profiles').update({ couple_id: couple.id }).eq('id', user.id)
   if (profileError) throw profileError
   return couple
+}
+
+// 코드를 만들고 대기 중인 화면에서, 상대방이 그 사이에 입장했는지 확인할 때 쓴다.
+export async function getCoupleByCode(code) {
+  if (!supabase) return null
+  const { data } = await supabase.from('couples').select('*').eq('invite_code', code).maybeSingle()
+  return data
 }
 
 // 캘린더에서 "첫 만남" 기념일을 지정하면 커플의 공식 시작일(며칠째 계산 기준)을 이 날짜로 갱신한다.

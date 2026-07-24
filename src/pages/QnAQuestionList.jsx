@@ -6,7 +6,7 @@ import BottomNav from '../components/BottomNav'
 import CategoryChip from '../components/CategoryChip'
 import QuestionCard from '../components/QuestionCard'
 import AdultGate from '../components/AdultGate'
-import { findCategory, getQuestionsByCategory, getSubGroups, getRandomQuestion } from '../lib/questions'
+import { findCategory, getQuestionsByCategory, getSubGroups, getRandomQuestion, getCategoryDisplayLabel } from '../lib/questions'
 import { getAnswer, getAnsweredIds, saveAnswer } from '../lib/answersStore'
 import { getMockPartnerChoice } from '../data/mock'
 import { isAdultVerified } from '../lib/adultGate'
@@ -73,7 +73,7 @@ export default function QnAQuestionList() {
   if (category.isAdult && !verified) {
     return (
       <div className="screen">
-        <TopAppBar title={category.label} onBack={() => navigate('/qna')} />
+        <TopAppBar title={getCategoryDisplayLabel(category)} onBack={() => navigate('/qna')} />
         <AdultGate onVerified={() => setVerified(true)} onBack={() => navigate('/qna')} />
       </div>
     )
@@ -92,7 +92,7 @@ export default function QnAQuestionList() {
   return (
     <div className="screen">
       <TopAppBar
-        title={category.label}
+        title={getCategoryDisplayLabel(category)}
         onBack={() => navigate('/qna')}
         right={
           <>

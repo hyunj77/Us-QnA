@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Copy } from 'lucide-react'
+import { ArrowLeft, Copy } from 'lucide-react'
 import PrimaryButton from '../components/PrimaryButton'
-import { createInviteCode, joinByCode } from '../lib/coupleStore'
+import { createInviteCode, joinByCode, getCoupleByCode } from '../lib/coupleStore'
 import { signOut } from '../lib/auth'
 import { refreshCoupleState } from '../lib/coupleState'
 import { subscribePokes } from '../lib/pokeStore'
+
+const POLL_INTERVAL_MS = 3000
 
 export default function CoupleConnect() {
   const navigate = useNavigate()
@@ -30,6 +32,22 @@ export default function CoupleConnect() {
       setLoading(false)
     }
   }
+
+  // 코드를 만들고 대기하는 동안, 상대방이 그 사이에 입장했는지 주기적으로 확인해서
+  // 연결되면 자동으로 홈으로 넘어간다.
+  useEffect(() => {
+    if (!myCode) return undefined
+    const interval = setInterval(async () => {
+      const couple = await getCoupleByCode(myCode)
+      if (couple?.member_b) {
+        clearInterval(interval)
+        await refreshCoupleState()
+        subscribePokes()
+        navigate('/home', { replace: true })
+      }
+    }, POLL_INTERVAL_MS)
+    return () => clearInterval(interval)
+  }, [myCode, navigate])
 
   const handleCopy = async () => {
     try {
@@ -59,7 +77,16 @@ export default function CoupleConnect() {
   }
 
   return (
-    <div className="page-center">
+    <div className="page-center" style={{ position: 'relative' }}>
+      <button
+        type="button"
+        className="topbar-icon-btn"
+        style={{ position: 'absolute', top: 16, left: 16 }}
+        onClick={() => navigate('/home')}
+      >
+        <ArrowLeft size={20} />
+      </button>
+
       <div className="auth-page">
         <div className="auth-brand">
           <span className="auth-brand-logo">💌</span>

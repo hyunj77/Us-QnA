@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import ProgressCard from '../components/ProgressCard'
-import { getCategories, getQuestionsByCategory, getSubGroups } from '../lib/questions'
+import { getCategories, getQuestionsByCategory, getSubGroups, getCategoryDisplayLabel } from '../lib/questions'
 import { getAnsweredIds } from '../lib/answersStore'
 
 const CATEGORY_STYLE = {
@@ -47,7 +47,7 @@ export default function QnACategories() {
             <ProgressCard
               key={c.id}
               emoji={c.emoji}
-              title={c.label}
+              title={getCategoryDisplayLabel(c)}
               desc={subCount > 0 ? `${CATEGORY_DESC[c.id]} · ${subCount}개 소분류` : CATEGORY_DESC[c.id]}
               done={done}
               total={questions.length}

@@ -1,5 +1,7 @@
 import categoriesData from '../data/categories.json'
 import questionsData from '../data/questions.json'
+import { isLoggedIn } from './authState'
+import { getCachedProfile } from './coupleState'
 
 // 지금은 로컬 JSON 파일이 소스지만, 이후 Supabase의 categories/questions 테이블로
 // 그대로 옮길 수 있도록 필드 구조를 맞춰뒀다.
@@ -14,6 +16,17 @@ export function getCategories() {
 
 export function findCategory(categoryId) {
   return CATEGORIES.find((c) => c.id === categoryId) || null
+}
+
+// "나의 소개서" 카테고리는 화면에는 "OO 안내서"처럼 내가 정한 닉네임을 넣어서 보여준다.
+// 로그인 전(둘러보기)이거나 닉네임을 아직 안 정했으면 기본 라벨을 그대로 쓴다.
+export function getCategoryDisplayLabel(category) {
+  if (!category) return ''
+  if (category.id === 'myself' && isLoggedIn()) {
+    const nickname = getCachedProfile()?.nickname
+    if (nickname) return `${nickname} 안내서`
+  }
+  return category.label
 }
 
 // 전체 불러오기

@@ -5,7 +5,7 @@ import TopAppBar from '../components/TopAppBar'
 import PrimaryButton from '../components/PrimaryButton'
 import SecondaryButton from '../components/SecondaryButton'
 import AdultGate from '../components/AdultGate'
-import { findCategory, findQuestion, getQuestionsByCategory } from '../lib/questions'
+import { findCategory, findQuestion, getQuestionsByCategory, getCategoryDisplayLabel } from '../lib/questions'
 import { getAnswer, saveAnswer } from '../lib/answersStore'
 import { isAdultVerified } from '../lib/adultGate'
 import { isBookmarked, toggleBookmark } from '../lib/bookmarkStore'
@@ -50,7 +50,7 @@ export default function QuestionDetail() {
   if (question.isAdult && !verified) {
     return (
       <div className="screen">
-        <TopAppBar title={category.label} onBack={() => navigate(`/qna/${categoryId}`)} />
+        <TopAppBar title={getCategoryDisplayLabel(category)} onBack={() => navigate(`/qna/${categoryId}`)} />
         <AdultGate onVerified={() => setVerified(true)} onBack={() => navigate(`/qna/${categoryId}`)} />
       </div>
     )
@@ -116,7 +116,7 @@ export default function QuestionDetail() {
       />
 
       <div className="detail-breadcrumb" style={{ background: `${category.color}22`, color: category.color }}>
-        {category.label}{question.subcategory ? ` · ${question.subcategory}` : ''}
+        {getCategoryDisplayLabel(category)}{question.subcategory ? ` · ${question.subcategory}` : ''}
       </div>
       <div className="detail-title">{question.question}</div>
       <div className="detail-desc">{hint}</div>
