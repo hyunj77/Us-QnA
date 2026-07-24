@@ -8,12 +8,13 @@ import AdultGate from '../components/AdultGate'
 import { findCategory, findQuestion, getQuestionsByCategory } from '../lib/questions'
 import { getAnswer } from '../lib/answersStore'
 import { isAdultVerified } from '../lib/adultGate'
+import { isBookmarked, toggleBookmark } from '../lib/bookmarkStore'
 
 export default function QuestionDetail() {
   const { categoryId, questionId } = useParams()
   const navigate = useNavigate()
   const location = useLocation()
-  const [bookmarked, setBookmarked] = useState(false)
+  const [bookmarked, setBookmarked] = useState(() => isBookmarked(questionId))
   const [toast, setToast] = useState(location.state?.justSaved ? '💗 답변이 저장되었습니다' : '')
   const [verified, setVerified] = useState(isAdultVerified())
   const category = findCategory(categoryId)
@@ -24,6 +25,10 @@ export default function QuestionDetail() {
     const timer = setTimeout(() => setToast(''), 1800)
     return () => clearTimeout(timer)
   }, [toast])
+
+  useEffect(() => {
+    setBookmarked(isBookmarked(questionId))
+  }, [questionId])
 
   if (!category || !question) return <div className="page-center"><p>존재하지 않는 질문이에요.</p></div>
 
@@ -47,7 +52,7 @@ export default function QuestionDetail() {
         title={`${index}/${questions.length}`}
         onBack={() => navigate(`/qna/${categoryId}`)}
         right={
-          <button className="topbar-icon-btn" onClick={() => setBookmarked((v) => !v)}>
+          <button className="topbar-icon-btn" onClick={() => setBookmarked(toggleBookmark(questionId))}>
             <Bookmark size={20} fill={bookmarked ? 'var(--main)' : 'none'} color={bookmarked ? 'var(--main)' : 'currentColor'} />
           </button>
         }

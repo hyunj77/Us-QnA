@@ -3,11 +3,12 @@ import { Gift, Bell, ChevronRight, Lock } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import PrimaryButton from '../components/PrimaryButton'
 import { getTodayQuestion, getRandomQuestions, findQuestion, findCategory, QUESTIONS } from '../lib/questions'
-import { getAnsweredCount, getRecentAnswers } from '../lib/answersStore'
+import { getAnsweredCount, getRecentAnswers, getStreakDays } from '../lib/answersStore'
 import { MOCK_PARTNER_RECENT } from '../data/mock'
 import { BOOK_ENTRIES, getBookProgress } from '../lib/bookUtils'
 import { getBookConfig } from '../lib/bookStore'
 import { isAdultVerified } from '../lib/adultGate'
+import { getNextAnniversary } from '../lib/anniversary'
 
 function timeAgo(iso) {
   const diffMs = Date.now() - new Date(iso).getTime()
@@ -26,6 +27,8 @@ export default function Home() {
   // 전체 500문항 기준 진행률. 답변이 1개라도 있으면 반올림으로 0%가 되어 "0%"와 "n개"가
   // 모순처럼 보이지 않도록 최소 1%는 보장한다.
   const pct = answeredCount === 0 ? 0 : Math.max(1, Math.round((answeredCount / QUESTIONS.length) * 100))
+  const streak = getStreakDays()
+  const nextAnniv = getNextAnniversary()
 
   const recent = getRecentAnswers(2)
     .map((r) => ({ ...r, q: findQuestion(r.questionId) }))
@@ -50,7 +53,7 @@ export default function Home() {
         <div className="today-q-card">
           <div className="today-q-head">
             <span className="today-q-label">💗 오늘의 질문</span>
-            <span className="today-q-dday">D-12</span>
+            <span className="today-q-dday">{nextAnniv.label} D-{nextAnniv.daysLeft}</span>
           </div>
           <div className="today-q-title">{today.question}</div>
           <PrimaryButton onClick={() => navigate(`/qna/${today.categoryId}/${today.id}`)}>답변하기</PrimaryButton>
@@ -70,7 +73,7 @@ export default function Home() {
             <div className="stat-row-label">답변한 질문</div>
           </div>
           <div className="stat-row-item">
-            <div className="stat-row-value">23일🔥</div>
+            <div className="stat-row-value">{streak}일{streak > 0 ? '🔥' : ''}</div>
             <div className="stat-row-label">연속 참여일</div>
           </div>
         </div>
