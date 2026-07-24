@@ -19,6 +19,10 @@ export default function Notifications() {
       navigate(`/qna/${today.categoryId}/${today.id}`)
     } else if (n.kind === 'new') {
       navigate('/qna')
+    } else if (n.kind === 'letter') {
+      navigate('/letters')
+    } else if (n.kind === 'poke') {
+      navigate('/home')
     } else {
       navigate('/my')
     }

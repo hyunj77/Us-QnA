@@ -24,6 +24,7 @@ import BookmarksList from './pages/BookmarksList'
 import AnswersList from './pages/AnswersList'
 import UsStats from './pages/UsStats'
 import CoupleConnect from './pages/CoupleConnect'
+import LetterBox from './pages/LetterBox'
 
 function AppRoutes() {
   const location = useLocation()
@@ -95,6 +96,7 @@ function AppRoutes() {
         <Route path="/qna/:categoryId/:questionId" element={<QuestionDetail />} />
         <Route path="/qna/:categoryId/:questionId/result" element={<AnswerResult />} />
         <Route path="/memories" element={<Memories />} />
+        <Route path="/letters" element={<LetterBox />} />
         <Route path="/books" element={<BookList />} />
         <Route path="/book/:bookId" element={<BookViewer />} />
         <Route path="/bookmarks" element={<BookmarksList />} />

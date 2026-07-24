@@ -1594,6 +1594,40 @@ input:focus, textarea:focus {
 }
 
 /* ===== Notifications ===== */
+.letter-card {
+  background: #fff;
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.letter-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.letter-card-tag {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+}
+
+.letter-card-time {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.letter-card-body {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
 .notif-item {
   display: flex;
   align-items: flex-start;
