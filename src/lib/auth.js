@@ -32,9 +32,10 @@ export function getSession() {
   return supabase.auth.getSession().then(({ data }) => data.session)
 }
 
-// callback(session | null) 형태로 로그인/로그아웃 시점마다 호출된다.
+// callback(session | null, event) 형태로 로그인/로그아웃/토큰갱신 시점마다 호출된다.
+// event: 'SIGNED_IN' | 'SIGNED_OUT' | 'TOKEN_REFRESHED' | 'USER_UPDATED' 등
 export function onAuthStateChange(callback) {
   if (!supabase) return () => {}
-  const { data } = supabase.auth.onAuthStateChange((_event, session) => callback(session))
+  const { data } = supabase.auth.onAuthStateChange((event, session) => callback(session, event))
   return () => data.subscription.unsubscribe()
 }
