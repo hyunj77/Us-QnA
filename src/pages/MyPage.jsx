@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Settings, Star, FileText, Mail, MessageCircle, ChevronRight, Sparkles, Bell } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
+import AdBanner from '../components/AdBanner'
 import { MOCK_PROFILE } from '../data/mock'
 import { getAnsweredCount, getStreakDays } from '../lib/answersStore'
 import { getAvatar, saveAvatarPhoto } from '../lib/profileStore'
@@ -102,9 +103,13 @@ export default function MyPage() {
         <MenuRow Icon={Mail} label="상대 답변 모아보기" onClick={() => navigate('/answers/partner')} />
       </div>
 
-      <div className="card" style={{ margin: '0 20px', width: 'auto', padding: 0, overflow: 'hidden' }}>
+      <div className="card" style={{ margin: '0 20px 16px', width: 'auto', padding: 0, overflow: 'hidden' }}>
         <MenuRow Icon={Settings} label="설정" onClick={() => navigate('/settings')} />
         <MenuRow Icon={MessageCircle} label="문의하기" />
+      </div>
+
+      <div style={{ margin: '0 20px 16px' }}>
+        <AdBanner />
       </div>
 
       <BottomNav />

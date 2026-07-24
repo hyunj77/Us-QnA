@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Gift, Bell, ChevronRight, Lock, Hand } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import PrimaryButton from '../components/PrimaryButton'
+import AdBanner from '../components/AdBanner'
 import { getTodayQuestion, findQuestion, findCategory, QUESTIONS } from '../lib/questions'
 import { getAnsweredCount, getRecentAnswers, getStreakDays } from '../lib/answersStore'
 import { MOCK_PARTNER_RECENT } from '../data/mock'
@@ -248,6 +249,7 @@ export default function Home() {
           )}
         </div>
 
+        <AdBanner />
       </div>
 
       {pokeToast && <div className="toast">{pokeToast}</div>}

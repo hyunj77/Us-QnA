@@ -1992,6 +1992,21 @@ input:focus, textarea:focus {
   color: var(--main);
 }
 
+/* ===== Ad banner ===== */
+.ad-banner-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.ad-banner-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  align-self: center;
+}
+
 /* ===== Community (커뮤니티 탭) ===== */
 .compose-field-label {
   font-size: 13px;
