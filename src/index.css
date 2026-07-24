@@ -813,6 +813,73 @@ input:focus, textarea:focus {
   color: #fff;
 }
 
+/* ===== Balance game inline choice row ===== */
+.balance-row {
+  padding: 14px 0;
+}
+
+.balance-row + .balance-row {
+  border-top: 1px solid var(--divider);
+}
+
+.balance-row-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.balance-choice-row {
+  display: flex;
+  gap: 10px;
+}
+
+.balance-choice-btn {
+  flex: 1;
+  min-height: 44px;
+  background: #fff;
+  border: 1.5px solid var(--divider);
+  border-radius: var(--r-md);
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.balance-choice-btn-active {
+  background: var(--main);
+  border-color: var(--main);
+  color: #fff;
+}
+
+.balance-who-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.balance-who-cell {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.balance-who-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--main);
+  background: var(--sub);
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+}
+
+.balance-who-tag-partner {
+  color: #A8790A;
+  background: #FFF3D0;
+}
+
 .question-check-done {
   background: var(--main);
   border-color: var(--main);

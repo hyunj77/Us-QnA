@@ -13,6 +13,13 @@ export const MOCK_MEMORIES = [
   { id: 4, month: '2024년 4월', date: '4.25', title: '내가 반하게 된 애인의 모습은?' },
 ]
 
+// 커플 연결 기능이 붙기 전까지, 밸런스 게임에서 상대방이 고른 선택지를 데모용으로 결정적으로 흉내낸다.
+export function getMockPartnerChoice(question) {
+  let hash = 0
+  for (let i = 0; i < question.id.length; i++) hash = (hash * 31 + question.id.charCodeAt(i)) >>> 0
+  return question.options[hash % question.options.length]
+}
+
 export const MOCK_PROFILE = {
   startDate: '2024.01.17',
   daysTogether: 123,

@@ -6,7 +6,8 @@ import BottomNav from '../components/BottomNav'
 import CategoryChip from '../components/CategoryChip'
 import QuestionCard from '../components/QuestionCard'
 import { findCategory, getQuestionsByCategory, getSubGroups } from '../lib/questions'
-import { getAnsweredIds } from '../lib/answersStore'
+import { getAnswer, getAnsweredIds, saveAnswer } from '../lib/answersStore'
+import { getMockPartnerChoice } from '../data/mock'
 
 const ROW_ICONS = ['❤️', '💫', '🎬', '🍴', '⭐', '🎨', '🐰', '🎵', '💌', '🌙']
 function pickIcon(id) {
@@ -15,18 +16,53 @@ function pickIcon(id) {
   return ROW_ICONS[hash % ROW_ICONS.length]
 }
 
+function BalanceRow({ question, selected, onSelect }) {
+  const partnerChoice = selected ? getMockPartnerChoice(question) : null
+  return (
+    <div className="balance-row">
+      <div className="balance-row-title">{question.title.replace(/\?$/, '').replace(/\s*(vs|VS)\s*/, ' vs ')}</div>
+      <div className="balance-choice-row">
+        {question.options.map((opt) => (
+          <button
+            key={opt}
+            className={`balance-choice-btn ${selected === opt ? 'balance-choice-btn-active' : ''}`}
+            onClick={() => onSelect(opt)}
+          >
+            {opt}
+          </button>
+        ))}
+      </div>
+      {selected && (
+        <div className="balance-who-row">
+          {question.options.map((opt) => (
+            <div key={opt} className="balance-who-cell">
+              {selected === opt && <span className="balance-who-tag">🧑 나</span>}
+              {partnerChoice === opt && <span className="balance-who-tag balance-who-tag-partner">💛 상대</span>}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function QnAQuestionList() {
   const { categoryId } = useParams()
   const navigate = useNavigate()
   const category = findCategory(categoryId)
   const [activeSub, setActiveSub] = useState('전체')
-  const answeredIds = getAnsweredIds()
+  const [answeredIds, setAnsweredIds] = useState(() => getAnsweredIds())
 
   const subGroups = useMemo(() => getSubGroups(categoryId).filter(Boolean), [categoryId])
   const questions = getQuestionsByCategory(categoryId)
   const shown = activeSub === '전체' ? questions : questions.filter((q) => q.sub === activeSub)
 
   if (!category) return <div className="page-center"><p>존재하지 않는 카테고리예요.</p></div>
+
+  const handleBalanceSelect = (question, option) => {
+    saveAnswer(question.id, option)
+    setAnsweredIds(getAnsweredIds())
+  }
 
   return (
     <div className="screen">
@@ -51,16 +87,25 @@ export default function QnAQuestionList() {
       </div>
 
       <div style={{ padding: '0 20px' }}>
-        {shown.map((q) => (
-          <QuestionCard
-            key={q.id}
-            emoji={pickIcon(q.id)}
-            title={q.title}
-            desc={q.sub}
-            done={answeredIds.has(q.id)}
-            onClick={() => navigate(`/qna/${categoryId}/${q.id}`)}
-          />
-        ))}
+        {shown.map((q) =>
+          q.type === 'choice' ? (
+            <BalanceRow
+              key={q.id}
+              question={q}
+              selected={getAnswer(q.id)?.body}
+              onSelect={(opt) => handleBalanceSelect(q, opt)}
+            />
+          ) : (
+            <QuestionCard
+              key={q.id}
+              emoji={pickIcon(q.id)}
+              title={q.title}
+              desc={q.sub}
+              done={answeredIds.has(q.id)}
+              onClick={() => navigate(`/qna/${categoryId}/${q.id}`)}
+            />
+          )
+        )}
       </div>
 
       <BottomNav />
