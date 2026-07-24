@@ -34,7 +34,8 @@ function AppRoutes() {
   }, [])
 
   // 로그인 세션이 있으면 앱을 어느 경로로 열었든 프로필/커플 캐시를 채우고 찌르기 구독을 건다.
-  // 스플래시('/')로 들어온 경우에만 프로필/커플 연결 여부에 따라 알맞은 화면으로 자동 이동시킨다.
+  // 커플 연결은 더 이상 강제 단계가 아니라, 홈 화면 상단 배너에서 원할 때 하도록 유도한다.
+  // 스플래시('/')로 들어온 경우에만 홈으로 자동 이동시킨다.
   useEffect(() => {
     getSession().then(async (session) => {
       if (!session) return
@@ -42,7 +43,7 @@ function AppRoutes() {
       await refreshCoupleState()
       if (profile?.couple_id) subscribePokes()
       if (location.pathname === '/') {
-        navigate(profile?.couple_id ? '/home' : '/couple-connect', { replace: true })
+        navigate('/home', { replace: true })
       }
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
