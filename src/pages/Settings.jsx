@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Bell, Lock, Unlink, Download, MessageCircle, ChevronRight, User, X } from 'lucide-react'
+import { Bell, Lock, Unlink, Download, MessageCircle, ChevronRight, User, X, LogOut } from 'lucide-react'
 import TopAppBar from '../components/TopAppBar'
 import PrimaryButton from '../components/PrimaryButton'
 import { isLoggedIn } from '../lib/authState'
 import { getCachedProfile, refreshCoupleState } from '../lib/coupleState'
 import { updateNickname } from '../lib/coupleStore'
+import { signOut } from '../lib/auth'
 
 const ROWS = [
   { Icon: Bell, label: '알림 설정' },
@@ -28,6 +29,11 @@ export default function Settings() {
     setInput(nickname)
     setError('')
     setEditing(true)
+  }
+
+  const handleLogout = async () => {
+    await signOut()
+    navigate('/signup', { replace: true })
   }
 
   const handleSave = async () => {
@@ -62,7 +68,7 @@ export default function Settings() {
         </div>
       )}
 
-      <div className="card" style={{ margin: '4px 20px', width: 'auto', padding: 0, overflow: 'hidden' }}>
+      <div className="card" style={{ margin: '4px 20px 16px', width: 'auto', padding: 0, overflow: 'hidden' }}>
         {ROWS.map(({ Icon, label }) => (
           <button key={label} className="menu-row" style={{ width: '100%', background: 'none', textAlign: 'left' }}>
             <Icon size={18} color="var(--main)" />
@@ -71,6 +77,15 @@ export default function Settings() {
           </button>
         ))}
       </div>
+
+      {isLoggedIn() && (
+        <div className="card" style={{ margin: '4px 20px', width: 'auto', padding: 0, overflow: 'hidden' }}>
+          <button className="menu-row" style={{ width: '100%', background: 'none', textAlign: 'left' }} onClick={handleLogout}>
+            <LogOut size={18} color="var(--error)" />
+            <span className="menu-row-label" style={{ color: 'var(--error)' }}>로그아웃</span>
+          </button>
+        </div>
+      )}
 
       {toast && <div className="toast">{toast}</div>}
 
