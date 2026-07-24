@@ -4,6 +4,7 @@ import BottomNav from '../components/BottomNav'
 import ProgressCard from '../components/ProgressCard'
 import { getCategories, getQuestionsByCategory, getSubGroups, getCategoryDisplayLabel, getRandomQuestions } from '../lib/questions'
 import { getAnsweredIds } from '../lib/answersStore'
+import { shouldShowAdGate } from '../lib/adGateStore'
 
 const CATEGORY_STYLE = {
   myself: { bg: '#FFEAD5', iconBg: 'rgba(255,255,255,0.75)' },
@@ -35,6 +36,12 @@ export default function QnACategories() {
   const goRandom = () => {
     const [q] = getRandomQuestions(1, { excludeAdult: true })
     navigate(`/qna/${q.categoryId}/${q.id}`)
+  }
+
+  const openCategory = (categoryId) => {
+    const next = `/qna/${categoryId}`
+    if (shouldShowAdGate()) navigate('/ad-gate', { state: { next } })
+    else navigate(next)
   }
 
   return (
@@ -70,7 +77,7 @@ export default function QnACategories() {
               total={questions.length}
               bg={style.bg}
               iconBg={style.iconBg}
-              onClick={() => navigate(`/qna/${c.id}`)}
+              onClick={() => openCategory(c.id)}
             />
           )
         })}

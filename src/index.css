@@ -2007,6 +2007,18 @@ input:focus, textarea:focus {
   align-self: center;
 }
 
+.ad-banner-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px dashed var(--divider);
+  border-radius: var(--r-md);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--bg);
+}
+
 /* ===== Community (커뮤니티 탭) ===== */
 .compose-field-label {
   font-size: 13px;

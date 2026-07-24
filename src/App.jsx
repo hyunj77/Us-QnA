@@ -35,6 +35,9 @@ import DailyFortunePage from './pages/DailyFortunePage'
 import SajuPage from './pages/SajuPage'
 import CommunityWrite from './pages/CommunityWrite'
 import CommunityPostDetail from './pages/CommunityPostDetail'
+import AdGatePage from './pages/AdGatePage'
+import RemoveAdsPage from './pages/RemoveAdsPage'
+import BookPrintPage from './pages/BookPrintPage'
 
 function AppRoutes() {
   const location = useLocation()
@@ -125,6 +128,9 @@ function AppRoutes() {
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/my" element={<MyPage />} />
         <Route path="/settings" element={<Settings />} />
+        <Route path="/ad-gate" element={<AdGatePage />} />
+        <Route path="/settings/remove-ads" element={<RemoveAdsPage />} />
+        <Route path="/settings/book-print" element={<BookPrintPage />} />
       </Routes>
     </div>
   )

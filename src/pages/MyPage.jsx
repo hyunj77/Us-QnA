@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Settings, Star, FileText, Mail, MessageCircle, ChevronRight, Sparkles, Bell } from 'lucide-react'
+import { Settings, Star, FileText, Mail, MessageCircle, ChevronRight, Sparkles, Bell, ShieldOff, Package } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import AdBanner from '../components/AdBanner'
 import { MOCK_PROFILE } from '../data/mock'
@@ -101,6 +101,11 @@ export default function MyPage() {
         <MenuRow Icon={Star} label="즐겨찾기" onClick={() => navigate('/bookmarks')} />
         <MenuRow Icon={FileText} label="내 답변 모아보기" desc={`${answeredCount}개 작성함`} onClick={() => navigate('/answers/mine')} />
         <MenuRow Icon={Mail} label="상대 답변 모아보기" onClick={() => navigate('/answers/partner')} />
+      </div>
+
+      <div className="card" style={{ margin: '0 20px 16px', width: 'auto', padding: 0, overflow: 'hidden' }}>
+        <MenuRow Icon={ShieldOff} label="광고 제거" desc="3,900원" onClick={() => navigate('/settings/remove-ads')} />
+        <MenuRow Icon={Package} label="우리의 책 인쇄 주문" onClick={() => navigate('/settings/book-print')} />
       </div>
 
       <div className="card" style={{ margin: '0 20px 16px', width: 'auto', padding: 0, overflow: 'hidden' }}>
