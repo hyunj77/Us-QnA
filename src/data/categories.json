@@ -1,8 +1,65 @@
 [
-  { "id": "myself", "category": 6, "order": 1, "emoji": "🙋", "label": "나의 소개서", "color": "#FFA94D", "isAdult": false },
-  { "id": "guide", "category": 1, "order": 2, "emoji": "❤️", "label": "나의 연애 안내서", "color": "#FF8FA3", "isAdult": false },
-  { "id": "couple", "category": 2, "order": 3, "emoji": "💕", "label": "커플 문답", "color": "#FF6FA5", "isAdult": false },
-  { "id": "ifonly", "category": 4, "order": 4, "emoji": "🤔", "label": "만약에 문답", "color": "#5C8DFF", "isAdult": false },
-  { "id": "balance", "category": 5, "order": 5, "emoji": "⚖️", "label": "밸런스 게임", "color": "#37C99A", "isAdult": false },
-  { "id": "nineteen", "category": 3, "order": 6, "emoji": "🔥", "label": "19금 문답", "color": "#B25CFF", "isAdult": true }
+  {
+    "id": "myself",
+    "category": 6,
+    "order": 1,
+    "emoji": "🙋",
+    "label": "나의 소개서",
+    "color": "#FFA94D",
+    "isAdult": false
+  },
+  {
+    "id": "guide",
+    "category": 1,
+    "order": 2,
+    "emoji": "❤️",
+    "label": "나의 연애 안내서",
+    "color": "#FF8FA3",
+    "isAdult": false
+  },
+  {
+    "id": "couple",
+    "category": 2,
+    "order": 3,
+    "emoji": "💕",
+    "label": "커플 문답",
+    "color": "#FF6FA5",
+    "isAdult": false
+  },
+  {
+    "id": "ifonly",
+    "category": 4,
+    "order": 4,
+    "emoji": "🤔",
+    "label": "만약에 문답",
+    "color": "#5C8DFF",
+    "isAdult": false
+  },
+  {
+    "id": "balance",
+    "category": 5,
+    "order": 5,
+    "emoji": "⚖️",
+    "label": "밸런스 게임",
+    "color": "#37C99A",
+    "isAdult": false
+  },
+  {
+    "id": "nineteen",
+    "category": 3,
+    "order": 7,
+    "emoji": "🔥",
+    "label": "19금 문답",
+    "color": "#B25CFF",
+    "isAdult": true
+  },
+  {
+    "id": "heartpairing",
+    "category": 7,
+    "order": 6,
+    "emoji": "📖",
+    "label": "하트페어링 북 질문 리스트",
+    "color": "#F06595",
+    "isAdult": false
+  }
 ]
