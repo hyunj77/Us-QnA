@@ -8,6 +8,8 @@ import { getAvatar, saveAvatarPhoto } from '../lib/profileStore'
 import { getLikedCount } from '../lib/reactionsStore'
 import { getTogetherDays, getTopCategory, getAvgAnswerLength } from '../lib/statsUtils'
 import { resizeImageFile } from '../lib/imageUtils'
+import { isLoggedIn } from '../lib/authState'
+import { getCachedCouple } from '../lib/coupleState'
 
 export default function MyPage() {
   const navigate = useNavigate()
@@ -17,6 +19,9 @@ export default function MyPage() {
   const togetherDays = getTogetherDays()
   const topCategory = getTopCategory()
   const avgLength = getAvgAnswerLength()
+  const startDateLabel = isLoggedIn()
+    ? (getCachedCouple()?.start_date ? getCachedCouple().start_date.replaceAll('-', '.') : null)
+    : MOCK_PROFILE.startDate
   const [mineAvatar, setMineAvatar] = useState(() => getAvatar('mine'))
   const [partnerAvatar, setPartnerAvatar] = useState(() => getAvatar('partner'))
 
@@ -45,8 +50,8 @@ export default function MyPage() {
             <input type="file" accept="image/*" onChange={handleAvatarUpload('partner', setPartnerAvatar)} style={{ display: 'none' }} />
           </label>
         </div>
-        <div className="profile-title">우리, {togetherDays}일째 💕</div>
-        <div className="profile-since">{MOCK_PROFILE.startDate} ~</div>
+        <div className="profile-title">{togetherDays != null ? `우리, ${togetherDays}일째 💕` : '커플 연결을 기다리는 중'}</div>
+        {startDateLabel && <div className="profile-since">{startDateLabel} ~</div>}
       </div>
 
       <div className="card stat-row" style={{ margin: '0 20px 20px', width: 'auto' }}>

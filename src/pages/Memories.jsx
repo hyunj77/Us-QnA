@@ -9,18 +9,21 @@ import { findCategory } from '../lib/questions'
 import { BOOK_ENTRIES, getBookProgress } from '../lib/bookUtils'
 import { getBookConfig } from '../lib/bookStore'
 import { isAdultVerified } from '../lib/adultGate'
+import { isLoggedIn } from '../lib/authState'
 
 export default function Memories() {
   const navigate = useNavigate()
+  // 실제 로그인한 사용자는 진짜 답변이 쌓이기 전까지 데모용 추억을 보여주지 않는다.
+  const memories = useMemo(() => (isLoggedIn() ? [] : MOCK_MEMORIES), [])
 
   const grouped = useMemo(() => {
     const map = new Map()
-    for (const m of MOCK_MEMORIES) {
+    for (const m of memories) {
       if (!map.has(m.month)) map.set(m.month, [])
       map.get(m.month).push(m)
     }
     return [...map.entries()]
-  }, [])
+  }, [memories])
 
   return (
     <div className="screen">
@@ -68,7 +71,7 @@ export default function Memories() {
           <span className="section-title">캘린더</span>
         </div>
         <div style={{ padding: '0 20px' }}>
-          <CalendarView memories={MOCK_MEMORIES} />
+          <CalendarView memories={memories} />
         </div>
       </div>
 
@@ -77,7 +80,7 @@ export default function Memories() {
         <div className="section-head" style={{ padding: '0 20px' }}>
           <span className="section-title">타임라인</span>
         </div>
-        {MOCK_MEMORIES.length > 0 ? (
+        {memories.length > 0 ? (
           <div>
             {grouped.map(([month, items]) => (
               <div key={month}>

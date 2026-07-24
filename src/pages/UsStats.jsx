@@ -29,7 +29,7 @@ export default function UsStats() {
       <div style={{ padding: '4px 20px 24px', display: 'flex', flexDirection: 'column', gap: 16 }}>
         <div className="card us-hero-card">
           <div className="us-hero-emoji">💕</div>
-          <div className="us-hero-days">함께한 지 {togetherDays}일째</div>
+          <div className="us-hero-days">{togetherDays != null ? `함께한 지 ${togetherDays}일째` : '커플 연결을 기다리는 중'}</div>
           <div className="us-hero-sub">답변 {answeredCount}개 · 연속 참여 {streak}일</div>
         </div>
 

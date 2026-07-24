@@ -1,3 +1,5 @@
+import { isLoggedIn } from '../lib/authState'
+
 // Supabase 연동 전까지 화면 확인용 샘플 데이터
 export const MOCK_NOTIFICATIONS = [
   { id: 1, emoji: '💌', bg: 'var(--sub)', title: '오늘의 문답이 도착했어요!', sub: '"애인이 가장 보고싶었던 순간은?"', time: '방금', unread: true, kind: 'today' },
@@ -21,7 +23,9 @@ export const MOCK_MEMORIES = [
 ]
 
 // 커플 연결 기능이 붙기 전까지, 밸런스 게임에서 상대방이 고른 선택지를 데모용으로 결정적으로 흉내낸다.
+// 실제 로그인한 사용자에게는 아직 답변 동기화가 안 붙어서 가짜 데이터를 보여주지 않는다.
 export function getMockPartnerChoice(question) {
+  if (isLoggedIn()) return null
   let hash = 0
   for (let i = 0; i < question.id.length; i++) hash = (hash * 31 + question.id.charCodeAt(i)) >>> 0
   return question.options[hash % question.options.length]
@@ -38,7 +42,9 @@ const PARTNER_ANSWER_TEMPLATES = [
 
 // 커플 연결 기능이 붙기 전까지, 상대방의 답변 완료 여부/내용을 데모용으로 결정적으로 흉내낸다.
 // 약 40%는 "아직 답변 전(잠금)" 상태로 나오게 해서 두 UI 상태를 모두 확인할 수 있게 한다.
+// 실제 로그인한 사용자에게는 아직 답변 동기화가 안 붙어서 가짜 데이터를 보여주지 않는다.
 export function getMockPartnerAnswer(question) {
+  if (isLoggedIn()) return null
   let hash = 0
   for (let i = 0; i < question.id.length; i++) hash = (hash * 31 + question.id.charCodeAt(i)) >>> 0
   if (hash % 10 < 4) return null

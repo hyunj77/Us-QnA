@@ -1,6 +1,7 @@
 import { QUESTIONS, findCategory } from './questions'
 import { getAllAnswers } from './answersStore'
-import { getMockPartnerChoice, MOCK_PROFILE } from '../data/mock'
+import { getMockPartnerChoice } from '../data/mock'
+import { getEffectiveStartDate } from './coupleState'
 
 const Q_MAP = new Map(QUESTIONS.map((q) => [q.id, q]))
 
@@ -19,7 +20,8 @@ function tokenize(text) {
 }
 
 export function getTogetherDays() {
-  const start = new Date(MOCK_PROFILE.startDate.replace(/\./g, '-'))
+  const start = getEffectiveStartDate()
+  if (!start) return null
   const today = new Date()
   const startMid = new Date(start.getFullYear(), start.getMonth(), start.getDate())
   const todayMid = new Date(today.getFullYear(), today.getMonth(), today.getDate())

@@ -9,6 +9,7 @@ import { BOOK_ENTRIES, getBookProgress } from '../lib/bookUtils'
 import { getBookConfig } from '../lib/bookStore'
 import { isAdultVerified } from '../lib/adultGate'
 import { getNextAnniversary } from '../lib/anniversary'
+import { isLoggedIn } from '../lib/authState'
 
 function timeAgo(iso) {
   const diffMs = Date.now() - new Date(iso).getTime()
@@ -53,7 +54,7 @@ export default function Home() {
         <div className="today-q-card">
           <div className="today-q-head">
             <span className="today-q-label">💗 오늘의 질문</span>
-            <span className="today-q-dday">{nextAnniv.label} D-{nextAnniv.daysLeft}</span>
+            <span className="today-q-dday">{nextAnniv.daysLeft == null ? nextAnniv.label : `${nextAnniv.label} D-${nextAnniv.daysLeft}`}</span>
           </div>
           <div className="today-q-title">{today.question}</div>
           <PrimaryButton onClick={() => navigate(`/qna/${today.categoryId}/${today.id}`)}>답변하기</PrimaryButton>
@@ -110,19 +111,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="card partner-activity-card">
-          <div className="partner-activity-head">
-            <span className="icon-badge" style={{ background: 'var(--sub)' }}>💌</span>
-            <div>
-              <div className="partner-activity-title">상대방의 최근 활동</div>
-              <div className="partner-activity-time">{MOCK_PARTNER_RECENT.time}</div>
+        {!isLoggedIn() && (
+          <div className="card partner-activity-card">
+            <div className="partner-activity-head">
+              <span className="icon-badge" style={{ background: 'var(--sub)' }}>💌</span>
+              <div>
+                <div className="partner-activity-title">상대방의 최근 활동</div>
+                <div className="partner-activity-time">{MOCK_PARTNER_RECENT.time}</div>
+              </div>
             </div>
+            <div className="partner-activity-body">
+              <Lock size={13} /> {MOCK_PARTNER_RECENT.question}
+            </div>
+            <div className="partner-activity-hint">내가 이 질문에 답하면 상대방 답변을 볼 수 있어요</div>
           </div>
-          <div className="partner-activity-body">
-            <Lock size={13} /> {MOCK_PARTNER_RECENT.question}
-          </div>
-          <div className="partner-activity-hint">내가 이 질문에 답하면 상대방 답변을 볼 수 있어요</div>
-        </div>
+        )}
 
         <div>
           <div className="section-head">

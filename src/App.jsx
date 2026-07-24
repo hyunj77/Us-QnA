@@ -2,6 +2,8 @@ import { useEffect } from 'react'
 import { HashRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { checkTodayAnniversary } from './lib/anniversaryNotify'
 import { getSession } from './lib/auth'
+import { ensureProfile } from './lib/coupleStore'
+import { refreshCoupleState } from './lib/coupleState'
 import Splash from './pages/Splash'
 import Onboarding from './pages/Onboarding'
 import Signup from './pages/Signup'
@@ -21,6 +23,7 @@ import BookList from './pages/BookList'
 import BookmarksList from './pages/BookmarksList'
 import AnswersList from './pages/AnswersList'
 import UsStats from './pages/UsStats'
+import CoupleConnect from './pages/CoupleConnect'
 
 function AppRoutes() {
   const location = useLocation()
@@ -30,11 +33,15 @@ function AppRoutes() {
     checkTodayAnniversary()
   }, [])
 
-  // 카카오/구글 로그인 후 돌아왔을 때(또는 세션이 남아있는 재방문 시) 스플래시를 건너뛰고 홈으로 보낸다.
+  // 카카오/구글 로그인 후 돌아왔을 때(또는 세션이 남아있는 재방문 시) 스플래시를 건너뛴다.
+  // 프로필이 없으면 만들고, 아직 커플 연결 전이면 연결 화면으로, 연결됐으면 바로 홈으로 보낸다.
   useEffect(() => {
     if (location.pathname !== '/') return
-    getSession().then((session) => {
-      if (session) navigate('/home', { replace: true })
+    getSession().then(async (session) => {
+      if (!session) return
+      const profile = await ensureProfile(session.user)
+      await refreshCoupleState()
+      navigate(profile?.couple_id ? '/home' : '/couple-connect', { replace: true })
     })
   }, [location.pathname, navigate])
 
@@ -44,6 +51,7 @@ function AppRoutes() {
         <Route path="/" element={<Splash />} />
         <Route path="/onboarding" element={<Onboarding />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/couple-connect" element={<CoupleConnect />} />
 
         <Route path="/home" element={<Home />} />
         <Route path="/qna" element={<QnACategories />} />

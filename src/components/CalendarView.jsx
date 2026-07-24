@@ -1,16 +1,27 @@
 import { useMemo, useState } from 'react'
-import { ChevronLeft, ChevronRight, X, Trash2 } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Plus, X, Trash2 } from 'lucide-react'
 import { getAnniversaryLabel } from '../lib/anniversary'
 import { getCustomAnniversary, toggleCustomAnniversary } from '../lib/customAnniversaries'
+import { isLoggedIn } from '../lib/authState'
+import { updateStartDate } from '../lib/coupleStore'
+import { refreshCoupleState } from '../lib/coupleState'
 
 const DOW = ['일', '월', '화', '수', '목', '금', '토']
 const PRESETS = ['첫 만남', '첫 데이트', '첫 키스', '동거 시작', '약혼', '결혼', '프로포즈', '생일']
+
+function toDateStr(date) {
+  const y = date.getFullYear()
+  const m = String(date.getMonth() + 1).padStart(2, '0')
+  const d = String(date.getDate()).padStart(2, '0')
+  return `${y}-${m}-${d}`
+}
 
 export default function CalendarView({ memories = [] }) {
   const today = new Date()
   const [year, setYear] = useState(today.getFullYear())
   const [month, setMonth] = useState(today.getMonth()) // 0-indexed
   const [picker, setPicker] = useState(null) // Date | null
+  const [toast, setToast] = useState('')
   const [, forceRerender] = useState(0)
 
   const memoryDaySet = useMemo(() => {
@@ -40,9 +51,25 @@ export default function CalendarView({ memories = [] }) {
     if (month === 11) { setMonth(0); setYear((y) => y + 1) } else setMonth((m) => m + 1)
   }
 
-  const handleSelectPreset = (label) => {
+  const flashToast = (msg) => {
+    setToast(msg)
+    setTimeout(() => setToast(''), 2000)
+  }
+
+  const handleSelectPreset = async (label) => {
     if (!picker) return
     toggleCustomAnniversary(picker, label)
+
+    if (label === '첫 만남' && isLoggedIn()) {
+      try {
+        await updateStartDate(toDateStr(picker))
+        await refreshCoupleState()
+        flashToast('💕 우리의 시작일이 설정됐어요!')
+      } catch {
+        flashToast('시작일 설정에 실패했어요.')
+      }
+    }
+
     setPicker(null)
     forceRerender((n) => n + 1)
   }
@@ -58,7 +85,7 @@ export default function CalendarView({ memories = [] }) {
   const pickerCustom = picker ? getCustomAnniversary(picker) : null
 
   return (
-    <div className="card calendar-card">
+    <div className="card calendar-card" style={{ position: 'relative' }}>
       <div className="calendar-nav">
         <button type="button" className="topbar-icon-btn" onClick={goPrev}><ChevronLeft size={18} /></button>
         <span className="calendar-nav-label">{year}년 {month + 1}월</span>
@@ -98,15 +125,30 @@ export default function CalendarView({ memories = [] }) {
         <span><span className="calendar-memory-dot" /> 추억이 있는 날</span>
       </div>
 
+      <button type="button" className="calendar-add-fab" onClick={() => setPicker(today)} aria-label="기념일 추가">
+        <Plus size={22} />
+      </button>
+
       {picker && (
         <div className="sheet-overlay" onClick={() => setPicker(null)}>
           <div className="sheet-card" onClick={(e) => e.stopPropagation()}>
             <div className="sheet-head">
-              <span className="sheet-title">
-                {picker.getMonth() + 1}월 {picker.getDate()}일 기념일 {pickerCustom ? '수정' : '추가'}
-              </span>
+              <span className="sheet-title">기념일 {pickerCustom ? '수정' : '추가'}</span>
               <button className="topbar-icon-btn" onClick={() => setPicker(null)}><X size={18} /></button>
             </div>
+
+            <label className="sheet-field-label">날짜</label>
+            <input
+              className="field"
+              type="date"
+              style={{ marginBottom: 16 }}
+              value={toDateStr(picker)}
+              onChange={(e) => {
+                if (!e.target.value) return
+                const [y, m, d] = e.target.value.split('-').map(Number)
+                setPicker(new Date(y, m - 1, d))
+              }}
+            />
 
             <div className="anniv-preset-grid">
               {PRESETS.map((label) => (
@@ -128,6 +170,8 @@ export default function CalendarView({ memories = [] }) {
           </div>
         </div>
       )}
+
+      {toast && <div className="toast">{toast}</div>}
     </div>
   )
 }
