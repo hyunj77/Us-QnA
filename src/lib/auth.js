@@ -4,7 +4,13 @@ export function signInWithKakao() {
   if (!supabase) return Promise.reject(new Error('Supabase가 아직 설정되지 않았어요.'))
   return supabase.auth.signInWithOAuth({
     provider: 'kakao',
-    options: { redirectTo: window.location.origin + import.meta.env.BASE_URL },
+    options: {
+      redirectTo: window.location.origin + import.meta.env.BASE_URL,
+      // account_email은 비즈 인증 없이는 카카오 앱에서 동의항목 자체가 열리지 않아
+      // 기본 요청 스코프에 이메일이 섞여 있으면 카카오가 요청을 통째로 거부한다(KOE205).
+      // 실제로 동의항목에 켜둔 스코프만 명시적으로 요청한다.
+      scopes: 'profile_nickname profile_image',
+    },
   })
 }
 
