@@ -2,17 +2,18 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import BottomNav from '../components/BottomNav'
 import NotificationItem from '../components/NotificationItem'
-import { MOCK_NOTIFICATIONS, NOTIF_KIND_LABEL } from '../data/mock'
+import { NOTIF_KIND_LABEL } from '../data/mock'
 import { getTodayQuestion } from '../lib/questions'
+import { getNotifications, markAllRead as persistMarkAllRead, markRead } from '../lib/notificationsStore'
 
 export default function Notifications() {
   const navigate = useNavigate()
-  const [items, setItems] = useState(MOCK_NOTIFICATIONS)
+  const [items, setItems] = useState(getNotifications)
 
-  const markAllRead = () => setItems((prev) => prev.map((n) => ({ ...n, unread: false })))
+  const markAllRead = () => setItems(persistMarkAllRead())
 
   const handleClick = (n) => {
-    setItems((prev) => prev.map((item) => (item.id === n.id ? { ...item, unread: false } : item)))
+    setItems(markRead(n.id))
     if (n.kind === 'today' || n.kind === 'partner') {
       const today = getTodayQuestion()
       navigate(`/qna/${today.categoryId}/${today.id}`)

@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { HashRouter, Routes, Route } from 'react-router-dom'
+import { checkTodayAnniversary } from './lib/anniversaryNotify'
 import Splash from './pages/Splash'
 import Onboarding from './pages/Onboarding'
 import Signup from './pages/Signup'
@@ -17,6 +19,10 @@ import BookViewer from './pages/BookViewer'
 import BookList from './pages/BookList'
 
 export default function App() {
+  useEffect(() => {
+    checkTodayAnniversary()
+  }, [])
+
   return (
     <HashRouter>
       <div className="app-shell">

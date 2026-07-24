@@ -104,11 +104,31 @@ export default function BookViewer() {
       </div>
 
       <div className="book-page">
-        <div className="book-page-meta">{page.subcategory} · {page.who === 'partner' ? '상대의 이야기' : '나의 이야기'}</div>
+        <div className="book-page-meta">
+          {page.subcategory}{page.who !== 'shared' ? ` · ${page.who === 'partner' ? '상대의 이야기' : '나의 이야기'}` : ''}
+        </div>
         <div className="book-page-emoji">{page.illustEmoji}</div>
         <div className="book-page-question">{page.questionText}</div>
         <div className="book-page-divider" />
-        {isLockedPartnerPage ? (
+        {page.who === 'shared' ? (
+          <div className="book-page-answers">
+            <div className="book-page-answer-block">
+              <div className="book-page-answer-who">🧑 나</div>
+              <div className="book-page-answer">{page.mine.body}</div>
+            </div>
+            <div className="book-page-answer-block">
+              <div className="book-page-answer-who">💛 상대</div>
+              {page.partner ? (
+                <div className="book-page-answer">{page.partner.body}</div>
+              ) : (
+                <div className="book-page-locked">
+                  <Lock size={16} />
+                  <span>아직 작성 중이에요</span>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : isLockedPartnerPage ? (
           <div className="book-page-locked">
             <Lock size={18} />
             <span>아직 작성 중이에요</span>

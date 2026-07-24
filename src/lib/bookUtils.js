@@ -36,9 +36,17 @@ export function buildBookPages(categoryId, who) {
     if (who === 'shared') {
       const mine = getAnswer(q.id)
       if (!mine) continue
-      pages.push({ questionId: q.id, questionText: q.question, subcategory: q.subcategory, pageNumber: pageNumber++, who: 'mine', answer: mine, illustEmoji: emoji })
       const partnerBody = getMockPartnerAnswer(q)
-      pages.push({ questionId: q.id, questionText: q.question, subcategory: q.subcategory, pageNumber: pageNumber++, who: 'partner', answer: partnerBody ? { body: partnerBody } : null, illustEmoji: emoji })
+      pages.push({
+        questionId: q.id,
+        questionText: q.question,
+        subcategory: q.subcategory,
+        pageNumber: pageNumber++,
+        who: 'shared',
+        mine,
+        partner: partnerBody ? { body: partnerBody } : null,
+        illustEmoji: emoji,
+      })
       continue
     }
 

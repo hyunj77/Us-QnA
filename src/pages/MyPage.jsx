@@ -1,12 +1,24 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Settings, Star, FileText, Mail, MessageCircle, ChevronRight } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import { MOCK_PROFILE } from '../data/mock'
 import { getAnsweredCount } from '../lib/answersStore'
+import { getAvatar, saveAvatarPhoto } from '../lib/profileStore'
 
 export default function MyPage() {
   const navigate = useNavigate()
   const answeredCount = getAnsweredCount()
+  const [mineAvatar, setMineAvatar] = useState(() => getAvatar('mine'))
+  const [partnerAvatar, setPartnerAvatar] = useState(() => getAvatar('partner'))
+
+  const handleAvatarUpload = (who, setAvatar) => (e) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onload = () => setAvatar(saveAvatarPhoto(who, reader.result))
+    reader.readAsDataURL(file)
+  }
 
   return (
     <div className="screen">
@@ -16,8 +28,14 @@ export default function MyPage() {
 
       <div className="profile-head">
         <div className="profile-avatars">
-          <span>🧑</span>
-          <span>👩</span>
+          <label className="profile-avatar-upload">
+            {mineAvatar.type === 'photo' ? <img src={mineAvatar.image} alt="" /> : <span>{mineAvatar.image}</span>}
+            <input type="file" accept="image/*" onChange={handleAvatarUpload('mine', setMineAvatar)} style={{ display: 'none' }} />
+          </label>
+          <label className="profile-avatar-upload">
+            {partnerAvatar.type === 'photo' ? <img src={partnerAvatar.image} alt="" /> : <span>{partnerAvatar.image}</span>}
+            <input type="file" accept="image/*" onChange={handleAvatarUpload('partner', setPartnerAvatar)} style={{ display: 'none' }} />
+          </label>
         </div>
         <div className="profile-title">우리, {MOCK_PROFILE.daysTogether}일째 💕</div>
         <div className="profile-since">{MOCK_PROFILE.startDate} ~</div>
