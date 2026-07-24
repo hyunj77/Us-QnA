@@ -37,8 +37,7 @@ export default function QnACategories() {
 
   return (
     <div className="screen">
-      <div className="topbar">
-        <div className="topbar-title" style={{ fontSize: 20 }}>문답</div>
+      <div className="qna-float-search">
         <button className="topbar-icon-btn" onClick={() => navigate('/qna/search')}>
           <Search size={20} />
         </button>

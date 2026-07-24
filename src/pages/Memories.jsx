@@ -1,10 +1,15 @@
 import { useMemo, useState } from 'react'
-import { Calendar as CalendarIcon } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { Calendar as CalendarIcon, ChevronRight, Lock } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import MemoryCard from '../components/MemoryCard'
 import { MOCK_MEMORIES } from '../data/mock'
+import { findCategory } from '../lib/questions'
+import { BOOK_CATEGORIES, getBookProgress } from '../lib/bookUtils'
+import { isAdultVerified } from '../lib/adultGate'
 
 export default function Memories() {
+  const navigate = useNavigate()
   const [tab, setTab] = useState('timeline')
 
   const grouped = useMemo(() => {
@@ -26,9 +31,10 @@ export default function Memories() {
       <div className="memory-toggle-row">
         <button className={`result-tab ${tab === 'timeline' ? 'result-tab-active' : ''}`} onClick={() => setTab('timeline')}>타임라인</button>
         <button className={`result-tab ${tab === 'calendar' ? 'result-tab-active' : ''}`} onClick={() => setTab('calendar')}>캘린더</button>
+        <button className={`result-tab ${tab === 'book' ? 'result-tab-active' : ''}`} onClick={() => setTab('book')}>우리의 책</button>
       </div>
 
-      {tab === 'timeline' ? (
+      {tab === 'timeline' && (
         MOCK_MEMORIES.length > 0 ? (
           <div>
             {grouped.map(([month, items]) => (
@@ -47,9 +53,39 @@ export default function Memories() {
             <div className="empty-state-desc">문답에 답변하면 이곳에 추억으로 쌓여요!</div>
           </div>
         )
-      ) : (
+      )}
+
+      {tab === 'calendar' && (
         <div style={{ padding: '40px 20px', textAlign: 'center', color: 'var(--text-secondary)' }}>
           캘린더 보기는 준비 중이에요.
+        </div>
+      )}
+
+      {tab === 'book' && (
+        <div style={{ padding: '4px 20px 20px' }}>
+          <p className="book-tab-desc">답변이 쌓이면 나만의 사용 설명서가 완성돼요</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {BOOK_CATEGORIES.map((categoryId) => {
+              const category = findCategory(categoryId)
+              if (!category) return null
+              const { done, total } = getBookProgress(categoryId)
+              const locked = category.isAdult && !isAdultVerified()
+              return (
+                <button
+                  key={categoryId}
+                  className="card book-select-card"
+                  onClick={() => navigate(`/book/${categoryId}`)}
+                >
+                  <span className="icon-badge" style={{ background: `${category.color}22`, fontSize: 22 }}>{category.emoji}</span>
+                  <div className="book-select-body">
+                    <div className="book-select-title">{category.label}</div>
+                    <div className="book-select-desc">{done}/{total}개 답변 완료</div>
+                  </div>
+                  {locked ? <Lock size={16} color="var(--text-secondary)" /> : <ChevronRight size={16} className="menu-row-chevron" />}
+                </button>
+              )
+            })}
+          </div>
         </div>
       )}
 
