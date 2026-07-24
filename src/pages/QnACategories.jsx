@@ -6,6 +6,7 @@ import { getCategories, getQuestionsByCategory, getSubGroups } from '../lib/ques
 import { getAnsweredIds } from '../lib/answersStore'
 
 const CATEGORY_STYLE = {
+  myself: { bg: '#FFEAD5', iconBg: 'rgba(255,255,255,0.75)' },
   guide: { bg: '#FFE1EC', iconBg: 'rgba(255,255,255,0.75)' },
   couple: { bg: '#ECEAFB', iconBg: 'rgba(255,255,255,0.75)' },
   nineteen: { bg: '#FFE1D2', iconBg: 'rgba(255,255,255,0.75)' },
@@ -14,7 +15,8 @@ const CATEGORY_STYLE = {
 }
 
 const CATEGORY_DESC = {
-  guide: '나의 가치관, 성격, 연애스타일을 알아가는 질문들',
+  myself: '나는 어떤 사람인지 알아가는 질문들',
+  guide: '나의 연애 가치관, 스타일을 알아가는 질문들',
   couple: '우리 서로를 더 깊이 알아가는 커플 전용 질문',
   nineteen: '더 솔직하고 과감한 질문들 (19세 이상 이용가능)',
   ifonly: '만약에 ~한다면? 재미있는 상상 질문들',
@@ -46,7 +48,7 @@ export default function QnACategories() {
               key={c.id}
               emoji={c.emoji}
               title={c.label}
-              desc={`${CATEGORY_DESC[c.id]} · ${subCount}개 소분류`}
+              desc={subCount > 0 ? `${CATEGORY_DESC[c.id]} · ${subCount}개 소분류` : CATEGORY_DESC[c.id]}
               done={done}
               total={questions.length}
               bg={style.bg}
