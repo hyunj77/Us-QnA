@@ -4,7 +4,7 @@ import { checkTodayAnniversary } from './lib/anniversaryNotify'
 import { getSession, onAuthStateChange } from './lib/auth'
 import { ensureProfile } from './lib/coupleStore'
 import { refreshCoupleState } from './lib/coupleState'
-import { subscribePokes } from './lib/pokeStore'
+import { subscribePokes, syncMissedNotifications } from './lib/pokeStore'
 import Splash from './pages/Splash'
 import Onboarding from './pages/Onboarding'
 import Signup from './pages/Signup'
@@ -39,6 +39,7 @@ function AppRoutes() {
     const setupLoggedInUser = async (session) => {
       const profile = await ensureProfile(session.user)
       await refreshCoupleState()
+      await syncMissedNotifications()
       if (profile?.couple_id) subscribePokes()
       return profile
     }

@@ -58,3 +58,37 @@ export function markRead(id) {
   write(next)
   return next
 }
+
+function timeAgoLabel(iso) {
+  const diffMs = Date.now() - new Date(iso).getTime()
+  const min = Math.floor(diffMs / 60000)
+  if (min < 1) return '방금'
+  if (min < 60) return `${min}분 전`
+  const hr = Math.floor(min / 60)
+  if (hr < 24) return `${hr}시간 전`
+  return `${Math.floor(hr / 24)}일 전`
+}
+
+// 앱이 닫혀있는 동안 서버(Supabase)에 쌓인 알림을 로컬 알림함으로 가져온다.
+// 이미 들어와 있는 항목(같은 서버 id)은 중복 추가하지 않는다.
+export function mergeServerNotifications(rows) {
+  if (!rows || rows.length === 0) return getNotifications()
+  const existing = getNotifications()
+  const existingIds = new Set(existing.map((n) => n.id))
+  const newOnes = rows
+    .filter((r) => !existingIds.has(r.id))
+    .map((r) => ({
+      id: r.id,
+      emoji: r.emoji,
+      bg: r.bg,
+      title: r.title,
+      sub: r.sub,
+      kind: r.kind,
+      unread: r.unread,
+      time: timeAgoLabel(r.created_at),
+    }))
+  if (newOnes.length === 0) return existing
+  const merged = [...newOnes, ...existing]
+  write(merged)
+  return merged
+}

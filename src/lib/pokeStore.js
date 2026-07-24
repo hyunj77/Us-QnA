@@ -1,6 +1,6 @@
 import { supabase } from './supabaseClient'
 import { getCachedCouple, getCachedProfile } from './coupleState'
-import { addNotification } from './notificationsStore'
+import { addNotification, mergeServerNotifications } from './notificationsStore'
 import { firePhoneNotification } from './pushNotify'
 
 function getPartnerId() {
@@ -37,6 +37,23 @@ export async function sendPoke() {
   if (error) throw error
 }
 
+// 앱을 여는 시점마다 호출: 그동안(앱이 닫혀있던 사이) 서버에 쌓인 알림을 로컬 알림함으로
+// 가져온다. 실시간 구독은 "지금 앱이 켜져있을 때"만 잡아내므로, 이게 있어야 나중에
+// 웹링크로 다시 들어왔을 때도 놓친 알림(콕 찌르기 포함)을 확인할 수 있다.
+export async function syncMissedNotifications() {
+  if (!supabase) return
+  const profile = getCachedProfile()
+  if (!profile) return
+  const { data, error } = await supabase
+    .from('notifications')
+    .select('*')
+    .eq('user_id', profile.id)
+    .order('created_at', { ascending: false })
+    .limit(30)
+  if (error || !data) return
+  mergeServerNotifications(data)
+}
+
 let subscribed = false
 
 // 로그인 + 커플 연결된 사용자에 대해 한 번만 구독을 건다.
@@ -56,6 +73,7 @@ export function subscribePokes() {
       (payload) => {
         const row = payload.new
         addNotification({
+          id: row.id,
           emoji: row.emoji,
           bg: row.bg,
           title: row.title,
