@@ -60,6 +60,16 @@ export async function updateNickname(nickname) {
   return trimmed
 }
 
+// 내 프로필에서 커플 연결만 끊는다. couples 행 자체는 남겨두므로, 상대방은 여전히
+// 연결된 상태로 보이다가 상대방도 연결 해제하거나 다시 코드를 주고받으면 정리된다.
+export async function unlinkCouple() {
+  if (!supabase) return
+  const { data: { user } } = await supabase.auth.getUser()
+  if (!user) throw new Error('로그인이 필요해요.')
+  const { error } = await supabase.from('profiles').update({ couple_id: null }).eq('id', user.id)
+  if (error) throw error
+}
+
 export async function createInviteCode() {
   if (!supabase) throw new Error('Supabase가 설정되지 않았어요.')
   const { data: { user } } = await supabase.auth.getUser()

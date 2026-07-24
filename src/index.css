@@ -73,6 +73,20 @@ button {
   cursor: pointer;
   border: none;
   font-family: inherit;
+  transition: transform 0.12s ease;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+  button:active:not(:disabled) {
+    transform: none;
+  }
 }
 
 input, textarea {

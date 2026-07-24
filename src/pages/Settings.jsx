@@ -1,20 +1,12 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Bell, Lock, Unlink, Download, MessageCircle, ChevronRight, User, X, LogOut } from 'lucide-react'
+import { Bell, Unlink, Download, MessageCircle, ChevronRight, User, X, LogOut } from 'lucide-react'
 import TopAppBar from '../components/TopAppBar'
 import PrimaryButton from '../components/PrimaryButton'
 import { isLoggedIn } from '../lib/authState'
-import { getCachedProfile, refreshCoupleState } from '../lib/coupleState'
-import { updateNickname } from '../lib/coupleStore'
+import { getCachedProfile, isCoupleConnected, refreshCoupleState } from '../lib/coupleState'
+import { updateNickname, unlinkCouple } from '../lib/coupleStore'
 import { signOut } from '../lib/auth'
-
-const ROWS = [
-  { Icon: Bell, label: '알림 설정' },
-  { Icon: Lock, label: '비밀번호 변경' },
-  { Icon: Unlink, label: '커플 연결 해제' },
-  { Icon: Download, label: '데이터 백업' },
-  { Icon: MessageCircle, label: '문의하기' },
-]
 
 export default function Settings() {
   const navigate = useNavigate()
@@ -24,16 +16,17 @@ export default function Settings() {
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
   const [toast, setToast] = useState('')
+  const [connected, setConnected] = useState(() => isCoupleConnected())
+
+  const flashToast = (msg) => {
+    setToast(msg)
+    setTimeout(() => setToast(''), 1800)
+  }
 
   const openEdit = () => {
     setInput(nickname)
     setError('')
     setEditing(true)
-  }
-
-  const handleLogout = async () => {
-    await signOut()
-    navigate('/signup', { replace: true })
   }
 
   const handleSave = async () => {
@@ -44,14 +37,49 @@ export default function Settings() {
       await refreshCoupleState()
       setNickname(saved)
       setEditing(false)
-      setToast('닉네임이 변경됐어요')
-      setTimeout(() => setToast(''), 1800)
+      flashToast('닉네임이 변경됐어요')
     } catch (err) {
       setError(err.message || '닉네임을 저장하지 못했어요.')
     } finally {
       setSaving(false)
     }
   }
+
+  const handleNotificationSettings = async () => {
+    if (!('Notification' in window)) {
+      flashToast('이 브라우저는 알림을 지원하지 않아요.')
+      return
+    }
+    if (Notification.permission === 'granted') {
+      flashToast('휴대폰 알림이 이미 켜져 있어요 🔔')
+      return
+    }
+    if (Notification.permission === 'denied') {
+      flashToast('브라우저 설정에서 알림 권한을 직접 허용해주셔야 해요.')
+      return
+    }
+    const result = await Notification.requestPermission()
+    flashToast(result === 'granted' ? '알림이 켜졌어요 🔔' : '알림을 허용하지 않으셨어요.')
+  }
+
+  const handleUnlink = async () => {
+    if (!window.confirm('정말 커플 연결을 해제할까요? 다시 연결하려면 새 코드가 필요해요.')) return
+    try {
+      await unlinkCouple()
+      await refreshCoupleState()
+      setConnected(false)
+      flashToast('커플 연결을 해제했어요.')
+    } catch (err) {
+      flashToast(err.message || '연결 해제에 실패했어요.')
+    }
+  }
+
+  const handleLogout = async () => {
+    await signOut()
+    navigate('/signup', { replace: true })
+  }
+
+  const handleStub = (label) => flashToast(`${label}은(는) 아직 준비 중이에요.`)
 
   return (
     <div className="screen">
@@ -69,13 +97,28 @@ export default function Settings() {
       )}
 
       <div className="card" style={{ margin: '4px 20px 16px', width: 'auto', padding: 0, overflow: 'hidden' }}>
-        {ROWS.map(({ Icon, label }) => (
-          <button key={label} className="menu-row" style={{ width: '100%', background: 'none', textAlign: 'left' }}>
-            <Icon size={18} color="var(--main)" />
-            <span className="menu-row-label">{label}</span>
+        <button className="menu-row" style={{ width: '100%', background: 'none', textAlign: 'left' }} onClick={handleNotificationSettings}>
+          <Bell size={18} color="var(--main)" />
+          <span className="menu-row-label">알림 설정</span>
+          <ChevronRight size={16} className="menu-row-chevron" />
+        </button>
+        {isLoggedIn() && connected && (
+          <button className="menu-row" style={{ width: '100%', background: 'none', textAlign: 'left' }} onClick={handleUnlink}>
+            <Unlink size={18} color="var(--main)" />
+            <span className="menu-row-label">커플 연결 해제</span>
             <ChevronRight size={16} className="menu-row-chevron" />
           </button>
-        ))}
+        )}
+        <button className="menu-row" style={{ width: '100%', background: 'none', textAlign: 'left' }} onClick={() => handleStub('데이터 백업')}>
+          <Download size={18} color="var(--main)" />
+          <span className="menu-row-label">데이터 백업</span>
+          <ChevronRight size={16} className="menu-row-chevron" />
+        </button>
+        <button className="menu-row" style={{ width: '100%', background: 'none', textAlign: 'left' }} onClick={() => handleStub('문의하기')}>
+          <MessageCircle size={18} color="var(--main)" />
+          <span className="menu-row-label">문의하기</span>
+          <ChevronRight size={16} className="menu-row-chevron" />
+        </button>
       </div>
 
       {isLoggedIn() && (
