@@ -13,6 +13,7 @@ import { getNextAnniversary } from '../lib/anniversary'
 import { isLoggedIn } from '../lib/authState'
 import { isCoupleConnected } from '../lib/coupleState'
 import { canPoke, sendPoke } from '../lib/pokeStore'
+import { getUnreadCount } from '../lib/notificationsStore'
 
 const POKE_COOLDOWN_MS = 60000
 const POKE_KEY = 'us-qna-last-poke-at'
@@ -38,6 +39,8 @@ export default function Home() {
   const pct = answeredCount === 0 ? 0 : Math.max(1, Math.round((answeredCount / QUESTIONS.length) * 100))
   const streak = getStreakDays()
   const nextAnniv = getNextAnniversary()
+
+  const unreadCount = getUnreadCount()
 
   const recent = getRecentAnswers(2)
     .map((r) => ({ ...r, q: findQuestion(r.questionId) }))
@@ -74,7 +77,10 @@ export default function Home() {
         <div className="home-greeting">오늘도 우리,<br />더 알아가는 하루 💕</div>
         <div className="topbar-side" style={{ gap: 4 }}>
           <button className="topbar-icon-btn"><Gift size={20} /></button>
-          <button className="topbar-icon-btn" onClick={() => navigate('/notifications')}><Bell size={20} /></button>
+          <button className="topbar-icon-btn" onClick={() => navigate('/notifications')}>
+            <Bell size={20} />
+            {unreadCount > 0 && <span className="notif-badge-dot" />}
+          </button>
         </div>
       </div>
 

@@ -59,6 +59,10 @@ export function markRead(id) {
   return next
 }
 
+export function getUnreadCount() {
+  return getNotifications().filter((n) => n.unread).length
+}
+
 function timeAgoLabel(iso) {
   const diffMs = Date.now() - new Date(iso).getTime()
   const min = Math.floor(diffMs / 60000)

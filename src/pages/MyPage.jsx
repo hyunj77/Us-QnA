@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Settings, Star, FileText, Mail, MessageCircle, ChevronRight, Sparkles } from 'lucide-react'
+import { Settings, Star, FileText, Mail, MessageCircle, ChevronRight, Sparkles, Bell } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import { MOCK_PROFILE } from '../data/mock'
 import { getAnsweredCount, getStreakDays } from '../lib/answersStore'
@@ -10,9 +10,11 @@ import { getTogetherDays, getTopCategory, getAvgAnswerLength } from '../lib/stat
 import { resizeImageFile } from '../lib/imageUtils'
 import { isLoggedIn } from '../lib/authState'
 import { getCachedCouple } from '../lib/coupleState'
+import { getUnreadCount } from '../lib/notificationsStore'
 
 export default function MyPage() {
   const navigate = useNavigate()
+  const unreadCount = getUnreadCount()
   const answeredCount = getAnsweredCount()
   const streak = getStreakDays()
   const likesReceived = getLikedCount('mine')
@@ -75,6 +77,10 @@ export default function MyPage() {
         </div>
       </div>
 
+      <div className="card" style={{ margin: '0 20px 16px', width: 'auto', padding: 0, overflow: 'hidden' }}>
+        <MenuRow Icon={Bell} label="알림" badge={unreadCount > 0} onClick={() => navigate('/notifications')} />
+      </div>
+
       <button className="card couple-stats-card" style={{ margin: '0 20px 16px', width: 'auto', textAlign: 'left' }} onClick={() => navigate('/us')}>
         <div className="couple-stats-title">우리의 문답 스타일</div>
         <div className="couple-stats-row">
@@ -106,11 +112,12 @@ export default function MyPage() {
   )
 }
 
-function MenuRow({ Icon, label, desc, onClick }) {
+function MenuRow({ Icon, label, desc, badge, onClick }) {
   return (
     <button className="menu-row" style={{ width: '100%', background: 'none', textAlign: 'left' }} onClick={onClick}>
       <Icon size={18} color="var(--main)" />
       <span className="menu-row-label">{label}</span>
+      {badge && <span className="menu-row-badge-dot" />}
       {desc && <span style={{ fontSize: 12, color: 'var(--text-secondary)' }}>{desc}</span>}
       <ChevronRight size={16} className="menu-row-chevron" />
     </button>

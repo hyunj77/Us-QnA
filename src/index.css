@@ -242,6 +242,18 @@ input:focus, textarea:focus {
   justify-content: center;
   color: var(--text);
   flex-shrink: 0;
+  position: relative;
+}
+
+.notif-badge-dot {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--error);
+  border: 1.5px solid #fff;
 }
 
 .topbar-side {
@@ -1772,6 +1784,14 @@ input:focus, textarea:focus {
 
 .menu-row-chevron {
   color: #C9C9CD;
+}
+
+.menu-row-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--error);
+  flex-shrink: 0;
 }
 
 /* ===== Adult gate ===== */
