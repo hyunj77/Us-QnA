@@ -29,6 +29,9 @@ import CommunityHome from './pages/CommunityHome'
 import PsychTestList from './pages/PsychTestList'
 import PsychTestPlay from './pages/PsychTestPlay'
 import TarotPage from './pages/TarotPage'
+import LoveFortunePage from './pages/LoveFortunePage'
+import CompatibilityPage from './pages/CompatibilityPage'
+import DailyFortunePage from './pages/DailyFortunePage'
 import CommunityWrite from './pages/CommunityWrite'
 import CommunityPostDetail from './pages/CommunityPostDetail'
 
@@ -112,6 +115,9 @@ function AppRoutes() {
         <Route path="/community/tests" element={<PsychTestList />} />
         <Route path="/community/tests/:testId" element={<PsychTestPlay />} />
         <Route path="/community/tarot" element={<TarotPage />} />
+        <Route path="/community/love-fortune" element={<LoveFortunePage />} />
+        <Route path="/community/compatibility" element={<CompatibilityPage />} />
+        <Route path="/community/daily-fortune" element={<DailyFortunePage />} />
         <Route path="/community/board/new" element={<CommunityWrite />} />
         <Route path="/community/board/:postId" element={<CommunityPostDetail />} />
         <Route path="/notifications" element={<Notifications />} />

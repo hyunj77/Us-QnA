@@ -9,6 +9,9 @@ import { isLoggedIn } from '../lib/authState'
 const ENTRIES = [
   { to: '/community/tests', emoji: '🧠', title: '심리 테스트', bg: 'var(--purple-light)' },
   { to: '/community/tarot', emoji: '🔮', title: 'AI 타로 보기', bg: 'var(--sub)' },
+  { to: '/community/love-fortune', emoji: '💘', title: '나의 연애운 보기', bg: '#FFE1EC' },
+  { to: '/community/compatibility', emoji: '🔗', title: 'AI 궁합 보기', bg: '#DFF5EC' },
+  { to: '/community/daily-fortune', emoji: '🍀', title: '오늘의 운세보기', bg: '#FFF3D0' },
 ]
 
 const SORTS = [
@@ -45,21 +48,22 @@ export default function CommunityHome() {
       </div>
 
       <div style={{ padding: '4px 20px 20px', display: 'flex', flexDirection: 'column', gap: 18 }}>
-        <div style={{ display: 'flex', gap: 10 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10 }}>
           {ENTRIES.map((item) => (
-            <button key={item.to} className="card" style={{ flex: 1, textAlign: 'center', padding: '18px 12px' }} onClick={() => navigate(item.to)}>
-              <div style={{ fontSize: 26, marginBottom: 6 }}>{item.emoji}</div>
-              <div style={{ fontSize: 13, fontWeight: 700, color: 'var(--text)' }}>{item.title}</div>
+            <button key={item.to} className="card" style={{ textAlign: 'center', padding: '16px 8px' }} onClick={() => navigate(item.to)}>
+              <div style={{ fontSize: 24, marginBottom: 6 }}>{item.emoji}</div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text)', lineHeight: 1.3 }}>{item.title}</div>
             </button>
           ))}
         </div>
 
         <div>
-          <div className="section-head">
-            <span className="section-title">💬 연애 커뮤니티</span>
+          <div className="section-head" style={{ alignItems: 'flex-start', flexDirection: 'column', gap: 4 }}>
+            <span className="section-title">💬 연애 고민상담</span>
+            <span style={{ fontSize: 12, color: 'var(--text-secondary)' }}>⚖️ 글마다 AI 판사에게 판결을 받아볼 수 있어요</span>
           </div>
 
-          <div className="community-sort-row" style={{ marginBottom: 14 }}>
+          <div className="community-sort-row" style={{ marginBottom: 14, marginTop: 12 }}>
             {SORTS.map((s) => (
               <button
                 key={s.value}

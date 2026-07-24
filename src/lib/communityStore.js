@@ -44,7 +44,7 @@ export async function getPost(id) {
   return data
 }
 
-// 연애 커뮤니티는 익명 게시판이라 실제 닉네임을 저장하지 않는다.
+// 연애 고민상담은 익명 게시판이라 실제 닉네임을 저장하지 않는다.
 export async function createPost({ category, title, body, opponentView, question, photoDataUrl }) {
   if (!supabase) throw new Error('Supabase가 설정되지 않았어요.')
   const profile = getCachedProfile()
