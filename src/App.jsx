@@ -12,7 +12,6 @@ import QnACategories from './pages/QnACategories'
 import QnAQuestionList from './pages/QnAQuestionList'
 import QnASearch from './pages/QnASearch'
 import QuestionDetail from './pages/QuestionDetail'
-import AnswerCompose from './pages/AnswerCompose'
 import AnswerResult from './pages/AnswerResult'
 import Memories from './pages/Memories'
 import Notifications from './pages/Notifications'
@@ -58,7 +57,6 @@ function AppRoutes() {
         <Route path="/qna/search" element={<QnASearch />} />
         <Route path="/qna/:categoryId" element={<QnAQuestionList />} />
         <Route path="/qna/:categoryId/:questionId" element={<QuestionDetail />} />
-        <Route path="/qna/:categoryId/:questionId/answer" element={<AnswerCompose />} />
         <Route path="/qna/:categoryId/:questionId/result" element={<AnswerResult />} />
         <Route path="/memories" element={<Memories />} />
         <Route path="/books" element={<BookList />} />
