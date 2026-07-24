@@ -108,6 +108,15 @@ export default function Signup() {
               </button>
             ))}
           </div>
+
+          <button
+            type="button"
+            className="btn-text"
+            style={{ display: 'block', margin: '20px auto 0' }}
+            onClick={() => navigate('/home')}
+          >
+            비회원으로 둘러보기
+          </button>
         </div>
       </div>
     </div>
