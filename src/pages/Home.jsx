@@ -11,6 +11,7 @@ import { getBookConfig } from '../lib/bookStore'
 import { isAdultVerified } from '../lib/adultGate'
 import { getNextAnniversary } from '../lib/anniversary'
 import { isLoggedIn } from '../lib/authState'
+import { isCoupleConnected } from '../lib/coupleState'
 import { canPoke, sendPoke } from '../lib/pokeStore'
 
 const POKE_COOLDOWN_MS = 60000
@@ -78,6 +79,17 @@ export default function Home() {
       </div>
 
       <div style={{ padding: '4px 20px 20px', display: 'flex', flexDirection: 'column', gap: 16 }}>
+        {isLoggedIn() && !isCoupleConnected() && (
+          <button className="couple-cta-card" onClick={() => navigate('/couple-connect')}>
+            <span className="couple-cta-emoji">💌</span>
+            <div className="couple-cta-body">
+              <div className="couple-cta-title">아직 커플 연결 전이에요</div>
+              <div className="couple-cta-desc">코드를 만들거나 입력해서 상대방과 연결해보세요</div>
+            </div>
+            <ChevronRight size={18} color="var(--main)" />
+          </button>
+        )}
+
         <div className="today-q-card">
           <div className="today-q-head">
             <span className="today-q-label">💗 오늘의 질문</span>

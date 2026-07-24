@@ -50,7 +50,13 @@ export default function MyPage() {
             <input type="file" accept="image/*" onChange={handleAvatarUpload('partner', setPartnerAvatar)} style={{ display: 'none' }} />
           </label>
         </div>
-        <div className="profile-title">{togetherDays != null ? `우리, ${togetherDays}일째 💕` : '커플 연결을 기다리는 중'}</div>
+        {togetherDays != null ? (
+          <div className="profile-title">우리, {togetherDays}일째 💕</div>
+        ) : (
+          <button type="button" className="profile-title-cta" onClick={() => navigate('/couple-connect')}>
+            커플 코드 연결하기 →
+          </button>
+        )}
         {startDateLabel && <div className="profile-since">{startDateLabel} ~</div>}
       </div>
 

@@ -781,6 +781,39 @@ input:focus, textarea:focus {
   color: var(--text-secondary);
 }
 
+.couple-cta-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  background: var(--sub);
+  border: 1.5px dashed var(--main);
+  border-radius: var(--r-lg);
+  padding: 16px 18px;
+}
+
+.couple-cta-emoji {
+  font-size: 24px;
+}
+
+.couple-cta-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.couple-cta-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.couple-cta-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
 .poke-card {
   display: flex;
   align-items: center;
@@ -1576,6 +1609,15 @@ input:focus, textarea:focus {
   font-size: 19px;
   font-weight: 800;
   color: var(--text);
+}
+
+.profile-title-cta {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--main);
+  background: var(--sub);
+  padding: 8px 16px;
+  border-radius: var(--r-pill);
 }
 
 .profile-since {
