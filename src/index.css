@@ -1761,3 +1761,65 @@ input:focus, textarea:focus {
   justify-content: center;
   cursor: pointer;
 }
+
+/* ===== Bookshelf carousel (Home) ===== */
+.bookshelf-row {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 2px 2px 6px;
+}
+
+.bookshelf-item {
+  flex-shrink: 0;
+  width: 92px;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.bookshelf-cover {
+  position: relative;
+  width: 92px;
+  height: 124px;
+  border-radius: 10px;
+  background: linear-gradient(155deg, #FEFCF8, #F6F1E7);
+  border: 1px solid #EFE8D8;
+  box-shadow: 0 6px 14px -6px rgba(80, 60, 30, 0.25), inset -3px 0 0 rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  color: var(--text-secondary);
+}
+
+.bookshelf-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.bookshelf-progress {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #9a9186;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2px 5px;
+  border-radius: var(--r-pill);
+}
+
+.bookshelf-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.4;
+}

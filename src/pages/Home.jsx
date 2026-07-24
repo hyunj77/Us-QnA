@@ -2,9 +2,12 @@ import { useNavigate } from 'react-router-dom'
 import { Gift, Bell, ChevronRight, Lock } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import PrimaryButton from '../components/PrimaryButton'
-import { getTodayQuestion, getRandomQuestions, findQuestion, QUESTIONS } from '../lib/questions'
+import { getTodayQuestion, getRandomQuestions, findQuestion, findCategory, QUESTIONS } from '../lib/questions'
 import { getAnsweredCount, getRecentAnswers } from '../lib/answersStore'
 import { MOCK_PARTNER_RECENT } from '../data/mock'
+import { BOOK_ENTRIES, getBookProgress } from '../lib/bookUtils'
+import { getBookConfig } from '../lib/bookStore'
+import { isAdultVerified } from '../lib/adultGate'
 
 function timeAgo(iso) {
   const diffMs = Date.now() - new Date(iso).getTime()
@@ -69,6 +72,38 @@ export default function Home() {
           <div className="stat-row-item">
             <div className="stat-row-value">23일🔥</div>
             <div className="stat-row-label">연속 참여일</div>
+          </div>
+        </div>
+
+        <div>
+          <div className="section-head">
+            <span className="section-title">📚 우리의 책</span>
+            <button className="btn-text" onClick={() => navigate('/memories')}>더보기 <ChevronRight size={12} /></button>
+          </div>
+          <div className="bookshelf-row">
+            {BOOK_ENTRIES.map((entry) => {
+              const category = findCategory(entry.categoryId)
+              if (!category) return null
+              const config = getBookConfig(entry.bookId, entry.who)
+              const { done, total } = getBookProgress(entry.categoryId, entry.who)
+              const locked = category.isAdult && !isAdultVerified()
+              const title = entry.who === 'shared' ? '우리 사용 설명서' : `${config.nickname} 사용 설명서`
+              return (
+                <button key={entry.bookId} className="bookshelf-item" onClick={() => navigate(`/book/${entry.bookId}`)}>
+                  <div className="bookshelf-cover">
+                    {locked ? (
+                      <Lock size={20} />
+                    ) : config.coverType === 'photo' && config.coverImage ? (
+                      <img src={config.coverImage} alt="" />
+                    ) : (
+                      <span>{config.coverImage}</span>
+                    )}
+                    <span className="bookshelf-progress">{done}/{total}</span>
+                  </div>
+                  <div className="bookshelf-title">{title}</div>
+                </button>
+              )
+            })}
           </div>
         </div>
 
