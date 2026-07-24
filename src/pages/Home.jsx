@@ -150,7 +150,29 @@ export default function Home() {
           </div>
         </div>
 
-        {!isLoggedIn() && (
+        {isLoggedIn() && canPoke() && (
+          <button className="poke-card" onClick={handlePoke} disabled={poking}>
+            <span className="icon-badge" style={{ background: 'var(--sub)' }}><Hand size={18} color="var(--main)" /></span>
+            <div className="poke-card-body">
+              <div className="poke-card-title">상대방 콕 찌르기</div>
+              <div className="poke-card-desc">답장을 기다리거나, 화해하고 싶을 때 눌러보세요</div>
+            </div>
+          </button>
+        )}
+
+        {isLoggedIn() ? (
+          canPoke() && (
+            <div className="card partner-activity-card">
+              <div className="partner-activity-head">
+                <span className="icon-badge" style={{ background: 'var(--sub)' }}>💌</span>
+                <div>
+                  <div className="partner-activity-title">상대방의 최근 활동</div>
+                </div>
+              </div>
+              <div className="partner-activity-hint">상대방이 답변을 남기면 여기에 표시돼요</div>
+            </div>
+          )
+        ) : (
           <div className="card partner-activity-card">
             <div className="partner-activity-head">
               <span className="icon-badge" style={{ background: 'var(--sub)' }}>💌</span>
@@ -164,16 +186,6 @@ export default function Home() {
             </div>
             <div className="partner-activity-hint">내가 이 질문에 답하면 상대방 답변을 볼 수 있어요</div>
           </div>
-        )}
-
-        {isLoggedIn() && canPoke() && (
-          <button className="poke-card" onClick={handlePoke} disabled={poking}>
-            <span className="icon-badge" style={{ background: 'var(--sub)' }}><Hand size={18} color="var(--main)" /></span>
-            <div className="poke-card-body">
-              <div className="poke-card-title">상대방 콕 찌르기</div>
-              <div className="poke-card-desc">답장을 기다리거나, 화해하고 싶을 때 눌러보세요</div>
-            </div>
-          </button>
         )}
 
         <div>

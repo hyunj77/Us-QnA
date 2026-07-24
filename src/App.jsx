@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { HashRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { checkTodayAnniversary } from './lib/anniversaryNotify'
 import { getSession, onAuthStateChange } from './lib/auth'
@@ -28,6 +28,7 @@ import CoupleConnect from './pages/CoupleConnect'
 function AppRoutes() {
   const location = useLocation()
   const navigate = useNavigate()
+  const [authReady, setAuthReady] = useState(false)
 
   useEffect(() => {
     checkTodayAnniversary()
@@ -44,11 +45,15 @@ function AppRoutes() {
       return profile
     }
 
-    // 이미 세션이 남아있는 재방문: 스플래시('/')로 들어온 경우에만 홈으로 자동 이동.
+    // 이미 세션이 남아있는 재방문: 커플/프로필 캐시가 다 채워지기 전까지는 화면을 그리지 않는다.
+    // (캐시는 새로고침마다 초기화되는 메모리 값이라, 이 체크가 끝나기 전에 홈 화면이 먼저
+    // 그려지면 "아직 커플 연결 전이에요" 같은 잘못된 상태가 잠깐 보였다가 사라지는 문제가 있었다.)
     getSession().then(async (session) => {
-      if (!session) return
-      await setupLoggedInUser(session)
-      if (location.pathname === '/') {
+      if (session) {
+        await setupLoggedInUser(session)
+      }
+      setAuthReady(true)
+      if (session && location.pathname === '/') {
         navigate('/home', { replace: true })
       }
     })
@@ -59,12 +64,21 @@ function AppRoutes() {
     const unsubscribe = onAuthStateChange(async (session, event) => {
       if (event !== 'SIGNED_IN' || !session) return
       await setupLoggedInUser(session)
+      setAuthReady(true)
       navigate('/home', { replace: true })
     })
 
     return unsubscribe
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  if (!authReady) {
+    return (
+      <div className="splash-wrap">
+        <div className="splash-logo">💌</div>
+      </div>
+    )
+  }
 
   return (
     <div className="app-shell">
