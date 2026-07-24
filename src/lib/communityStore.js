@@ -44,7 +44,8 @@ export async function getPost(id) {
   return data
 }
 
-export async function createPost({ category, title, body, opponentView, question }) {
+// 연애 커뮤니티는 익명 게시판이라 실제 닉네임을 저장하지 않는다.
+export async function createPost({ category, title, body, opponentView, question, photoDataUrl }) {
   if (!supabase) throw new Error('Supabase가 설정되지 않았어요.')
   const profile = getCachedProfile()
   if (!profile) throw new Error('로그인이 필요해요.')
@@ -56,12 +57,13 @@ export async function createPost({ category, title, body, opponentView, question
     .from('community_posts')
     .insert({
       author_id: profile.id,
-      author_nickname: profile.nickname || '익명',
+      author_nickname: '익명',
       category: category || '연애',
       title: trimmedTitle,
       body: trimmedBody,
       opponent_view: opponentView?.trim() || null,
       question: question?.trim() || null,
+      photo_url: photoDataUrl || null,
     })
     .select()
     .single()
@@ -90,7 +92,7 @@ export async function addComment(postId, body) {
   const { error } = await supabase.from('community_comments').insert({
     post_id: postId,
     author_id: profile.id,
-    author_nickname: profile.nickname || '익명',
+    author_nickname: '익명',
     body: trimmed,
   })
   if (error) throw error

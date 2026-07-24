@@ -249,6 +249,9 @@ as $$
 $$;
 grant execute on function increment_comment_count(uuid) to authenticated;
 
+-- 연애 커뮤니티 피드가 카드형(사진 배경)으로 바뀌면서 게시글에 사진 첨부를 지원.
+alter table community_posts add column photo_url text;
+
 -- ── AI 연애 판사 Edge Function 배포 (비용 발생하니 나중에 연결) ──────────────
 -- 1) supabase/functions/love-judge 폴더의 함수를 배포:
 --      supabase functions deploy love-judge

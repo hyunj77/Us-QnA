@@ -10,6 +10,19 @@ export const JUDGE_STYLES = [
   { id: 'counselor', label: '심리상담사 스타일', emoji: '🫶', desc: '감정을 깊이 들여다보는 상담 톤이에요' },
 ]
 
+export const CATEGORY_GRADIENT = {
+  '썸': 'linear-gradient(160deg, #FFB6C1, #FF8FA3)',
+  '연애': 'linear-gradient(160deg, #FF9FB2, #FF5C93)',
+  '장거리': 'linear-gradient(160deg, #A5C8FF, #5C8DFF)',
+  '이별': 'linear-gradient(160deg, #B8B9FA, #7C6FE0)',
+  '재회': 'linear-gradient(160deg, #FFD3A5, #FD9853)',
+  '결혼': 'linear-gradient(160deg, #FFE1EC, #F06595)',
+  '부부': 'linear-gradient(160deg, #FFD9E6, #E64980)',
+  '가족': 'linear-gradient(160deg, #C7F0DB, #37C99A)',
+  '친구': 'linear-gradient(160deg, #FFF3D0, #FFB020)',
+  '인간관계': 'linear-gradient(160deg, #DDE6FF, #6C8CFF)',
+}
+
 export const REACTIONS = [
   { kind: 'like', emoji: '👍', label: '공감' },
   { kind: 'funny', emoji: '😂', label: '웃김' },

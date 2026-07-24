@@ -96,7 +96,7 @@ export default function CommunityPostDetail() {
 
   return (
     <div className="screen">
-      <TopAppBar title={post.category} onBack={() => navigate('/community/board')} />
+      <TopAppBar title={post.category} onBack={() => navigate('/community')} />
 
       <div style={{ padding: '4px 20px 24px', display: 'flex', flexDirection: 'column', gap: 16 }}>
         <div>
@@ -105,6 +105,10 @@ export default function CommunityPostDetail() {
             {post.author_nickname} · {timeAgo(post.created_at)}
           </div>
         </div>
+
+        {post.photo_url && (
+          <img src={post.photo_url} alt="" style={{ width: '100%', borderRadius: 'var(--r-lg)', objectFit: 'cover' }} />
+        )}
 
         <p style={{ fontSize: 14, color: 'var(--text)', lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>{post.body}</p>
 

@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Camera, X } from 'lucide-react'
 import TopAppBar from '../components/TopAppBar'
 import PrimaryButton from '../components/PrimaryButton'
 import CategoryChip from '../components/CategoryChip'
 import TextField from '../components/TextField'
 import { createPost } from '../lib/communityStore'
 import { COMMUNITY_CATEGORIES } from '../data/communityCategories'
+import { resizeImageFile } from '../lib/imageUtils'
 
 export default function CommunityWrite() {
   const navigate = useNavigate()
@@ -14,17 +16,30 @@ export default function CommunityWrite() {
   const [body, setBody] = useState('')
   const [opponentView, setOpponentView] = useState('')
   const [question, setQuestion] = useState('')
+  const [photo, setPhoto] = useState('')
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
 
   const canSubmit = title.trim().length > 0 && body.trim().length > 0 && !saving
+
+  const handlePhotoSelect = async (e) => {
+    const file = e.target.files?.[0]
+    e.target.value = ''
+    if (!file) return
+    try {
+      const dataUrl = await resizeImageFile(file, { maxDim: 1000, quality: 0.75 })
+      setPhoto(dataUrl)
+    } catch {
+      setError('사진을 불러오지 못했어요.')
+    }
+  }
 
   const handleSubmit = async () => {
     if (!canSubmit) return
     setSaving(true)
     setError('')
     try {
-      const post = await createPost({ category, title, body, opponentView, question })
+      const post = await createPost({ category, title, body, opponentView, question, photoDataUrl: photo })
       navigate(`/community/board/${post.id}`, { replace: true })
     } catch (err) {
       setError(err.message || '글을 등록하지 못했어요.')
@@ -34,7 +49,7 @@ export default function CommunityWrite() {
 
   return (
     <div className="screen">
-      <TopAppBar title="고민 글쓰기" onBack={() => navigate('/community/board')} />
+      <TopAppBar title="고민 글쓰기 (익명)" onBack={() => navigate('/community')} />
 
       <div style={{ padding: '4px 20px 24px', display: 'flex', flexDirection: 'column', gap: 18 }}>
         <div>
@@ -44,6 +59,23 @@ export default function CommunityWrite() {
               <CategoryChip key={c} label={c} active={category === c} onClick={() => setCategory(c)} />
             ))}
           </div>
+        </div>
+
+        <div>
+          <div className="compose-field-label">사진 <span className="compose-field-optional">(선택)</span></div>
+          {photo ? (
+            <div className="compose-photo-thumb" style={{ width: 100, height: 100 }}>
+              <img src={photo} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <button type="button" className="compose-photo-remove" onClick={() => setPhoto('')}>
+                <X size={12} />
+              </button>
+            </div>
+          ) : (
+            <label className="compose-tool-btn" style={{ width: 'fit-content' }}>
+              <Camera size={16} /> 사진 추가
+              <input type="file" accept="image/*" onChange={handlePhotoSelect} style={{ display: 'none' }} />
+            </label>
+          )}
         </div>
 
         <div>
