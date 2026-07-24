@@ -59,7 +59,8 @@ export default function QuestionDetail() {
   const questions = getQuestionsByCategory(categoryId)
   const index = questions.findIndex((q) => q.id === questionId) + 1
   const answered = !!getAnswer(questionId)
-  const hint = question.type === 'balance' ? '둘 중 하나를 골라주세요!' : '솔직하게 답변해주세요!'
+  const isChoice = question.type === 'choice' && question.options?.length > 0
+  const hint = question.type === 'balance' || isChoice ? '하나를 골라주세요!' : '솔직하게 답변해주세요!'
 
   const handleSave = () => {
     if (body.trim().length < 1 || saving) return
@@ -69,6 +70,12 @@ export default function QuestionDetail() {
       setSaving(false)
       setToast('💗 답변이 저장되었습니다')
     }, 400)
+  }
+
+  const handleChooseOption = (option) => {
+    saveAnswer(questionId, option)
+    setBody(option)
+    setToast('💗 답변이 저장되었습니다')
   }
 
   const handlePhotoSelect = async (e) => {
@@ -123,60 +130,76 @@ export default function QuestionDetail() {
 
       <div className="detail-illustration">{category.emoji}</div>
 
-      <div className="compose-wrap" style={{ padding: '4px 20px 20px' }}>
-        <div className="compose-textarea-wrap">
-          <textarea
-            className="compose-textarea"
-            placeholder="여기에 답변을 입력해주세요. 최소 10자 이상 입력해주세요."
-            value={body}
-            maxLength={MAX_LEN}
-            onChange={(e) => setBody(e.target.value)}
-          />
-          <span className="compose-counter">{body.length}/{MAX_LEN}</span>
+      {isChoice ? (
+        <div className="choice-list" style={{ padding: '4px 20px 20px' }}>
+          {question.options.map((option, idx) => (
+            <button
+              key={option}
+              type="button"
+              className={`choice-option-btn ${body === option ? 'choice-option-btn-active' : ''}`}
+              onClick={() => handleChooseOption(option)}
+            >
+              <span className="choice-option-num">{idx + 1}</span>
+              <span className="choice-option-text">{option}</span>
+            </button>
+          ))}
         </div>
-
-        {photos.length > 0 && (
-          <div className="compose-photo-row">
-            {photos.map((src, idx) => (
-              <div key={idx} className="compose-photo-thumb">
-                <img src={src} alt="" />
-                <button type="button" className="compose-photo-remove" onClick={() => removePhoto(idx)}>
-                  <X size={12} />
-                </button>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {showEmoji && (
-          <div className="compose-emoji-row">
-            {EMOJI_PRESETS.map((emoji) => (
-              <button key={emoji} type="button" className="compose-emoji-btn" onClick={() => insertEmoji(emoji)}>
-                {emoji}
-              </button>
-            ))}
-          </div>
-        )}
-
-        <div className="compose-tool-row">
-          <label className="compose-tool-btn">
-            <Camera size={16} /> 사진 추가{photos.length > 0 ? ` (${photos.length}/${MAX_PHOTOS})` : ''}
-            <input
-              type="file"
-              accept="image/*"
-              multiple
-              onChange={handlePhotoSelect}
-              disabled={photos.length >= MAX_PHOTOS}
-              style={{ display: 'none' }}
+      ) : (
+        <div className="compose-wrap" style={{ padding: '4px 20px 20px' }}>
+          <div className="compose-textarea-wrap">
+            <textarea
+              className="compose-textarea"
+              placeholder="여기에 답변을 입력해주세요. 최소 10자 이상 입력해주세요."
+              value={body}
+              maxLength={MAX_LEN}
+              onChange={(e) => setBody(e.target.value)}
             />
-          </label>
-          <button type="button" className="compose-tool-btn" onClick={() => setShowEmoji((v) => !v)}>
-            <Smile size={16} /> 이모지
-          </button>
-        </div>
+            <span className="compose-counter">{body.length}/{MAX_LEN}</span>
+          </div>
 
-        {notice && <p className="auth-notice" style={{ margin: 0 }}>{notice}</p>}
-      </div>
+          {photos.length > 0 && (
+            <div className="compose-photo-row">
+              {photos.map((src, idx) => (
+                <div key={idx} className="compose-photo-thumb">
+                  <img src={src} alt="" />
+                  <button type="button" className="compose-photo-remove" onClick={() => removePhoto(idx)}>
+                    <X size={12} />
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {showEmoji && (
+            <div className="compose-emoji-row">
+              {EMOJI_PRESETS.map((emoji) => (
+                <button key={emoji} type="button" className="compose-emoji-btn" onClick={() => insertEmoji(emoji)}>
+                  {emoji}
+                </button>
+              ))}
+            </div>
+          )}
+
+          <div className="compose-tool-row">
+            <label className="compose-tool-btn">
+              <Camera size={16} /> 사진 추가{photos.length > 0 ? ` (${photos.length}/${MAX_PHOTOS})` : ''}
+              <input
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={handlePhotoSelect}
+                disabled={photos.length >= MAX_PHOTOS}
+                style={{ display: 'none' }}
+              />
+            </label>
+            <button type="button" className="compose-tool-btn" onClick={() => setShowEmoji((v) => !v)}>
+              <Smile size={16} /> 이모지
+            </button>
+          </div>
+
+          {notice && <p className="auth-notice" style={{ margin: 0 }}>{notice}</p>}
+        </div>
+      )}
 
       <div className="fixed-bottom-spacer" />
 
@@ -184,9 +207,11 @@ export default function QuestionDetail() {
 
       <div className="fixed-bottom-bar">
         <div className="detail-actions">
-          <PrimaryButton onClick={handleSave} disabled={body.trim().length < 1 || saving}>
-            {saving ? '저장 중...' : answered ? '답변 수정 저장' : '답변 저장'}
-          </PrimaryButton>
+          {!isChoice && (
+            <PrimaryButton onClick={handleSave} disabled={body.trim().length < 1 || saving}>
+              {saving ? '저장 중...' : answered ? '답변 수정 저장' : '답변 저장'}
+            </PrimaryButton>
+          )}
           <SecondaryButton
             disabled={!answered}
             onClick={() => answered && navigate(`/qna/${categoryId}/${questionId}/result`)}

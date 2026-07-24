@@ -6213,10 +6213,17 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 사랑",
-    "question": "연애 전 내가 원하는 스킨십 단계는? (불가능 / 손잡기 / 포옹 / 키스 / 기타 중에서)",
-    "type": "normal",
+    "question": "연애 전 내가 원하는 스킨십 단계는?",
+    "type": "choice",
     "difficulty": "medium",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "불가능",
+      "손잡기",
+      "포옹",
+      "키스",
+      "기타"
+    ]
   },
   {
     "id": "heartpairing-018",
@@ -6224,10 +6231,17 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 사랑",
-    "question": "연애 중 내가 원하는 하루 연락 빈도는? (짧은 통화 1번 / 메시지 5번 이하+잠들기 전 통화 1번 / 이동할 때마다 메시지나 통화 / 메시지만 자주 / 영상통화로 일상 공유)",
-    "type": "normal",
+    "question": "연애 중 내가 원하는 하루 연락 빈도는?",
+    "type": "choice",
     "difficulty": "medium",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "짧은 통화 1번",
+      "메시지 5번 이하 + 잠들기 전 통화 1번",
+      "이동할 때마다 메시지나 통화",
+      "메시지만 자주",
+      "영상통화로 일상 공유"
+    ]
   },
   {
     "id": "heartpairing-019",
@@ -6235,10 +6249,17 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 사랑",
-    "question": "연애 중 내가 원하는 만남 빈도는? (주말 중 1회 / 주말 이틀만 함께 / 주중 1~2회+주말 1회 / 주말 포함 4회 이상 / 가능한 매일)",
-    "type": "normal",
+    "question": "연애 중 내가 원하는 만남 빈도는?",
+    "type": "choice",
     "difficulty": "medium",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "주말 중 1회",
+      "주말 이틀만 함께",
+      "주중 1~2회 + 주말 1회",
+      "주말 포함 4회 이상",
+      "가능한 매일"
+    ]
   },
   {
     "id": "heartpairing-020",
@@ -6246,10 +6267,17 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 사랑",
-    "question": "남사친·여사친과의 만남 허용 범위는 어디까지인가요? (존재 자체 불허 / 단체 모임이라면 가능 / 단둘이 카페나 식사 가능 / 단둘이 영화관·노래방 가능 / 단둘이 술자리 가능)",
-    "type": "normal",
+    "question": "남사친·여사친과의 만남 허용 범위는 어디까지인가요?",
+    "type": "choice",
     "difficulty": "medium",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "존재 자체 불허",
+      "단체 모임이라면 가능",
+      "단둘이 카페나 식사 가능",
+      "단둘이 영화관·노래방 가능",
+      "단둘이 술자리 가능"
+    ]
   },
   {
     "id": "heartpairing-021",
@@ -6257,10 +6285,17 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 사랑",
-    "question": "일상 공유 가능 범위는 어느 정도인가요? (일상 스케줄 공유 / 만나는 지인들 구체적으로 공유 / 집 비밀번호 공유 / 핸드폰 비밀번호 공유 / 자산 내역 공유)",
-    "type": "normal",
+    "question": "일상 공유 가능 범위는 어느 정도인가요?",
+    "type": "choice",
     "difficulty": "medium",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "일상 스케줄 공유",
+      "만나는 지인들 구체적으로 공유",
+      "집 비밀번호 공유",
+      "핸드폰 비밀번호 공유",
+      "자산 내역 공유"
+    ]
   },
   {
     "id": "heartpairing-022",
@@ -6312,10 +6347,14 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 사랑",
-    "question": "연인과 다투었을 때 내가 원하는 해결 방법은? (서로 마음이 풀릴 때까지 이야기한다 / 화가 가라앉을 때까지 잠시 시간을 갖는다)",
-    "type": "normal",
+    "question": "연인과 다투었을 때 내가 원하는 해결 방법은?",
+    "type": "choice",
     "difficulty": "medium",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "서로 마음이 풀릴 때까지 이야기한다",
+      "화가 가라앉을 때까지 잠시 시간을 갖는다"
+    ]
   },
   {
     "id": "heartpairing-027",
@@ -6323,10 +6362,17 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 사랑",
-    "question": "연인이 \"잠시 떨어져서 생각할 시간을 갖자\"고 했을 때 나의 반응은? (이유를 묻지 않고 따른다 / 이유를 물어보고 대화를 시도한다 / 이유가 무엇이든 절대 안된다고 붙잡는다 / 일단 원하는 대로 하고 틈틈이 연락한다 / 이별의 의미로 받아들이고 헤어진다)",
-    "type": "normal",
+    "question": "연인이 \"잠시 떨어져서 생각할 시간을 갖자\"고 했을 때 나의 반응은?",
+    "type": "choice",
     "difficulty": "medium",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "이유를 묻지 않고 따른다",
+      "이유를 물어보고 대화를 시도한다",
+      "이유가 무엇이든 절대 안된다고 붙잡는다",
+      "일단 원하는 대로 하고 틈틈이 연락한다",
+      "이별의 의미로 받아들이고 헤어진다"
+    ]
   },
   {
     "id": "heartpairing-028",
@@ -6389,10 +6435,14 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 결혼",
-    "question": "신혼집은 어떻게 마련하고 싶나요? (빚 안고 자가 vs 빚 없이 전세)",
-    "type": "normal",
+    "question": "신혼집은 어떻게 마련하고 싶나요?",
+    "type": "choice",
     "difficulty": "hard",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "빚 안고 자가",
+      "빚 없이 전세"
+    ]
   },
   {
     "id": "heartpairing-034",
@@ -6411,10 +6461,16 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 결혼",
-    "question": "내가 희망하는 우리 부부의 월수입은? (월 500~800 / 800~1000 / 1000~1500 / 1500 이상)",
-    "type": "normal",
+    "question": "내가 희망하는 우리 부부의 월수입은?",
+    "type": "choice",
     "difficulty": "hard",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "월 500~800",
+      "월 800~1000",
+      "월 1000~1500",
+      "월 1500 이상"
+    ]
   },
   {
     "id": "heartpairing-036",
@@ -6422,10 +6478,15 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 결혼",
-    "question": "결혼 후 돈 관리는 누가 하면 좋을까요? (각자 벌어서 각자 관리 / 생활비만 각출 / 모든 수입 공개 후 한 사람이 관리)",
-    "type": "normal",
+    "question": "결혼 후 돈 관리는 누가 하면 좋을까요?",
+    "type": "choice",
     "difficulty": "hard",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "각자 벌어서 각자 관리",
+      "생활비만 각출",
+      "모든 수입 공개 후 한 사람이 관리"
+    ]
   },
   {
     "id": "heartpairing-037",
@@ -6433,10 +6494,15 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 결혼",
-    "question": "결혼 후 내가 원하는 수면 형태는? (같은 방 한 침대 / 같은 방 침대 따로 / 각자 방에서 숙면)",
-    "type": "normal",
+    "question": "결혼 후 내가 원하는 수면 형태는?",
+    "type": "choice",
     "difficulty": "hard",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "같은 방 한 침대",
+      "같은 방 침대 따로",
+      "각자 방에서 숙면"
+    ]
   },
   {
     "id": "heartpairing-038",
@@ -6444,10 +6510,14 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 결혼",
-    "question": "결혼 후 명절을 보내고 싶은 방식은? (양가 방문 / 명절 전 양가 방문 후 연휴는 우리끼리)",
-    "type": "normal",
+    "question": "결혼 후 명절을 보내고 싶은 방식은?",
+    "type": "choice",
     "difficulty": "hard",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "양가 방문",
+      "명절 전 양가 방문 후 연휴는 우리끼리"
+    ]
   },
   {
     "id": "heartpairing-039",
@@ -6455,10 +6525,17 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 결혼",
-    "question": "반려동물과 함께 살 수 있나요? (없다 / 반려견 / 반려묘 / 둘 다 / 기타)",
-    "type": "normal",
+    "question": "반려동물과 함께 살 수 있나요?",
+    "type": "choice",
     "difficulty": "hard",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "없다",
+      "반려견",
+      "반려묘",
+      "둘 다",
+      "기타"
+    ]
   },
   {
     "id": "heartpairing-040",
@@ -6510,10 +6587,15 @@
     "categoryId": "heartpairing",
     "categoryName": "하트페어링 북 질문 리스트",
     "subcategory": "내가 생각하는 결혼",
-    "question": "출근 전날 밤 10시에 부부싸움이 났다면 어떻게 하고 싶나요? (더 큰 싸움을 피하기 위해 각자의 공간에서 잔다 / 싸워도 잠은 한 침대에서 잔다 / 완전히 해결될 때까지 이야기하고 잔다)",
-    "type": "normal",
+    "question": "출근 전날 밤 10시에 부부싸움이 났다면 어떻게 하고 싶나요?",
+    "type": "choice",
     "difficulty": "hard",
-    "isAdult": false
+    "isAdult": false,
+    "options": [
+      "더 큰 싸움을 피하기 위해 각자의 공간에서 잔다",
+      "싸워도 잠은 한 침대에서 잔다",
+      "완전히 해결될 때까지 이야기하고 잔다"
+    ]
   },
   {
     "id": "heartpairing-045",

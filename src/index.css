@@ -1149,6 +1149,60 @@ input:focus, textarea:focus {
   color: var(--text-secondary);
 }
 
+.choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.choice-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: 1.5px solid var(--divider);
+  border-radius: var(--r-md);
+  padding: 14px 16px;
+}
+
+.choice-option-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choice-option-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.choice-option-btn-active {
+  border-color: var(--main);
+  background: var(--sub);
+}
+
+.choice-option-btn-active .choice-option-num {
+  background: var(--main);
+  color: #fff;
+}
+
+.choice-option-btn-active .choice-option-text {
+  color: var(--main);
+  font-weight: 700;
+}
+
 .compose-tool-row {
   display: flex;
   gap: 10px;
