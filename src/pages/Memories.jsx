@@ -102,41 +102,6 @@ export default function Memories() {
         </div>
       </div>
 
-      {/* 캘린더 */}
-      <div className="memory-section">
-        <div className="section-head" style={{ padding: '0 20px' }}>
-          <span className="section-title">캘린더</span>
-        </div>
-        <div style={{ padding: '0 20px' }}>
-          <CalendarView memories={memories} />
-        </div>
-      </div>
-
-      {/* 타임라인 */}
-      <div className="memory-section">
-        <div className="section-head" style={{ padding: '0 20px' }}>
-          <span className="section-title">타임라인</span>
-        </div>
-        {memories.length > 0 ? (
-          <div>
-            {grouped.map(([month, items]) => (
-              <div key={month}>
-                <div className="memory-month">{month}</div>
-                {items.map((m) => (
-                  <MemoryCard key={m.id} date={m.date} title={m.title} preview={m.preview} />
-                ))}
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="empty-state">
-            <div className="empty-state-emoji">📷</div>
-            <div className="empty-state-title">아직 추억이 없어요.</div>
-            <div className="empty-state-desc">문답에 답변하면 이곳에 추억으로 쌓여요!</div>
-          </div>
-        )}
-      </div>
-
       {isLoggedIn() && canWriteLetter() && (
         <div className="memory-section">
           <div className="section-head" style={{ padding: '0 20px' }}>
@@ -182,6 +147,41 @@ export default function Memories() {
           </div>
         </div>
       )}
+
+      {/* 캘린더 */}
+      <div className="memory-section">
+        <div className="section-head" style={{ padding: '0 20px' }}>
+          <span className="section-title">캘린더</span>
+        </div>
+        <div style={{ padding: '0 20px' }}>
+          <CalendarView memories={memories} />
+        </div>
+      </div>
+
+      {/* 타임라인 */}
+      <div className="memory-section">
+        <div className="section-head" style={{ padding: '0 20px' }}>
+          <span className="section-title">타임라인</span>
+        </div>
+        {memories.length > 0 ? (
+          <div>
+            {grouped.map(([month, items]) => (
+              <div key={month}>
+                <div className="memory-month">{month}</div>
+                {items.map((m) => (
+                  <MemoryCard key={m.id} date={m.date} title={m.title} preview={m.preview} />
+                ))}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="empty-state">
+            <div className="empty-state-emoji">📷</div>
+            <div className="empty-state-title">아직 추억이 없어요.</div>
+            <div className="empty-state-desc">문답에 답변하면 이곳에 추억으로 쌓여요!</div>
+          </div>
+        )}
+      </div>
 
       {toast && <div className="toast">{toast}</div>}
 
