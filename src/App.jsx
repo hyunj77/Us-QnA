@@ -14,6 +14,7 @@ import Notifications from './pages/Notifications'
 import MyPage from './pages/MyPage'
 import Settings from './pages/Settings'
 import BookViewer from './pages/BookViewer'
+import BookList from './pages/BookList'
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/qna/:categoryId/:questionId/answer" element={<AnswerCompose />} />
           <Route path="/qna/:categoryId/:questionId/result" element={<AnswerResult />} />
           <Route path="/memories" element={<Memories />} />
+          <Route path="/books" element={<BookList />} />
           <Route path="/book/:bookId" element={<BookViewer />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/my" element={<MyPage />} />
