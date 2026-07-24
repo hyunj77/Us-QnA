@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { PenLine } from 'lucide-react'
+import { PenLine, Search } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import CommunityPostCard from '../components/CommunityPostCard'
 import { getPosts } from '../lib/communityStore'
 import { isLoggedIn } from '../lib/authState'
+import { MAIN_TABS } from '../data/communityCategories'
 
 const ENTRIES = [
   { to: '/community/tests', emoji: '🧠', title: '심리 테스트', bg: 'var(--purple-light)' },
@@ -12,11 +13,7 @@ const ENTRIES = [
   { to: '/community/love-fortune', emoji: '💘', title: '나의 연애운 보기', bg: '#FFE1EC' },
   { to: '/community/compatibility', emoji: '🔗', title: 'AI 궁합 보기', bg: '#DFF5EC' },
   { to: '/community/daily-fortune', emoji: '🍀', title: '오늘의 운세보기', bg: '#FFF3D0' },
-]
-
-const SORTS = [
-  { value: 'new', label: '새로운' },
-  { value: 'popular', label: '인기 있는' },
+  { to: '/community/saju', emoji: '☯️', title: 'AI 사주', bg: '#ECEAFB' },
 ]
 
 function reactionTotal(post) {
@@ -27,7 +24,8 @@ export default function CommunityHome() {
   const navigate = useNavigate()
   const [posts, setPosts] = useState([])
   const [loading, setLoading] = useState(true)
-  const [sort, setSort] = useState('new')
+  const [activeTab, setActiveTab] = useState('all')
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     getPosts().then((data) => {
@@ -36,10 +34,25 @@ export default function CommunityHome() {
     })
   }, [])
 
-  const sorted = useMemo(() => {
-    if (sort === 'popular') return [...posts].sort((a, b) => reactionTotal(b) - reactionTotal(a))
-    return posts
-  }, [posts, sort])
+  const filtered = useMemo(() => {
+    let list = posts
+    const tab = MAIN_TABS.find((t) => t.key === activeTab)
+    if (tab?.type === 'category') {
+      const values = Array.isArray(tab.value) ? tab.value : [tab.value]
+      list = list.filter((p) => values.includes(p.category))
+    } else if (tab?.type === 'tag') {
+      const values = Array.isArray(tab.value) ? tab.value : [tab.value]
+      list = list.filter((p) => values.some((v) => p.tags?.includes(v)))
+    } else if (tab?.type === 'popular') {
+      list = [...list].sort((a, b) => reactionTotal(b) - reactionTotal(a))
+    }
+
+    const q = search.trim().replace(/^#/, '')
+    if (q) {
+      list = list.filter((p) => p.title.includes(q) || p.body.includes(q) || p.tags?.some((t) => t.replace('#', '').includes(q)))
+    }
+    return list
+  }, [posts, activeTab, search])
 
   return (
     <div className="screen">
@@ -63,23 +76,34 @@ export default function CommunityHome() {
             <span style={{ fontSize: 12, color: 'var(--text-secondary)' }}>⚖️ 글마다 AI 판사에게 판결을 받아볼 수 있어요</span>
           </div>
 
-          <div className="community-sort-row" style={{ marginBottom: 14, marginTop: 12 }}>
-            {SORTS.map((s) => (
+          <div style={{ position: 'relative', margin: '12px 0 14px' }}>
+            <Search size={16} style={{ position: 'absolute', left: 14, top: '50%', transform: 'translateY(-50%)', color: 'var(--text-secondary)' }} />
+            <input
+              className="field"
+              style={{ paddingLeft: 38 }}
+              placeholder="태그나 키워드로 검색해보세요 (예: #읽씹)"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
+
+          <div style={{ display: 'flex', gap: 8, overflowX: 'auto', marginBottom: 14, paddingBottom: 2 }}>
+            {MAIN_TABS.map((tab) => (
               <button
-                key={s.value}
-                className={`chip ${sort === s.value ? 'chip-active' : ''}`}
-                onClick={() => setSort(s.value)}
+                key={tab.key}
+                className={`chip ${activeTab === tab.key ? 'chip-active' : ''}`}
+                onClick={() => setActiveTab(tab.key)}
               >
-                {s.label}
+                {tab.emoji} {tab.label}
               </button>
             ))}
           </div>
 
           {loading ? (
             <p style={{ textAlign: 'center', color: 'var(--text-secondary)', marginTop: 40 }}>불러오는 중...</p>
-          ) : sorted.length > 0 ? (
+          ) : filtered.length > 0 ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-              {sorted.map((post) => (
+              {filtered.map((post) => (
                 <CommunityPostCard key={post.id} post={post} />
               ))}
             </div>

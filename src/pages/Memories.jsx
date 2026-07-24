@@ -13,6 +13,7 @@ import { getBookConfig } from '../lib/bookStore'
 import { isAdultVerified } from '../lib/adultGate'
 import { isLoggedIn } from '../lib/authState'
 import { canWriteLetter, getAllLetters, sendLetter } from '../lib/letterStore'
+import { getRandomBookTagline } from '../data/bookTaglines'
 
 function formatLetterDate(iso) {
   return new Date(iso).toLocaleString('ko-KR', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
@@ -22,6 +23,7 @@ export default function Memories() {
   const navigate = useNavigate()
   // 실제 로그인한 사용자는 진짜 답변이 쌓이기 전까지 데모용 추억을 보여주지 않는다.
   const memories = useMemo(() => (isLoggedIn() ? [] : MOCK_MEMORIES), [])
+  const [bookTagline] = useState(getRandomBookTagline)
 
   const [letters, setLetters] = useState([])
   const [composing, setComposing] = useState(false)
@@ -75,7 +77,7 @@ export default function Memories() {
           <span className="section-title">우리의 책</span>
           <button className="btn-text" onClick={() => navigate('/books')}>더보기 <ChevronRight size={12} /></button>
         </div>
-        <p className="book-tab-desc" style={{ padding: '0 20px' }}>답변이 쌓이면 나만의 사용 설명서가 완성돼요</p>
+        <p className="book-tab-desc" style={{ padding: '0 20px' }}>{bookTagline}</p>
         <div className="book-carousel">
           {BOOK_ENTRIES.map((entry) => {
             const category = findCategory(entry.categoryId)

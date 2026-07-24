@@ -27,6 +27,13 @@ export default function CommunityPostCard({ post }) {
       <div className="community-feed-card-bottom">
         <div className="community-feed-card-title">{post.title}</div>
         <p className="community-feed-card-preview">{post.body}</p>
+        {post.tags?.length > 0 && (
+          <div className="community-feed-card-tags">
+            {post.tags.slice(0, 4).map((t) => (
+              <span key={t}>{t}</span>
+            ))}
+          </div>
+        )}
         <div className="community-feed-card-meta">
           <span><Heart size={13} fill="#fff" /> {post.reactions?.like || 0}</span>
           <span><MessageCircle size={13} /> {post.comments_count || 0}</span>

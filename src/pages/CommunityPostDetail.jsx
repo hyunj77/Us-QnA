@@ -112,6 +112,14 @@ export default function CommunityPostDetail() {
 
         <p style={{ fontSize: 14, color: 'var(--text)', lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>{post.body}</p>
 
+        {post.tags?.length > 0 && (
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            {post.tags.map((t) => (
+              <span key={t} className="chip" style={{ minHeight: 'auto', padding: '5px 12px' }}>{t}</span>
+            ))}
+          </div>
+        )}
+
         {post.opponent_view && (
           <div className="card" style={{ background: 'var(--bg)' }}>
             <div className="compose-field-label" style={{ marginBottom: 6 }}>상대방 입장</div>

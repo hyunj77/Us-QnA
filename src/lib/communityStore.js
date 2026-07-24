@@ -45,7 +45,7 @@ export async function getPost(id) {
 }
 
 // 연애 고민상담은 익명 게시판이라 실제 닉네임을 저장하지 않는다.
-export async function createPost({ category, title, body, opponentView, question, photoDataUrl }) {
+export async function createPost({ category, title, body, opponentView, question, photoDataUrl, tags }) {
   if (!supabase) throw new Error('Supabase가 설정되지 않았어요.')
   const profile = getCachedProfile()
   if (!profile) throw new Error('로그인이 필요해요.')
@@ -64,6 +64,7 @@ export async function createPost({ category, title, body, opponentView, question
       opponent_view: opponentView?.trim() || null,
       question: question?.trim() || null,
       photo_url: photoDataUrl || null,
+      tags: tags && tags.length > 0 ? tags : [],
     })
     .select()
     .single()

@@ -32,6 +32,7 @@ import TarotPage from './pages/TarotPage'
 import LoveFortunePage from './pages/LoveFortunePage'
 import CompatibilityPage from './pages/CompatibilityPage'
 import DailyFortunePage from './pages/DailyFortunePage'
+import SajuPage from './pages/SajuPage'
 import CommunityWrite from './pages/CommunityWrite'
 import CommunityPostDetail from './pages/CommunityPostDetail'
 
@@ -118,6 +119,7 @@ function AppRoutes() {
         <Route path="/community/love-fortune" element={<LoveFortunePage />} />
         <Route path="/community/compatibility" element={<CompatibilityPage />} />
         <Route path="/community/daily-fortune" element={<DailyFortunePage />} />
+        <Route path="/community/saju" element={<SajuPage />} />
         <Route path="/community/board/new" element={<CommunityWrite />} />
         <Route path="/community/board/:postId" element={<CommunityPostDetail />} />
         <Route path="/notifications" element={<Notifications />} />

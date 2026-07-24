@@ -6,21 +6,27 @@ import PrimaryButton from '../components/PrimaryButton'
 import CategoryChip from '../components/CategoryChip'
 import TextField from '../components/TextField'
 import { createPost } from '../lib/communityStore'
-import { COMMUNITY_CATEGORIES } from '../data/communityCategories'
+import { COMMUNITY_CATEGORIES, TAG_GROUPS } from '../data/communityCategories'
 import { resizeImageFile } from '../lib/imageUtils'
 
 export default function CommunityWrite() {
   const navigate = useNavigate()
-  const [category, setCategory] = useState(COMMUNITY_CATEGORIES[1])
+  const [category, setCategory] = useState(COMMUNITY_CATEGORIES[1].key)
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
   const [opponentView, setOpponentView] = useState('')
   const [question, setQuestion] = useState('')
   const [photo, setPhoto] = useState('')
+  const [tags, setTags] = useState([])
+  const [showTagPicker, setShowTagPicker] = useState(false)
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
 
   const canSubmit = title.trim().length > 0 && body.trim().length > 0 && !saving
+
+  const toggleTag = (tag) => {
+    setTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]))
+  }
 
   const handlePhotoSelect = async (e) => {
     const file = e.target.files?.[0]
@@ -39,7 +45,7 @@ export default function CommunityWrite() {
     setSaving(true)
     setError('')
     try {
-      const post = await createPost({ category, title, body, opponentView, question, photoDataUrl: photo })
+      const post = await createPost({ category, title, body, opponentView, question, photoDataUrl: photo, tags })
       navigate(`/community/board/${post.id}`, { replace: true })
     } catch (err) {
       setError(err.message || '글을 등록하지 못했어요.')
@@ -56,8 +62,18 @@ export default function CommunityWrite() {
           <div className="compose-field-label">카테고리</div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {COMMUNITY_CATEGORIES.map((c) => (
-              <CategoryChip key={c} label={c} active={category === c} onClick={() => setCategory(c)} />
+              <CategoryChip key={c.key} label={`${c.emoji} ${c.key}`} active={category === c.key} onClick={() => setCategory(c.key)} />
             ))}
+          </div>
+        </div>
+
+        <div>
+          <div className="compose-field-label">태그 <span className="compose-field-optional">(선택, 여러 개 가능)</span></div>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+            {tags.map((t) => (
+              <CategoryChip key={t} label={t} active onClick={() => toggleTag(t)} />
+            ))}
+            <button type="button" className="chip" onClick={() => setShowTagPicker(true)}>+ 태그 추가</button>
           </div>
         </div>
 
@@ -130,6 +146,30 @@ export default function CommunityWrite() {
           {saving ? '등록하는 중...' : '글 등록하기'}
         </PrimaryButton>
       </div>
+
+      {showTagPicker && (
+        <div className="sheet-overlay" onClick={() => setShowTagPicker(false)}>
+          <div className="sheet-card" onClick={(e) => e.stopPropagation()} style={{ maxHeight: '75vh', overflowY: 'auto' }}>
+            <div className="sheet-head">
+              <span className="sheet-title">태그 고르기</span>
+              <button className="topbar-icon-btn" onClick={() => setShowTagPicker(false)}><X size={18} /></button>
+            </div>
+
+            {TAG_GROUPS.map((g) => (
+              <div key={g.group} style={{ marginBottom: 16 }}>
+                <div className="compose-field-label">{g.group}</div>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+                  {g.tags.map((t) => (
+                    <CategoryChip key={t} label={t} active={tags.includes(t)} onClick={() => toggleTag(t)} />
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <PrimaryButton onClick={() => setShowTagPicker(false)}>선택 완료 ({tags.length}개)</PrimaryButton>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

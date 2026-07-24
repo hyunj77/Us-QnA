@@ -14,9 +14,17 @@ import { isLoggedIn } from '../lib/authState'
 import { isCoupleConnected } from '../lib/coupleState'
 import { canPoke, sendPoke } from '../lib/pokeStore'
 import { getUnreadCount } from '../lib/notificationsStore'
+import { hashString, todayKey } from '../lib/fortuneUtils'
 
 const POKE_COOLDOWN_MS = 60000
 const POKE_KEY = 'us-qna-last-poke-at'
+
+const PROMO_BANNERS = [
+  { badge: 'NEW', title: '커뮤니티에서 AI 타로·오늘의 운세를 확인해보세요', emoji: '🔮', to: '/community' },
+  { badge: 'NEW', title: '연애 고민상담에 올리고 AI 판사에게 판결을 받아보세요', emoji: '⚖️', to: '/community' },
+  { badge: 'TIP', title: '상대방에게 마음을 담은 편지를 보내보세요', emoji: '💌', to: '/memories' },
+  { badge: 'TIP', title: '우리 리포트에서 우리만의 통계를 확인해보세요', emoji: '📊', to: '/memories' },
+]
 
 function timeAgo(iso) {
   const diffMs = Date.now() - new Date(iso).getTime()
@@ -41,6 +49,7 @@ export default function Home() {
   const nextAnniv = getNextAnniversary()
 
   const unreadCount = getUnreadCount()
+  const promoBanner = PROMO_BANNERS[hashString(todayKey()) % PROMO_BANNERS.length]
 
   const recent = getRecentAnswers(2)
     .map((r) => ({ ...r, q: findQuestion(r.questionId) }))
@@ -69,7 +78,13 @@ export default function Home() {
   return (
     <div className="screen">
       <div className="topbar">
-        <div className="home-greeting">오늘도 우리,<br />더 알아가는 하루 💕</div>
+        <div>
+          <div className="home-wordmark">
+            <span className="home-wordmark-us">Us</span>
+            <span className="home-wordmark-qna">·QnA</span>
+          </div>
+          <div className="home-greeting">오늘도 우리,<br />더 알아가는 하루 💕</div>
+        </div>
         <div className="topbar-side" style={{ gap: 4 }}>
           <button className="topbar-icon-btn"><Gift size={20} /></button>
           <button className="topbar-icon-btn" onClick={() => navigate('/notifications')}>
@@ -80,6 +95,12 @@ export default function Home() {
       </div>
 
       <div style={{ padding: '4px 20px 20px', display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <button className="home-promo-banner" onClick={() => navigate(promoBanner.to)}>
+          <span className="home-promo-banner-badge">{promoBanner.badge}</span>
+          <div className="home-promo-banner-title">{promoBanner.title}</div>
+          <span className="home-promo-banner-emoji">{promoBanner.emoji}</span>
+        </button>
+
         {isLoggedIn() && !isCoupleConnected() && (
           <button className="couple-cta-card" onClick={() => navigate('/couple-connect')}>
             <span className="couple-cta-emoji">💌</span>
