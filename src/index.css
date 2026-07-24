@@ -1941,6 +1941,142 @@ input:focus, textarea:focus {
   color: var(--main);
 }
 
+/* ===== Community (커뮤니티 탭) ===== */
+.compose-field-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.compose-field-optional {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.reaction-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--divider);
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.reaction-btn-active {
+  border-color: var(--main);
+  background: var(--sub);
+  color: var(--main);
+}
+
+.judge-style-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.judge-style-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid var(--divider);
+  background: #fff;
+  text-align: left;
+}
+
+.judge-style-btn-active {
+  border-color: var(--main);
+  background: var(--sub);
+}
+
+.judge-style-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.judge-style-desc {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.judge-card {
+  background: #0F1E3D;
+  color: #fff;
+  border-radius: var(--r-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.judge-card-head {
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 14px;
+}
+
+.judge-card-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #E6C875;
+}
+
+.judge-card-meta {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 6px;
+}
+
+.judge-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #E6C875;
+  margin-bottom: 6px;
+}
+
+.judge-section-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.judge-fault-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.judge-fault-chart {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.judge-fault-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.judge-not-ready {
+  border: 1.5px dashed var(--divider);
+  border-radius: var(--r-lg);
+  padding: 24px 20px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
 /* ===== Our Report (추억 탭) ===== */
 .report-card {
   display: flex;

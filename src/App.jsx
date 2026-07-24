@@ -25,6 +25,13 @@ import AnswersList from './pages/AnswersList'
 import UsStats from './pages/UsStats'
 import CoupleConnect from './pages/CoupleConnect'
 import LetterBox from './pages/LetterBox'
+import CommunityHome from './pages/CommunityHome'
+import PsychTestList from './pages/PsychTestList'
+import PsychTestPlay from './pages/PsychTestPlay'
+import TarotPage from './pages/TarotPage'
+import CommunityBoard from './pages/CommunityBoard'
+import CommunityWrite from './pages/CommunityWrite'
+import CommunityPostDetail from './pages/CommunityPostDetail'
 
 function AppRoutes() {
   const location = useLocation()
@@ -102,6 +109,13 @@ function AppRoutes() {
         <Route path="/bookmarks" element={<BookmarksList />} />
         <Route path="/answers/:who" element={<AnswersList />} />
         <Route path="/us" element={<UsStats />} />
+        <Route path="/community" element={<CommunityHome />} />
+        <Route path="/community/tests" element={<PsychTestList />} />
+        <Route path="/community/tests/:testId" element={<PsychTestPlay />} />
+        <Route path="/community/tarot" element={<TarotPage />} />
+        <Route path="/community/board" element={<CommunityBoard />} />
+        <Route path="/community/board/new" element={<CommunityWrite />} />
+        <Route path="/community/board/:postId" element={<CommunityPostDetail />} />
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/my" element={<MyPage />} />
         <Route path="/settings" element={<Settings />} />

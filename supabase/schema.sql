@@ -154,3 +154,104 @@ create policy "book_configs: same couple" on book_configs
 -- notifications: 본인 것만
 create policy "notifications: own only" on notifications
   for all using (user_id = auth.uid()) with check (user_id = auth.uid());
+
+-- ══════════════════════════════════════════════════════════════════════
+-- 커뮤니티 탭: 연애 커뮤니티 게시판 + AI 연애 판사
+-- (아래 블록은 커뮤니티 탭 추가 시점에 새로 실행한 SQL)
+-- ══════════════════════════════════════════════════════════════════════
+
+create table community_posts (
+  id uuid primary key default gen_random_uuid(),
+  author_id uuid not null references auth.users(id) on delete cascade,
+  author_nickname text not null default '익명',
+  category text not null default '연애',
+  title text not null,
+  body text not null,           -- 상황 설명
+  opponent_view text,           -- 상대방 입장 (선택)
+  question text,                -- 내가 궁금한 점 (선택)
+  reactions jsonb not null default '{"like":0,"funny":0,"sad":0,"angry":0,"judge_agree":0}'::jsonb,
+  comments_count int not null default 0,
+  created_at timestamptz not null default now()
+);
+
+create table community_comments (
+  id uuid primary key default gen_random_uuid(),
+  post_id uuid not null references community_posts(id) on delete cascade,
+  author_id uuid not null references auth.users(id) on delete cascade,
+  author_nickname text not null default '익명',
+  body text not null,
+  is_ai boolean not null default false,
+  created_at timestamptz not null default now()
+);
+
+-- AI 연애 판사 결과. Edge Function(love-judge)이 서비스 롤로 직접 써넣는다.
+create table community_judgments (
+  id uuid primary key default gen_random_uuid(),
+  post_id uuid not null references community_posts(id) on delete cascade unique,
+  case_number text not null,
+  judge_style text not null,
+  summary text,
+  author_view jsonb,       -- { emotion, intent, pros, cons }
+  opponent_view jsonb,     -- { emotion, intent, possibility, misunderstanding }
+  issues jsonb,            -- string[]
+  evidence jsonb,          -- { positive: string[], negative: string[], guesses: string[], facts: string[] }
+  verdict text,
+  fault_author int,
+  fault_opponent int,
+  recommended_actions jsonb, -- { action, reason }[]
+  one_liner text,
+  confidence int,
+  created_at timestamptz not null default now()
+);
+
+alter table community_posts enable row level security;
+alter table community_comments enable row level security;
+alter table community_judgments enable row level security;
+
+create policy "community_posts: select all" on community_posts for select using (auth.uid() is not null);
+create policy "community_posts: insert own" on community_posts for insert with check (author_id = auth.uid());
+create policy "community_posts: update own" on community_posts for update using (author_id = auth.uid());
+create policy "community_posts: delete own" on community_posts for delete using (author_id = auth.uid());
+
+create policy "community_comments: select all" on community_comments for select using (auth.uid() is not null);
+create policy "community_comments: insert own" on community_comments for insert with check (author_id = auth.uid());
+create policy "community_comments: delete own" on community_comments for delete using (author_id = auth.uid());
+
+-- 판결 생성은 Edge Function이 서비스 롤 키로 수행하므로 클라이언트용 insert 정책은 두지 않고, 조회만 허용한다.
+create policy "community_judgments: select all" on community_judgments for select using (auth.uid() is not null);
+
+-- 좋아요/공감 등 반응 카운트를 다른 사람 글에도 안전하게 증감시키기 위한 함수(컬럼 단위 제한).
+create or replace function toggle_post_reaction(p_post_id uuid, p_kind text, p_delta int)
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+begin
+  update community_posts
+  set reactions = jsonb_set(
+    reactions,
+    array[p_kind],
+    to_jsonb(greatest(0, coalesce((reactions->>p_kind)::int, 0) + p_delta))
+  )
+  where id = p_post_id;
+end;
+$$;
+grant execute on function toggle_post_reaction(uuid, text, int) to authenticated;
+
+create or replace function increment_comment_count(p_post_id uuid)
+returns void
+language sql
+security definer
+set search_path = public
+as $$
+  update community_posts set comments_count = comments_count + 1 where id = p_post_id;
+$$;
+grant execute on function increment_comment_count(uuid) to authenticated;
+
+-- ── AI 연애 판사 Edge Function 배포 (비용 발생하니 나중에 연결) ──────────────
+-- 1) supabase/functions/love-judge 폴더의 함수를 배포:
+--      supabase functions deploy love-judge
+-- 2) Anthropic API 키를 시크릿으로 등록:
+--      supabase secrets set ANTHROPIC_API_KEY=sk-ant-...
+-- 이 두 단계를 하기 전까지 "AI 판결 받기" 버튼은 "아직 준비 중이에요"로 표시된다.

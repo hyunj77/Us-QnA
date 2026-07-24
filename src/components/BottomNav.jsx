@@ -1,10 +1,11 @@
 import { useNavigate, useLocation } from 'react-router-dom'
-import { House, Heart, Calendar, User } from 'lucide-react'
+import { House, Heart, Calendar, Users, User } from 'lucide-react'
 
 const ITEMS = [
   { to: '/home', label: '홈', Icon: House },
   { to: '/qna', label: '문답', Icon: Heart },
   { to: '/memories', label: '추억', Icon: Calendar },
+  { to: '/community', label: '커뮤니티', Icon: Users },
   { to: '/my', label: 'MY', Icon: User },
 ]
 
