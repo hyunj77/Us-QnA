@@ -1,0 +1,1305 @@
+[
+  {
+    "id": "guide-001",
+    "category": "guide",
+    "sub": "나를 소개해요",
+    "type": "open",
+    "title": "나를 한 단어로 표현하면?"
+  },
+  {
+    "id": "guide-002",
+    "category": "guide",
+    "sub": "나를 소개해요",
+    "type": "open",
+    "title": "성공의 기준은 무엇이라고 생각해?"
+  },
+  {
+    "id": "guide-003",
+    "category": "guide",
+    "sub": "나를 소개해요",
+    "type": "open",
+    "title": "아침형 인간 vs 저녁형 인간?"
+  },
+  {
+    "id": "guide-004",
+    "category": "guide",
+    "sub": "나를 소개해요",
+    "type": "open",
+    "title": "여행을 간다면 휴양 vs 관광?"
+  },
+  {
+    "id": "guide-005",
+    "category": "guide",
+    "sub": "나를 소개해요",
+    "type": "open",
+    "title": "인생의 좌우명은?"
+  },
+  {
+    "id": "guide-006",
+    "category": "guide",
+    "sub": "나를 소개해요",
+    "type": "open",
+    "title": "쉬는 날에는 보통 무엇을 해?"
+  },
+  {
+    "id": "guide-007",
+    "category": "guide",
+    "sub": "나를 소개해요",
+    "type": "open",
+    "title": "초능력을 하나 가질 수 있다면?"
+  },
+  {
+    "id": "guide-008",
+    "category": "guide",
+    "sub": "나를 소개해요",
+    "type": "open",
+    "title": "과거로 갈래, 미래로 갈래?"
+  },
+  {
+    "id": "guide-009",
+    "category": "guide",
+    "sub": "나를 소개해요",
+    "type": "open",
+    "title": "내가 가장 감동받는 말은?"
+  },
+  {
+    "id": "guide-010",
+    "category": "guide",
+    "sub": "나를 소개해요",
+    "type": "open",
+    "title": "가장 듣기 싫은 말은?"
+  },
+  {
+    "id": "guide-011",
+    "category": "guide",
+    "sub": "나의 연애 스타일",
+    "type": "open",
+    "title": "좋아하는 사람에게 먼저 다가가는 편이야?"
+  },
+  {
+    "id": "guide-012",
+    "category": "guide",
+    "sub": "나의 연애 스타일",
+    "type": "open",
+    "title": "하루 중 언제 연락하는 게 가장 좋아?"
+  },
+  {
+    "id": "guide-013",
+    "category": "guide",
+    "sub": "나의 연애 스타일",
+    "type": "open",
+    "title": "데이트는 계획형이 좋아, 즉흥형이 좋아?"
+  },
+  {
+    "id": "guide-014",
+    "category": "guide",
+    "sub": "나의 연애 스타일",
+    "type": "open",
+    "title": "기념일을 잘 챙기는 편이야?"
+  },
+  {
+    "id": "guide-015",
+    "category": "guide",
+    "sub": "나의 연애 스타일",
+    "type": "open",
+    "title": "연인과 취미를 함께하는 게 중요해?"
+  },
+  {
+    "id": "guide-016",
+    "category": "guide",
+    "sub": "나의 연애 스타일",
+    "type": "open",
+    "title": "커플 사진 많이 찍는 편이 좋아?"
+  },
+  {
+    "id": "guide-017",
+    "category": "guide",
+    "sub": "나의 연애 스타일",
+    "type": "open",
+    "title": "가장 로맨틱하다고 생각하는 장소는?"
+  },
+  {
+    "id": "guide-018",
+    "category": "guide",
+    "sub": "사랑 표현",
+    "type": "open",
+    "title": "연인에게 가장 듣고 싶은 칭찬은?"
+  },
+  {
+    "id": "guide-019",
+    "category": "guide",
+    "sub": "사랑 표현",
+    "type": "open",
+    "title": "좋아하는 사람이 해주면 기분 좋은 행동은?"
+  },
+  {
+    "id": "guide-020",
+    "category": "guide",
+    "sub": "사랑 표현",
+    "type": "open",
+    "title": "사랑을 표현하는 편이야, 표현받는 걸 더 좋아해?"
+  },
+  {
+    "id": "guide-021",
+    "category": "guide",
+    "sub": "사랑 표현",
+    "type": "open",
+    "title": "연인이 힘들어하면 어떻게 위로해 주는 편이야?"
+  },
+  {
+    "id": "guide-022",
+    "category": "guide",
+    "sub": "사랑 표현",
+    "type": "open",
+    "title": "연애하면 가장 행복한 순간은?"
+  },
+  {
+    "id": "guide-023",
+    "category": "guide",
+    "sub": "사랑 표현",
+    "type": "open",
+    "title": "연인이 기억해 주면 좋겠는 작은 것은?"
+  },
+  {
+    "id": "guide-024",
+    "category": "guide",
+    "sub": "사랑 표현",
+    "type": "open",
+    "title": "선물보다 더 감동받는 것은?"
+  },
+  {
+    "id": "guide-025",
+    "category": "guide",
+    "sub": "사랑 표현",
+    "type": "open",
+    "title": "나만의 애정 표현은?"
+  },
+  {
+    "id": "guide-026",
+    "category": "guide",
+    "sub": "연애 가치관",
+    "type": "open",
+    "title": "다투면 먼저 이야기하는 편이야?"
+  },
+  {
+    "id": "guide-027",
+    "category": "guide",
+    "sub": "연애 가치관",
+    "type": "open",
+    "title": "서운한 일이 생기면 바로 말하는 편이야?"
+  },
+  {
+    "id": "guide-028",
+    "category": "guide",
+    "sub": "연애 가치관",
+    "type": "open",
+    "title": "연애에서 가장 중요하게 생각하는 약속은?"
+  },
+  {
+    "id": "guide-029",
+    "category": "guide",
+    "sub": "연애 가치관",
+    "type": "open",
+    "title": "서로의 개인 시간을 존중하는 편이야?"
+  },
+  {
+    "id": "guide-030",
+    "category": "guide",
+    "sub": "연애 가치관",
+    "type": "open",
+    "title": "연애하면서 꼭 지키고 싶은 원칙이 있어?"
+  },
+  {
+    "id": "guide-031",
+    "category": "guide",
+    "sub": "연애 가치관",
+    "type": "open",
+    "title": "연애에서 절대 양보할 수 없는 기준은?"
+  },
+  {
+    "id": "guide-032",
+    "category": "guide",
+    "sub": "연애 가치관",
+    "type": "open",
+    "title": "장거리 연애를 할 수 있어?"
+  },
+  {
+    "id": "guide-033",
+    "category": "guide",
+    "sub": "연애 가치관",
+    "type": "open",
+    "title": "연애 중 이성 친구는 어디까지 괜찮아?"
+  },
+  {
+    "id": "guide-034",
+    "category": "guide",
+    "sub": "연애 가치관",
+    "type": "open",
+    "title": "연애에서 가장 두려운 것은?"
+  },
+  {
+    "id": "guide-035",
+    "category": "guide",
+    "sub": "연애 가치관",
+    "type": "open",
+    "title": "이별 후에도 친구로 지낼 수 있다고 생각해?"
+  },
+  {
+    "id": "guide-036",
+    "category": "guide",
+    "sub": "미래의 연애",
+    "type": "open",
+    "title": "운명적인 사랑을 믿어?"
+  },
+  {
+    "id": "guide-037",
+    "category": "guide",
+    "sub": "미래의 연애",
+    "type": "open",
+    "title": "결혼은 꼭 하고 싶어?"
+  },
+  {
+    "id": "guide-038",
+    "category": "guide",
+    "sub": "미래의 연애",
+    "type": "open",
+    "title": "아이에 대한 생각은? 낳는다면 몇명?"
+  },
+  {
+    "id": "guide-039",
+    "category": "guide",
+    "sub": "내가 원하는 숫자",
+    "type": "open",
+    "title": "우리의 하루 평균 연락 횟수"
+  },
+  {
+    "id": "guide-040",
+    "category": "guide",
+    "sub": "내가 원하는 숫자",
+    "type": "open",
+    "title": "우리의 한 달 평균 데이트 횟수"
+  },
+  {
+    "id": "guide-041",
+    "category": "guide",
+    "sub": "내가 원하는 숫자",
+    "type": "open",
+    "title": "우리의 평균 취침 시간"
+  },
+  {
+    "id": "couple-001",
+    "category": "couple",
+    "sub": "서로 소개",
+    "type": "open",
+    "title": "서로의 호칭은?"
+  },
+  {
+    "id": "couple-002",
+    "category": "couple",
+    "sub": "서로 소개",
+    "type": "open",
+    "title": "서로의 MBTI 유형은?"
+  },
+  {
+    "id": "couple-003",
+    "category": "couple",
+    "sub": "서로 소개",
+    "type": "open",
+    "title": "가장 선호하는 영화 장르"
+  },
+  {
+    "id": "couple-004",
+    "category": "couple",
+    "sub": "서로 소개",
+    "type": "open",
+    "title": "내가 가장 좋아하는 음식 3가지"
+  },
+  {
+    "id": "couple-005",
+    "category": "couple",
+    "sub": "서로 소개",
+    "type": "open",
+    "title": "나에게 가장 잘 어울리는 별명은?"
+  },
+  {
+    "id": "couple-006",
+    "category": "couple",
+    "sub": "서로 소개",
+    "type": "open",
+    "title": "애인을 보면 떠오르는 색깔은?"
+  },
+  {
+    "id": "couple-007",
+    "category": "couple",
+    "sub": "서로 소개",
+    "type": "open",
+    "title": "애인과 닮은 동물이 있다면?"
+  },
+  {
+    "id": "couple-008",
+    "category": "couple",
+    "sub": "서로 소개",
+    "type": "open",
+    "title": "서로에게 어울리는 노래 제목은?"
+  },
+  {
+    "id": "couple-009",
+    "category": "couple",
+    "sub": "서로 소개",
+    "type": "open",
+    "title": "서로의 닮은점은?"
+  },
+  {
+    "id": "couple-010",
+    "category": "couple",
+    "sub": "서로 소개",
+    "type": "open",
+    "title": "서로의 가장 다른 점은?"
+  },
+  {
+    "id": "couple-011",
+    "category": "couple",
+    "sub": "첫 만남",
+    "type": "open",
+    "title": "우리의 첫 키스 장소는?"
+  },
+  {
+    "id": "couple-012",
+    "category": "couple",
+    "sub": "첫 만남",
+    "type": "open",
+    "title": "애인을 처음 봤을 때 내가 느꼈던 감정"
+  },
+  {
+    "id": "couple-013",
+    "category": "couple",
+    "sub": "첫 만남",
+    "type": "open",
+    "title": "고백 받았던(했던)날 내가 느꼈던 감정은?"
+  },
+  {
+    "id": "couple-014",
+    "category": "couple",
+    "sub": "첫 만남",
+    "type": "open",
+    "title": "처음 보고 가장 끌렸던 부분은?"
+  },
+  {
+    "id": "couple-015",
+    "category": "couple",
+    "sub": "첫 만남",
+    "type": "open",
+    "title": "나와 처음 만난 날로 돌아간다면 다시 만날 거야?"
+  },
+  {
+    "id": "couple-016",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "내가 선호하는 애인과의 데이트 스타일"
+  },
+  {
+    "id": "couple-017",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "7일 중 애인과 만남 빈도수와 나의 생각은?"
+  },
+  {
+    "id": "couple-018",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "내가 선호하는 데이트 유형은?"
+  },
+  {
+    "id": "couple-019",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "가장 기억에 남는 우리의 데이트"
+  },
+  {
+    "id": "couple-020",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "데이트 중 가장 기억에 남는 순간은?"
+  },
+  {
+    "id": "couple-021",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "비 오는 날 데이트하면 뭐 하고 싶어?"
+  },
+  {
+    "id": "couple-022",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "나랑 영화 본다면 어떤 장르의 영화를 보고 싶어?"
+  },
+  {
+    "id": "couple-023",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "나랑 커플 게임하면 누가 더 잘할 것 같아?"
+  },
+  {
+    "id": "couple-024",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "내가 좋아할 것 같은 데이트 코스는?"
+  },
+  {
+    "id": "couple-025",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "데이트가 끝날 때 가장 아쉬운 순간은?"
+  },
+  {
+    "id": "couple-026",
+    "category": "couple",
+    "sub": "데이트",
+    "type": "open",
+    "title": "애인과 가장 찍고 싶은 커플 포즈 사진은?"
+  },
+  {
+    "id": "couple-027",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "애인이 가장 보고싶었던 순간은?"
+  },
+  {
+    "id": "couple-028",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "애인에게 궁금한 19금 질문 한 가지"
+  },
+  {
+    "id": "couple-029",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "내가 가장 좋아하는 스킨쉽은?"
+  },
+  {
+    "id": "couple-030",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "내가 반하게 된 애인의 모습"
+  },
+  {
+    "id": "couple-031",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "애인에게 가장 감동 받았던 순간"
+  },
+  {
+    "id": "couple-032",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "요즘 우리의 애정지수는 몇 %?"
+  },
+  {
+    "id": "couple-033",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "애인에게 마지막으로 하고 싶은 한마디"
+  },
+  {
+    "id": "couple-034",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "나한테 애교를 부려줬으면 하는 순간은?"
+  },
+  {
+    "id": "couple-035",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "나한테 가장 심쿵했던 행동은?"
+  },
+  {
+    "id": "couple-036",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "나에게 가장 듣고 싶은 말은?"
+  },
+  {
+    "id": "couple-037",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "우리 관계에서 가장 행복했던 순간은?"
+  },
+  {
+    "id": "couple-038",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "사랑받고 있다고 느끼는 행동은?"
+  },
+  {
+    "id": "couple-039",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "내가 하루 종일 안기고 있으면 어때?"
+  },
+  {
+    "id": "couple-040",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "나에게 가장 고마웠던 순간은?"
+  },
+  {
+    "id": "couple-041",
+    "category": "couple",
+    "sub": "서로의 마음",
+    "type": "open",
+    "title": "나를 보면 가장 먼저 하고 싶은 행동은?"
+  },
+  {
+    "id": "couple-042",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "애인의 얼굴 중 내가 가장 좋아하는 부위는?"
+  },
+  {
+    "id": "couple-043",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "애인의 성격 중 내가 가장 좋아하는 것"
+  },
+  {
+    "id": "couple-044",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "애인에게 나는 애인만의 향기는?"
+  },
+  {
+    "id": "couple-045",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "애인의 옷 입는 스타일은?"
+  },
+  {
+    "id": "couple-046",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "우리 커플의 장점은 뭐라고 생각해?"
+  },
+  {
+    "id": "couple-047",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "현재 나의 연애 장점은 무엇이라고 생각해?"
+  },
+  {
+    "id": "couple-048",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "현재 나의 연애 단점은 무엇이라고 생각해?"
+  },
+  {
+    "id": "couple-049",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "나의 연애 가치관"
+  },
+  {
+    "id": "couple-050",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "내가 생각하는 바람의 기준"
+  },
+  {
+    "id": "couple-051",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "애인의 몸으로 일주일을 살 수 있다면?"
+  },
+  {
+    "id": "couple-052",
+    "category": "couple",
+    "sub": "서로에 대한 생각",
+    "type": "open",
+    "title": "내가 생각하는 사랑이란?"
+  },
+  {
+    "id": "couple-053",
+    "category": "couple",
+    "sub": "생활 습관",
+    "type": "open",
+    "title": "애인의 술버릇과 주량은?"
+  },
+  {
+    "id": "couple-054",
+    "category": "couple",
+    "sub": "생활 습관",
+    "type": "open",
+    "title": "애인이 터치하지 않았으면 하는 것"
+  },
+  {
+    "id": "couple-055",
+    "category": "couple",
+    "sub": "생활 습관",
+    "type": "open",
+    "title": "애인이 고쳤으면 하는 습관"
+  },
+  {
+    "id": "couple-056",
+    "category": "couple",
+    "sub": "생활 습관",
+    "type": "open",
+    "title": "애인의 평균 취침 시간은?"
+  },
+  {
+    "id": "couple-057",
+    "category": "couple",
+    "sub": "생활 습관",
+    "type": "open",
+    "title": "하루에 애인과 전화 빈도"
+  },
+  {
+    "id": "couple-058",
+    "category": "couple",
+    "sub": "생활 습관",
+    "type": "open",
+    "title": "애인의 평균 답장 속도"
+  },
+  {
+    "id": "couple-059",
+    "category": "couple",
+    "sub": "생활 습관",
+    "type": "open",
+    "title": "애인이 고쳤으면 하는 부분은?"
+  },
+  {
+    "id": "couple-060",
+    "category": "couple",
+    "sub": "갈등과 서운함",
+    "type": "open",
+    "title": "가장 최근에 싸웠던 일은?"
+  },
+  {
+    "id": "couple-061",
+    "category": "couple",
+    "sub": "갈등과 서운함",
+    "type": "open",
+    "title": "애인의 전애인을 마주친다면?"
+  },
+  {
+    "id": "couple-062",
+    "category": "couple",
+    "sub": "갈등과 서운함",
+    "type": "open",
+    "title": "애인에게 최근에 가장 서운했던 순간"
+  },
+  {
+    "id": "couple-063",
+    "category": "couple",
+    "sub": "갈등과 서운함",
+    "type": "open",
+    "title": "나에게 질투했던 적 있어?"
+  },
+  {
+    "id": "couple-064",
+    "category": "couple",
+    "sub": "갈등과 서운함",
+    "type": "open",
+    "title": "나에게 미안했던 순간은?"
+  },
+  {
+    "id": "couple-065",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "애인과 가장 하고 싶은 나의 버킷리스트는?"
+  },
+  {
+    "id": "couple-066",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "애인과 가장 가고 싶은 해외 여행지"
+  },
+  {
+    "id": "couple-067",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "애인과 가장 가고 싶은 국내 여행지"
+  },
+  {
+    "id": "couple-068",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "내가 가장 결혼 하고 싶은 나이는?"
+  },
+  {
+    "id": "couple-069",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "애인에게 가장 받고 싶은 프로포즈는?"
+  },
+  {
+    "id": "couple-070",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "가장 하고 싶은 우리의 커플템은?"
+  },
+  {
+    "id": "couple-071",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "앞으로 꼭 같이 이루고 싶은 꿈은?"
+  },
+  {
+    "id": "couple-072",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "커플룩 입어보고 싶어?"
+  },
+  {
+    "id": "couple-073",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "커플 아이템 하나 맞춘다면?"
+  },
+  {
+    "id": "couple-074",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "내가 해주는 요리를 먹어보고 싶어?"
+  },
+  {
+    "id": "couple-075",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "나에게 깜짝 선물을 준다면?"
+  },
+  {
+    "id": "couple-076",
+    "category": "couple",
+    "sub": "미래 이야기",
+    "type": "open",
+    "title": "애인이 어떤 소원이든 다 들어준다고 한다면?"
+  },
+  {
+    "id": "nineteen-001",
+    "category": "nineteen",
+    "sub": "설렘",
+    "type": "open",
+    "title": "내가 가장 귀엽다고 느껴질 때는?"
+  },
+  {
+    "id": "nineteen-002",
+    "category": "nineteen",
+    "sub": "설렘",
+    "type": "open",
+    "title": "내가 가장 섹시할 때는 언제야?"
+  },
+  {
+    "id": "nineteen-003",
+    "category": "nineteen",
+    "sub": "스킨십",
+    "type": "open",
+    "title": "가장 좋아하는 스킨십은?"
+  },
+  {
+    "id": "nineteen-004",
+    "category": "nineteen",
+    "sub": "스킨십",
+    "type": "open",
+    "title": "손잡기, 포옹, 뽀뽀 중 하나만 고른다면?"
+  },
+  {
+    "id": "nineteen-005",
+    "category": "nineteen",
+    "sub": "스킨십",
+    "type": "open",
+    "title": "나를 안고 있으면 어떤 기분이 들어?"
+  },
+  {
+    "id": "nineteen-006",
+    "category": "nineteen",
+    "sub": "취향",
+    "type": "open",
+    "title": "내가 어떤 옷을 입으면 가장 예뻐(멋있어) 보여?"
+  },
+  {
+    "id": "nineteen-007",
+    "category": "nineteen",
+    "sub": "취향",
+    "type": "open",
+    "title": "내가 향수를 뿌리면 어떤 향이 어울릴 것 같아?"
+  },
+  {
+    "id": "nineteen-008",
+    "category": "nineteen",
+    "sub": "취향",
+    "type": "open",
+    "title": "애인의 신체부위 중 가장 좋은 곳은?"
+  },
+  {
+    "id": "nineteen-009",
+    "category": "nineteen",
+    "sub": "솔직한 질문",
+    "type": "open",
+    "title": "우리 둘만의 비밀을 하나 만든다면?"
+  },
+  {
+    "id": "nineteen-010",
+    "category": "nineteen",
+    "sub": "솔직한 질문",
+    "type": "open",
+    "title": "가장 자신있는 신체부위는 어디야?"
+  },
+  {
+    "id": "nineteen-011",
+    "category": "nineteen",
+    "sub": "솔직한 질문",
+    "type": "open",
+    "title": "가장 최근에 야동 언제 봤어?"
+  },
+  {
+    "id": "nineteen-012",
+    "category": "nineteen",
+    "sub": "솔직한 질문",
+    "type": "open",
+    "title": "나랑 어디서 했을 때 제일 좋았어?"
+  },
+  {
+    "id": "nineteen-013",
+    "category": "nineteen",
+    "sub": "솔직한 질문",
+    "type": "open",
+    "title": "좋았던 척 연기한 적 있어?"
+  },
+  {
+    "id": "nineteen-014",
+    "category": "nineteen",
+    "sub": "내가 원하는 숫자",
+    "type": "open",
+    "title": "내가 원하는 평균 사랑 횟수 :"
+  },
+  {
+    "id": "nineteen-015",
+    "category": "nineteen",
+    "sub": "내가 원하는 숫자",
+    "type": "open",
+    "title": "내가 원하는 평균 사랑 시간 :"
+  },
+  {
+    "id": "nineteen-016",
+    "category": "nineteen",
+    "sub": "내가 원하는 숫자",
+    "type": "open",
+    "title": "내가 원하는 19금 로망 :"
+  },
+  {
+    "id": "ifonly-001",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 술 한 잔도 못마시면 어떨 것 같아?"
+  },
+  {
+    "id": "ifonly-002",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 하루종일 연락 안하면 어떻게 할거야?"
+  },
+  {
+    "id": "ifonly-003",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 대머리여도 계속 만날거야? 지금은 안 그래도 유전이라면?"
+  },
+  {
+    "id": "ifonly-004",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 백만원만 빌려달라고 하면 빌려줄거야?"
+  },
+  {
+    "id": "ifonly-005",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 범죄를 저질렀는데 모른척 해달라고 한다면?"
+  },
+  {
+    "id": "ifonly-006",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 사람 많은 장소에서 내가 방구 뀌면 어떻게 할거야?"
+  },
+  {
+    "id": "ifonly-007",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 동성이였어도 나랑 계속 만날거야?"
+  },
+  {
+    "id": "ifonly-008",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 자기 차로 사고내면 어떻게 할거야?"
+  },
+  {
+    "id": "ifonly-009",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 남사친(여사친)이랑 둘이 술 먹는다고 하면?"
+  },
+  {
+    "id": "ifonly-010",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 통장 비밀번호 알려달라고 한다면?"
+  },
+  {
+    "id": "ifonly-011",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 닭다리 2개를 다 먹는다고 한다면?"
+  },
+  {
+    "id": "ifonly-012",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 롤 아이디 빌려달라고 하면?"
+  },
+  {
+    "id": "ifonly-013",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 내가 날 위해 요리 해달라고 하면?"
+  },
+  {
+    "id": "ifonly-014",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 다른 사람한테 대쉬 받으면 나한테 말할거야?"
+  },
+  {
+    "id": "ifonly-015",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 누가 나랑 헤어지면 100억 준다면 헤어질거야?"
+  },
+  {
+    "id": "ifonly-016",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 가장 친한 친구랑 나랑 싸우면 누구 편 들거야?"
+  },
+  {
+    "id": "ifonly-017",
+    "category": "ifonly",
+    "sub": null,
+    "type": "open",
+    "title": "만약에 전여친한테 연락 오면 나한테 말할거야?"
+  },
+  {
+    "id": "balance-001",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "겨울 데이트 vs 여름 데이트?",
+    "options": [
+      "겨울 데이트",
+      "여름 데이트"
+    ]
+  },
+  {
+    "id": "balance-002",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "매일 손잡기 vs 매일 포옹",
+    "options": [
+      "매일 손잡기",
+      "매일 포옹"
+    ]
+  },
+  {
+    "id": "balance-003",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "낮 데이트 vs 밤 데이트",
+    "options": [
+      "낮 데이트",
+      "밤 데이트"
+    ]
+  },
+  {
+    "id": "balance-004",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "집 데이트 vs 여행 데이트",
+    "options": [
+      "집 데이트",
+      "여행 데이트"
+    ]
+  },
+  {
+    "id": "balance-005",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "영화 보기 vs 맛집 가기",
+    "options": [
+      "영화 보기",
+      "맛집 가기"
+    ]
+  },
+  {
+    "id": "balance-006",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "커플룩 맞추기 vs 커플링 맞추기",
+    "options": [
+      "커플룩 맞추기",
+      "커플링 맞추기"
+    ]
+  },
+  {
+    "id": "balance-007",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "애교 많은 연인 vs 츤데레 연인",
+    "options": [
+      "애교 많은 연인",
+      "츤데레 연인"
+    ]
+  },
+  {
+    "id": "balance-008",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "문자 자주 하기 vs 전화 오래 하기",
+    "options": [
+      "문자 자주 하기",
+      "전화 오래 하기"
+    ]
+  },
+  {
+    "id": "balance-009",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "먼저 안기기 vs 먼저 손잡기",
+    "options": [
+      "먼저 안기기",
+      "먼저 손잡기"
+    ]
+  },
+  {
+    "id": "balance-010",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "하루 종일 붙어 있기 vs 각자 시간 보내기",
+    "options": [
+      "하루 종일 붙어 있기",
+      "각자 시간 보내기"
+    ]
+  },
+  {
+    "id": "balance-011",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "기념일 크게 챙기기 vs 평소 자주 챙기기",
+    "options": [
+      "기념일 크게 챙기기",
+      "평소 자주 챙기기"
+    ]
+  },
+  {
+    "id": "balance-012",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "같이 운동하기 vs 같이 게임하기",
+    "options": [
+      "같이 운동하기",
+      "같이 게임하기"
+    ]
+  },
+  {
+    "id": "balance-013",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "사진 많이 찍기 vs 추억만 남기기",
+    "options": [
+      "사진 많이 찍기",
+      "추억만 남기기"
+    ]
+  },
+  {
+    "id": "balance-014",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "바다 여행 vs 산 여행",
+    "options": [
+      "바다 여행",
+      "산 여행"
+    ]
+  },
+  {
+    "id": "balance-015",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "즉흥 여행 vs 계획 여행",
+    "options": [
+      "즉흥 여행",
+      "계획 여행"
+    ]
+  },
+  {
+    "id": "balance-016",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "연애 초반으로 돌아가기 vs 지금 그대로 계속하기",
+    "options": [
+      "연애 초반으로 돌아가기",
+      "지금 그대로 계속하기"
+    ]
+  },
+  {
+    "id": "balance-017",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "무뚝뚝한 연인 vs 표현 해주는 연인",
+    "options": [
+      "무뚝뚝한 연인",
+      "표현 해주는 연인"
+    ]
+  },
+  {
+    "id": "balance-018",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "내 팬티속 베프 손 VS 베프 팬티 속 내 손",
+    "options": [
+      "내 팬티속 베프 손",
+      "베프 팬티 속 내 손"
+    ]
+  },
+  {
+    "id": "balance-019",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "남자와 술 마시기 VS 1박 2일 여행 다녀오기",
+    "options": [
+      "남자와 술 마시기",
+      "1박 2일 여행 다녀오기"
+    ]
+  },
+  {
+    "id": "balance-020",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "우리 집에 다른 이성 속옷 VS 다른 이성 집에 내 속옷",
+    "options": [
+      "우리 집에 다른 이성 속옷",
+      "다른 이성 집에 내 속옷"
+    ]
+  },
+  {
+    "id": "balance-021",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "피시방 게임 평생 끊기 VS 애인 평생 끊기",
+    "options": [
+      "피시방 게임 평생 끊기",
+      "애인 평생 끊기"
+    ]
+  },
+  {
+    "id": "balance-022",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "하루에 1번 하기 VS 1년에 1번 하기",
+    "options": [
+      "하루에 1번 하기",
+      "1년에 1번 하기"
+    ]
+  },
+  {
+    "id": "balance-023",
+    "category": "balance",
+    "sub": null,
+    "type": "choice",
+    "title": "한 달 동안 뽀뽀 금지 VS 한 달 동안 손잡기 금지",
+    "options": [
+      "한 달 동안 뽀뽀 금지",
+      "한 달 동안 손잡기 금지"
+    ]
+  }
+]

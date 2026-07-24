@@ -1,0 +1,95 @@
+import { useNavigate } from 'react-router-dom'
+import { Gift, Bell, ChevronRight, Dice5 } from 'lucide-react'
+import BottomNav from '../components/BottomNav'
+import PrimaryButton from '../components/PrimaryButton'
+import { getTodayQuestion, getRandomQuestion, QUESTIONS } from '../lib/questions'
+import { getAnsweredCount } from '../lib/answersStore'
+
+const RECENT_FALLBACK = [
+  { id: 'couple-034', time: '방금 답변 완료' },
+  { id: 'couple-035', time: '어제 답변 완료' },
+]
+
+export default function Home() {
+  const navigate = useNavigate()
+  const today = getTodayQuestion()
+  const answeredCount = getAnsweredCount()
+  const pct = Math.round((answeredCount / QUESTIONS.length) * 100)
+
+  const recent = RECENT_FALLBACK.map((r) => ({ ...r, q: QUESTIONS.find((q) => q.id === r.id) }))
+    .filter((r) => r.q)
+
+  const goRandom = () => {
+    const q = getRandomQuestion()
+    navigate(`/qna/${q.category}/${q.id}`)
+  }
+
+  return (
+    <div className="screen">
+      <div className="topbar">
+        <div className="home-greeting">오늘도 우리,<br />더 알아가는 하루 💕</div>
+        <div className="topbar-side" style={{ gap: 4 }}>
+          <button className="topbar-icon-btn"><Gift size={20} /></button>
+          <button className="topbar-icon-btn" onClick={() => navigate('/notifications')}><Bell size={20} /></button>
+        </div>
+      </div>
+
+      <div style={{ padding: '4px 20px 20px', display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <div className="today-q-card">
+          <div className="today-q-head">
+            <span className="today-q-label">💗 오늘의 질문</span>
+            <span className="today-q-dday">D-12</span>
+          </div>
+          <div className="today-q-title">{today.title}</div>
+          <PrimaryButton onClick={() => navigate(`/qna/${today.category}/${today.id}`)}>답변하기</PrimaryButton>
+          <div className="today-q-hint">
+            <span className="avatar-pair"><span>🧑</span><span>👩</span></span>
+            오늘의 답변을 완료하면 서로의 답변을 볼 수 있어요!
+          </div>
+        </div>
+
+        <div className="card stat-row">
+          <div className="stat-row-item">
+            <div className="stat-row-value">{pct}%</div>
+            <div className="stat-row-label">문답 진행률</div>
+          </div>
+          <div className="stat-row-item">
+            <div className="stat-row-value">{answeredCount}개</div>
+            <div className="stat-row-label">답변한 질문</div>
+          </div>
+          <div className="stat-row-item">
+            <div className="stat-row-value">23일🔥</div>
+            <div className="stat-row-label">연속 참여일</div>
+          </div>
+        </div>
+
+        {recent.length > 0 && (
+          <div>
+            <div className="section-head">
+              <span className="section-title">최근 답변</span>
+              <button className="btn-text" onClick={() => navigate('/qna')}>더보기 <ChevronRight size={12} /></button>
+            </div>
+            <div className="card">
+              {recent.map(({ q, time }) => (
+                <div key={q.id} className="recent-item">
+                  <span className="icon-badge" style={{ background: 'var(--sub)' }}>💗</span>
+                  <div>
+                    <div className="recent-item-title">{q.title}</div>
+                    <div className="recent-item-time">{time}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <button className="random-q-card" style={{ width: '100%', textAlign: 'left' }} onClick={goRandom}>
+          <span className="random-q-emoji"><Dice5 size={26} /></span>
+          <span className="random-q-text">랜덤으로 질문을 뽑아보세요!</span>
+        </button>
+      </div>
+
+      <BottomNav />
+    </div>
+  )
+}
