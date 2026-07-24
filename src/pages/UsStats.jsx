@@ -1,5 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import TopAppBar from '../components/TopAppBar'
+import TogetherStatsCard from '../components/TogetherStatsCard'
+import CoupleStatisticsCard from '../components/CoupleStatisticsCard'
+import AIPersonalityReportCard from '../components/AIPersonalityReportCard'
+import AIQuestionRecommendationCard from '../components/AIQuestionRecommendationCard'
 import { QUESTIONS } from '../lib/questions'
 import { getAnsweredCount, getStreakDays } from '../lib/answersStore'
 import {
@@ -10,6 +14,7 @@ import {
   getAvgAnswerLength,
   getTopWords,
 } from '../lib/statsUtils'
+import { getTogetherStats, getCoupleStatistics, getPersonalityInsights, getRecommendedQuestions } from '../lib/reportUtils'
 
 export default function UsStats() {
   const navigate = useNavigate()
@@ -21,6 +26,11 @@ export default function UsStats() {
   const avgLength = getAvgAnswerLength()
   const topWords = getTopWords()
   const streak = getStreakDays()
+
+  const together = getTogetherStats()
+  const statistics = getCoupleStatistics()
+  const insights = getPersonalityInsights()
+  const recommendation = getRecommendedQuestions(5)
 
   return (
     <div className="screen">
@@ -84,6 +94,14 @@ export default function UsStats() {
                 </div>
               </div>
             )}
+
+            <div className="section-head">
+              <span className="section-title">📊 우리 리포트</span>
+            </div>
+            <TogetherStatsCard {...together} />
+            <CoupleStatisticsCard {...statistics} />
+            <AIPersonalityReportCard insights={insights} />
+            <AIQuestionRecommendationCard lead={recommendation.lead} questions={recommendation.questions} />
           </>
         ) : (
           <div className="empty-state">

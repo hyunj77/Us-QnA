@@ -1941,6 +1941,175 @@ input:focus, textarea:focus {
   color: var(--main);
 }
 
+/* ===== Our Report (추억 탭) ===== */
+.report-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.report-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.report-card-emoji {
+  font-size: 18px;
+}
+
+.report-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+}
+
+.report-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.report-stat-item {
+  text-align: center;
+}
+
+.report-stat-value {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.report-stat-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.report-progress-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.report-progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.report-progress-track {
+  width: 100%;
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: var(--divider);
+  overflow: hidden;
+}
+
+.report-progress-fill {
+  height: 100%;
+  border-radius: var(--r-pill);
+  background: var(--main);
+  transition: width 0.4s ease;
+}
+
+.report-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.report-mini-item {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.report-mini-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.report-mini-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 2px;
+}
+
+.report-empty-hint {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.report-personality-item {
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--bg);
+}
+
+.report-personality-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.report-personality-snippet {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.report-reco-lead {
+  font-size: 13px;
+  color: var(--text);
+  background: var(--sub);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+.report-reco-question {
+  width: 100%;
+  text-align: left;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--divider);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: none;
+}
+
+.report-reco-question + .report-reco-question {
+  margin-top: 8px;
+}
+
+.report-summary-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--main);
+  padding: 4px 0 0;
+  background: none;
+  width: 100%;
+}
+
 /* ===== Notification kind tag ===== */
 .notif-kind-tag {
   font-size: 10px;

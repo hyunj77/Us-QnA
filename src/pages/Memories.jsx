@@ -4,6 +4,7 @@ import { ChevronRight, Lock, Mail, X } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import MemoryCard from '../components/MemoryCard'
 import CalendarView from '../components/CalendarView'
+import OurReportSection from '../components/OurReportSection'
 import PrimaryButton from '../components/PrimaryButton'
 import { MOCK_MEMORIES } from '../data/mock'
 import { findCategory } from '../lib/questions'
@@ -157,6 +158,8 @@ export default function Memories() {
           <CalendarView memories={memories} />
         </div>
       </div>
+
+      <OurReportSection />
 
       {/* 타임라인 */}
       <div className="memory-section">
