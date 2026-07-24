@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { Gift, Bell, ChevronRight, Dice5 } from 'lucide-react'
+import { Gift, Bell, ChevronRight } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import PrimaryButton from '../components/PrimaryButton'
 import { getTodayQuestion, getRandomQuestion, findQuestion, QUESTIONS } from '../lib/questions'
@@ -101,9 +101,12 @@ export default function Home() {
           )}
         </div>
 
-        <button className="random-q-card" style={{ width: '100%', textAlign: 'left' }} onClick={goRandom}>
-          <span className="random-q-emoji"><Dice5 size={26} /></span>
-          <span className="random-q-text">랜덤으로 질문을 뽑아보세요!</span>
+        <button className="random-q-card" style={{ width: '100%' }} onClick={goRandom}>
+          <div>
+            <div className="random-q-title">랜덤 질문</div>
+            <div className="random-q-text">랜덤으로 질문을 뽑아보세요!</div>
+          </div>
+          <span className="random-q-badge"><span>?</span></span>
         </button>
       </div>
 

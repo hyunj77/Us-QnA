@@ -206,9 +206,9 @@ input:focus, textarea:focus {
 /* ===== Top App Bar ===== */
 .topbar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: calc(28px + env(safe-area-inset-top)) 20px 16px;
+  padding: calc(48px + env(safe-area-inset-top)) 20px 16px;
   gap: 10px;
 }
 
@@ -551,14 +551,24 @@ input:focus, textarea:focus {
   margin-bottom: 18px;
 }
 
+.today-q-card .btn-primary {
+  width: auto;
+  min-width: 180px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 32px;
+}
+
 .today-q-hint {
-  margin-top: 14px;
+  margin-top: 22px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-size: 12px;
   color: var(--main-hover);
   font-weight: 600;
+  text-align: center;
 }
 
 .avatar-pair {
@@ -658,20 +668,44 @@ input:focus, textarea:focus {
 .random-q-card {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 14px;
-  background: var(--purple-light);
+  background: #fff;
   border-radius: var(--r-lg);
-  padding: 16px 18px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow-card);
 }
 
-.random-q-emoji {
-  font-size: 26px;
+.random-q-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
 }
 
 .random-q-text {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.random-q-badge {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--main);
+  transform: rotate(45deg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.random-q-badge span {
+  transform: rotate(-45deg);
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
 }
 
 /* ===== Category list (Q&A) ===== */
