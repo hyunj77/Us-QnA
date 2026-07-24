@@ -1,24 +1,31 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Settings, Star, FileText, Mail, MessageCircle, ChevronRight } from 'lucide-react'
+import { Settings, Star, FileText, Mail, MessageCircle, ChevronRight, Sparkles } from 'lucide-react'
 import BottomNav from '../components/BottomNav'
 import { MOCK_PROFILE } from '../data/mock'
 import { getAnsweredCount, getStreakDays } from '../lib/answersStore'
 import { getAvatar, saveAvatarPhoto } from '../lib/profileStore'
+import { getLikedCount } from '../lib/reactionsStore'
+import { getTogetherDays, getTopCategory, getAvgAnswerLength } from '../lib/statsUtils'
+import { resizeImageFile } from '../lib/imageUtils'
 
 export default function MyPage() {
   const navigate = useNavigate()
   const answeredCount = getAnsweredCount()
   const streak = getStreakDays()
+  const likesReceived = getLikedCount('mine')
+  const togetherDays = getTogetherDays()
+  const topCategory = getTopCategory()
+  const avgLength = getAvgAnswerLength()
   const [mineAvatar, setMineAvatar] = useState(() => getAvatar('mine'))
   const [partnerAvatar, setPartnerAvatar] = useState(() => getAvatar('partner'))
 
-  const handleAvatarUpload = (who, setAvatar) => (e) => {
+  const handleAvatarUpload = (who, setAvatar) => async (e) => {
     const file = e.target.files?.[0]
+    e.target.value = ''
     if (!file) return
-    const reader = new FileReader()
-    reader.onload = () => setAvatar(saveAvatarPhoto(who, reader.result))
-    reader.readAsDataURL(file)
+    const dataUrl = await resizeImageFile(file, { maxDim: 400, quality: 0.8 })
+    setAvatar(saveAvatarPhoto(who, dataUrl))
   }
 
   return (
@@ -38,7 +45,7 @@ export default function MyPage() {
             <input type="file" accept="image/*" onChange={handleAvatarUpload('partner', setPartnerAvatar)} style={{ display: 'none' }} />
           </label>
         </div>
-        <div className="profile-title">우리, {MOCK_PROFILE.daysTogether}일째 💕</div>
+        <div className="profile-title">우리, {togetherDays}일째 💕</div>
         <div className="profile-since">{MOCK_PROFILE.startDate} ~</div>
       </div>
 
@@ -52,26 +59,27 @@ export default function MyPage() {
           <div className="stat-row-label">연속 참여</div>
         </div>
         <div className="stat-row-item">
-          <div className="stat-row-value">{MOCK_PROFILE.likesReceived}</div>
+          <div className="stat-row-value">{likesReceived}</div>
           <div className="stat-row-label">받은 좋아요</div>
         </div>
       </div>
 
-      <div className="card couple-stats-card" style={{ margin: '0 20px 16px', width: 'auto' }}>
+      <button className="card couple-stats-card" style={{ margin: '0 20px 16px', width: 'auto', textAlign: 'left' }} onClick={() => navigate('/us')}>
         <div className="couple-stats-title">우리의 문답 스타일</div>
         <div className="couple-stats-row">
           <div className="couple-stats-item">
-            <div className="couple-stats-value">{MOCK_PROFILE.topCategory}</div>
+            <div className="couple-stats-value">{topCategory ? topCategory.label : '-'}</div>
             <div className="couple-stats-label">가장 많이 답한 카테고리</div>
           </div>
           <div className="couple-stats-item">
-            <div className="couple-stats-value">{MOCK_PROFILE.avgAnswerLength}자</div>
+            <div className="couple-stats-value">{avgLength}자</div>
             <div className="couple-stats-label">평균 답변 길이</div>
           </div>
         </div>
-      </div>
+      </button>
 
       <div className="card" style={{ margin: '0 20px 16px', width: 'auto', padding: 0, overflow: 'hidden' }}>
+        <MenuRow Icon={Sparkles} label="우리 통계" onClick={() => navigate('/us')} />
         <MenuRow Icon={Star} label="즐겨찾기" onClick={() => navigate('/bookmarks')} />
         <MenuRow Icon={FileText} label="내 답변 모아보기" desc={`${answeredCount}개 작성함`} onClick={() => navigate('/answers/mine')} />
         <MenuRow Icon={Mail} label="상대 답변 모아보기" onClick={() => navigate('/answers/partner')} />

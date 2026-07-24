@@ -1,6 +1,6 @@
-import { Camera, Heart } from 'lucide-react'
+import { Heart } from 'lucide-react'
 
-export default function AnswerCard({ name, time, body, photoCount = 0, liked, onToggleLike }) {
+export default function AnswerCard({ name, time, body, photos = [], liked, onToggleLike }) {
   return (
     <div className="card answer-card">
       <div className="answer-card-head">
@@ -9,12 +9,14 @@ export default function AnswerCard({ name, time, body, photoCount = 0, liked, on
         <span className="answer-card-time">{time}</span>
       </div>
       <p className="answer-card-body">{body}</p>
+      {photos.length > 0 && (
+        <div className="answer-card-photos">
+          {photos.map((src, idx) => (
+            <img key={idx} src={src} alt="" />
+          ))}
+        </div>
+      )}
       <div className="answer-card-foot">
-        {photoCount > 0 && (
-          <div className="answer-card-photo">
-            <Camera size={13} /> 사진 {photoCount}장
-          </div>
-        )}
         {onToggleLike && (
           <button
             type="button"

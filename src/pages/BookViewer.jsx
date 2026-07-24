@@ -6,6 +6,7 @@ import { findCategory } from '../lib/questions'
 import { findBookEntry, buildBookPages } from '../lib/bookUtils'
 import { getBookConfig, saveBookConfig, COVER_ILLUSTRATIONS } from '../lib/bookStore'
 import { isAdultVerified } from '../lib/adultGate'
+import { resizeImageFile } from '../lib/imageUtils'
 
 const BY_LABEL = { mine: 'by 나', partner: 'by 상대', shared: 'by 우리 둘' }
 
@@ -41,12 +42,12 @@ export default function BookViewer() {
     setConfig(saveBookConfig(entry.bookId, entry.who, patch))
   }
 
-  const handlePhotoUpload = (e) => {
+  const handlePhotoUpload = async (e) => {
     const file = e.target.files?.[0]
+    e.target.value = ''
     if (!file) return
-    const reader = new FileReader()
-    reader.onload = () => handleSaveCover({ coverType: 'photo', coverImage: reader.result })
-    reader.readAsDataURL(file)
+    const dataUrl = await resizeImageFile(file, { maxDim: 700, quality: 0.8 })
+    handleSaveCover({ coverType: 'photo', coverImage: dataUrl })
   }
 
   if (view === 'cover') {

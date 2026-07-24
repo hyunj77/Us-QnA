@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { Lock, PartyPopper } from 'lucide-react'
+import { Lock, PartyPopper, Share2, History, X, Copy } from 'lucide-react'
 import TopAppBar from '../components/TopAppBar'
 import PrimaryButton from '../components/PrimaryButton'
 import AnswerCard from '../components/AnswerCard'
@@ -9,11 +9,17 @@ import { getAnswer } from '../lib/answersStore'
 import { getMockPartnerAnswer } from '../data/mock'
 import { isLiked, toggleLike } from '../lib/reactionsStore'
 
+function formatDate(iso) {
+  return new Date(iso).toLocaleString('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })
+}
+
 export default function AnswerResult() {
   const { categoryId, questionId } = useParams()
   const navigate = useNavigate()
-  const [tab, setTab] = useState('mine')
   const [likeVersion, setLikeVersion] = useState(0)
+  const [showHistory, setShowHistory] = useState(false)
+  const [showShare, setShowShare] = useState(false)
+  const [toast, setToast] = useState('')
   const category = findCategory(categoryId)
   const question = findQuestion(questionId)
   const myAnswer = getAnswer(questionId)
@@ -26,15 +32,56 @@ export default function AnswerResult() {
   const questions = getQuestionsByCategory(categoryId)
   const idx = questions.findIndex((q) => q.id === questionId)
   const next = questions[idx + 1]
+  const history = myAnswer.history || []
 
   const handleLike = (who) => {
     toggleLike(questionId, who)
     setLikeVersion((v) => v + 1)
   }
 
+  const shareText = `[우리 사용 설명서]\nQ. ${question.question}\nA. ${myAnswer.body}`
+
+  const flashToast = (msg) => {
+    setToast(msg)
+    setTimeout(() => setToast(''), 1800)
+  }
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: '우리 사용 설명서', text: shareText })
+      } catch {
+        // 사용자가 공유를 취소한 경우 조용히 무시
+      }
+      setShowShare(false)
+      return
+    }
+    try {
+      await navigator.clipboard.writeText(shareText)
+      flashToast('📋 답변이 클립보드에 복사되었어요')
+    } catch {
+      flashToast('복사에 실패했어요')
+    }
+    setShowShare(false)
+  }
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(shareText)
+      flashToast('📋 답변이 클립보드에 복사되었어요')
+    } catch {
+      flashToast('복사에 실패했어요')
+    }
+    setShowShare(false)
+  }
+
   return (
     <div className="screen">
-      <TopAppBar title="답변 결과" onBack={() => navigate(`/qna/${categoryId}/${questionId}`)} />
+      <TopAppBar
+        title="답변 결과"
+        onBack={() => navigate(`/qna/${categoryId}/${questionId}`)}
+        right={<button className="topbar-icon-btn" onClick={() => setShowShare(true)}><Share2 size={19} /></button>}
+      />
 
       <div className="result-banner">
         <PartyPopper size={22} color="var(--main)" />
@@ -46,19 +93,33 @@ export default function AnswerResult() {
         </div>
       </div>
 
-      <div className="result-tab-row">
-        <button className={`result-tab ${tab === 'mine' ? 'result-tab-active' : ''}`} onClick={() => setTab('mine')}>내 답변</button>
-        <button className={`result-tab ${tab === 'theirs' ? 'result-tab-active' : ''}`} onClick={() => setTab('theirs')}>상대 답변</button>
-      </div>
-
       <AnswerCard
         key={`mine-${likeVersion}`}
         name="내가 쓴 답변"
         time={new Date(myAnswer.createdAt).toLocaleString('ko-KR', { month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' })}
         body={myAnswer.body}
+        photos={myAnswer.photos || []}
         liked={isLiked(questionId, 'mine')}
         onToggleLike={() => handleLike('mine')}
       />
+
+      {history.length > 0 && (
+        <div style={{ padding: '0 20px 4px' }}>
+          <button type="button" className="answer-history-toggle" onClick={() => setShowHistory((v) => !v)}>
+            <History size={14} /> 수정 기록 {history.length}개 · 이전 답변 {showHistory ? '숨기기' : '보기'}
+          </button>
+          {showHistory && (
+            <div className="answer-history-list">
+              {history.map((h, i) => (
+                <div key={i} className="answer-history-item">
+                  <div className="answer-history-time">{formatDate(h.createdAt)}</div>
+                  <div className="answer-history-body">{h.body}</div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
 
       {bothDone ? (
         <AnswerCard
@@ -84,6 +145,25 @@ export default function AnswerResult() {
           다음 질문 보기 →
         </PrimaryButton>
       </div>
+
+      {toast && <div className="toast">{toast}</div>}
+
+      {showShare && (
+        <div className="sheet-overlay" onClick={() => setShowShare(false)}>
+          <div className="sheet-card" onClick={(e) => e.stopPropagation()}>
+            <div className="sheet-head">
+              <span className="sheet-title">공유하기</span>
+              <button className="topbar-icon-btn" onClick={() => setShowShare(false)}><X size={18} /></button>
+            </div>
+            <button type="button" className="btn-secondary share-sheet-btn" onClick={handleShare}>
+              <Share2 size={16} /> {navigator.share ? '공유하기' : '텍스트 공유'}
+            </button>
+            <button type="button" className="btn-secondary share-sheet-btn" onClick={handleCopy}>
+              <Copy size={16} /> 텍스트 복사하기
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

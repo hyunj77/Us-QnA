@@ -52,7 +52,14 @@ export default function QuestionDetail() {
         title={`${index}/${questions.length}`}
         onBack={() => navigate(`/qna/${categoryId}`)}
         right={
-          <button className="topbar-icon-btn" onClick={() => setBookmarked(toggleBookmark(questionId))}>
+          <button
+            className="topbar-icon-btn"
+            onClick={() => {
+              const next = toggleBookmark(questionId)
+              setBookmarked(next)
+              setToast(next ? '⭐ 즐겨찾기에 추가했어요' : '즐겨찾기를 해제했어요')
+            }}
+          >
             <Bookmark size={20} fill={bookmarked ? 'var(--main)' : 'none'} color={bookmarked ? 'var(--main)' : 'currentColor'} />
           </button>
         }

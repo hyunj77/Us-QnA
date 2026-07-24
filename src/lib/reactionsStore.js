@@ -24,3 +24,9 @@ export function toggleLike(questionId, who) {
   writeAll(all)
   return all[key]
 }
+
+// who: 'mine'이면 "내가 쓴 답변" 카드에 눌린 하트 수 = 내가 받은 좋아요
+export function getLikedCount(who) {
+  const all = readAll()
+  return Object.entries(all).filter(([key, liked]) => liked && key.endsWith(`:${who}`)).length
+}

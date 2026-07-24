@@ -1,14 +1,17 @@
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { Camera, Smile } from 'lucide-react'
+import { Camera, Smile, X } from 'lucide-react'
 import TopAppBar from '../components/TopAppBar'
 import PrimaryButton from '../components/PrimaryButton'
 import AdultGate from '../components/AdultGate'
 import { findCategory, findQuestion, getQuestionsByCategory } from '../lib/questions'
 import { getAnswer, saveAnswer } from '../lib/answersStore'
 import { isAdultVerified } from '../lib/adultGate'
+import { resizeImageFile } from '../lib/imageUtils'
 
 const MAX_LEN = 500
+const MAX_PHOTOS = 3
+const EMOJI_PRESETS = ['❤️', '😍', '🥹', '😂', '😢', '👍', '🥰', '😳']
 
 export default function AnswerCompose() {
   const { categoryId, questionId } = useParams()
@@ -17,6 +20,8 @@ export default function AnswerCompose() {
   const question = findQuestion(questionId)
   const existing = getAnswer(questionId)
   const [body, setBody] = useState(existing?.body || '')
+  const [photos, setPhotos] = useState(existing?.photos || [])
+  const [showEmoji, setShowEmoji] = useState(false)
   const [notice, setNotice] = useState('')
   const [saving, setSaving] = useState(false)
   const [verified, setVerified] = useState(isAdultVerified())
@@ -40,9 +45,34 @@ export default function AnswerCompose() {
     if (body.trim().length < 1 || saving) return
     setSaving(true)
     setTimeout(() => {
-      saveAnswer(questionId, body.trim())
+      saveAnswer(questionId, body.trim(), photos)
       navigate(`/qna/${categoryId}/${questionId}`, { state: { justSaved: true } })
     }, 400)
+  }
+
+  const handlePhotoSelect = async (e) => {
+    const allSelected = [...(e.target.files || [])]
+    const files = allSelected.slice(0, MAX_PHOTOS - photos.length)
+    e.target.value = ''
+    if (files.length === 0) return
+    setNotice(allSelected.length > files.length ? `사진은 최대 ${MAX_PHOTOS}장까지 첨부할 수 있어요.` : '')
+    for (const file of files) {
+      try {
+        const dataUrl = await resizeImageFile(file)
+        setPhotos((prev) => [...prev, dataUrl].slice(0, MAX_PHOTOS))
+      } catch {
+        setNotice('사진을 불러오지 못했어요.')
+      }
+    }
+  }
+
+  const removePhoto = (idx) => {
+    setPhotos((prev) => prev.filter((_, i) => i !== idx))
+  }
+
+  const insertEmoji = (emoji) => {
+    if (body.length >= MAX_LEN) return
+    setBody((prev) => (prev + emoji).slice(0, MAX_LEN))
   }
 
   return (
@@ -68,11 +98,42 @@ export default function AnswerCompose() {
           <span className="compose-counter">{body.length}/{MAX_LEN}</span>
         </div>
 
+        {photos.length > 0 && (
+          <div className="compose-photo-row">
+            {photos.map((src, idx) => (
+              <div key={idx} className="compose-photo-thumb">
+                <img src={src} alt="" />
+                <button type="button" className="compose-photo-remove" onClick={() => removePhoto(idx)}>
+                  <X size={12} />
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {showEmoji && (
+          <div className="compose-emoji-row">
+            {EMOJI_PRESETS.map((emoji) => (
+              <button key={emoji} type="button" className="compose-emoji-btn" onClick={() => insertEmoji(emoji)}>
+                {emoji}
+              </button>
+            ))}
+          </div>
+        )}
+
         <div className="compose-tool-row">
-          <button type="button" className="compose-tool-btn" onClick={() => setNotice('사진 첨부는 준비 중이에요.')}>
-            <Camera size={16} /> 사진 추가
-          </button>
-          <button type="button" className="compose-tool-btn" onClick={() => setNotice('이모지 선택은 준비 중이에요.')}>
+          <label className="compose-tool-btn">
+            <Camera size={16} /> 사진 추가{photos.length > 0 ? ` (${photos.length}/${MAX_PHOTOS})` : ''}
+            <input
+              type="file"
+              accept="image/*"
+              multiple
+              onChange={handlePhotoSelect}
+              disabled={photos.length >= MAX_PHOTOS}
+              style={{ display: 'none' }}
+            />
+          </label>
+          <button type="button" className="compose-tool-btn" onClick={() => setShowEmoji((v) => !v)}>
             <Smile size={16} /> 이모지
           </button>
         </div>

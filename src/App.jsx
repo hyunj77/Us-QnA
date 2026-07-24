@@ -19,6 +19,7 @@ import BookViewer from './pages/BookViewer'
 import BookList from './pages/BookList'
 import BookmarksList from './pages/BookmarksList'
 import AnswersList from './pages/AnswersList'
+import UsStats from './pages/UsStats'
 
 export default function App() {
   useEffect(() => {
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="/book/:bookId" element={<BookViewer />} />
           <Route path="/bookmarks" element={<BookmarksList />} />
           <Route path="/answers/:who" element={<AnswersList />} />
+          <Route path="/us" element={<UsStats />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/my" element={<MyPage />} />
           <Route path="/settings" element={<Settings />} />

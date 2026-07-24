@@ -51,7 +51,14 @@ export function getSubGroups(categoryId) {
 export function searchQuestions(query) {
   const q = query.trim().toLowerCase()
   if (!q) return []
-  return QUESTIONS.filter((item) => item.question.toLowerCase().includes(q))
+  return QUESTIONS.filter((item) => {
+    const category = findCategory(item.categoryId)
+    return (
+      item.question.toLowerCase().includes(q) ||
+      (item.subcategory || '').toLowerCase().includes(q) ||
+      (category?.label || '').toLowerCase().includes(q)
+    )
+  })
 }
 
 // 랜덤 N개 뽑기
