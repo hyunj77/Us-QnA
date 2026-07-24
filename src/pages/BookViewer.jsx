@@ -3,28 +3,25 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { ArrowLeft, ChevronLeft, ChevronRight, Lock, Pencil, X } from 'lucide-react'
 import AdultGate from '../components/AdultGate'
 import { findCategory } from '../lib/questions'
-import { buildBookPages } from '../lib/bookUtils'
+import { findBookEntry, buildBookPages } from '../lib/bookUtils'
 import { getBookConfig, saveBookConfig, COVER_ILLUSTRATIONS } from '../lib/bookStore'
 import { isAdultVerified } from '../lib/adultGate'
 
-const BOOK_TITLE = {
-  guide: (nickname) => `${nickname} 사용 설명서`,
-  couple: () => '우리 사용 설명서',
-  nineteen: (nickname) => `${nickname} 사용 설명서`,
-}
+const BY_LABEL = { mine: 'by 나', partner: 'by 상대', shared: 'by 우리 둘' }
 
 export default function BookViewer() {
-  const { categoryId } = useParams()
+  const { bookId } = useParams()
   const navigate = useNavigate()
-  const category = findCategory(categoryId)
-  const [config, setConfig] = useState(() => getBookConfig(categoryId))
+  const entry = findBookEntry(bookId)
+  const category = entry ? findCategory(entry.categoryId) : null
+  const [config, setConfig] = useState(() => entry ? getBookConfig(entry.bookId, entry.who) : null)
   const [view, setView] = useState('cover') // 'cover' | page index (number)
   const [editing, setEditing] = useState(false)
   const [verified, setVerified] = useState(isAdultVerified())
 
-  const pages = useMemo(() => buildBookPages(categoryId), [categoryId])
+  const pages = useMemo(() => entry ? buildBookPages(entry.categoryId, entry.who) : [], [entry])
 
-  if (!category) return <div className="page-center"><p>존재하지 않는 책이에요.</p></div>
+  if (!entry || !category) return <div className="page-center"><p>존재하지 않는 책이에요.</p></div>
 
   if (category.isAdult && !verified) {
     return (
@@ -37,10 +34,11 @@ export default function BookViewer() {
     )
   }
 
-  const title = (BOOK_TITLE[categoryId] || (() => '사용 설명서'))(config.nickname)
+  const title = entry.who === 'shared' ? '우리 사용 설명서' : `${config.nickname} 사용 설명서`
+  const byLine = BY_LABEL[entry.who]
 
   const handleSaveCover = (patch) => {
-    setConfig(saveBookConfig(categoryId, patch))
+    setConfig(saveBookConfig(entry.bookId, entry.who, patch))
   }
 
   const handlePhotoUpload = (e) => {
@@ -56,13 +54,15 @@ export default function BookViewer() {
       <div className="screen book-screen">
         <div className="topbar">
           <button className="topbar-icon-btn" onClick={() => navigate('/memories')}><ArrowLeft size={20} /></button>
-          <button className="topbar-icon-btn" onClick={() => setEditing(true)}><Pencil size={18} /></button>
+          {entry.who !== 'shared' && (
+            <button className="topbar-icon-btn" onClick={() => setEditing(true)}><Pencil size={18} /></button>
+          )}
         </div>
 
         <div className="book-cover">
-          <div className="book-cover-category">{category.label}</div>
+          <div className="book-cover-category">{entry.label}</div>
           <div className="book-cover-title">{title}</div>
-          <div className="book-cover-by">by {config.nickname}</div>
+          <div className="book-cover-by">{byLine}</div>
           <div className="book-cover-image">
             {config.coverType === 'photo' && config.coverImage ? (
               <img src={config.coverImage} alt="" />
@@ -75,7 +75,9 @@ export default function BookViewer() {
           {pages.length > 0 ? (
             <button className="btn-primary book-open-btn" onClick={() => setView(0)}>책 열어보기</button>
           ) : (
-            <p className="book-empty-hint">아직 답변한 질문이 없어요. 문답에 답변하면 페이지가 쌓여요!</p>
+            <p className="book-empty-hint">
+              {entry.who === 'partner' ? '상대방이 아직 답변하지 않았어요.' : '아직 답변한 질문이 없어요. 문답에 답변하면 페이지가 쌓여요!'}
+            </p>
           )}
         </div>
 

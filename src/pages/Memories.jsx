@@ -5,7 +5,7 @@ import BottomNav from '../components/BottomNav'
 import MemoryCard from '../components/MemoryCard'
 import { MOCK_MEMORIES } from '../data/mock'
 import { findCategory } from '../lib/questions'
-import { BOOK_CATEGORIES, getBookProgress } from '../lib/bookUtils'
+import { BOOK_ENTRIES, getBookProgress } from '../lib/bookUtils'
 import { isAdultVerified } from '../lib/adultGate'
 
 export default function Memories() {
@@ -65,20 +65,20 @@ export default function Memories() {
         <div style={{ padding: '4px 20px 20px' }}>
           <p className="book-tab-desc">답변이 쌓이면 나만의 사용 설명서가 완성돼요</p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-            {BOOK_CATEGORIES.map((categoryId) => {
-              const category = findCategory(categoryId)
+            {BOOK_ENTRIES.map((entry) => {
+              const category = findCategory(entry.categoryId)
               if (!category) return null
-              const { done, total } = getBookProgress(categoryId)
+              const { done, total } = getBookProgress(entry.categoryId, entry.who)
               const locked = category.isAdult && !isAdultVerified()
               return (
                 <button
-                  key={categoryId}
+                  key={entry.bookId}
                   className="card book-select-card"
-                  onClick={() => navigate(`/book/${categoryId}`)}
+                  onClick={() => navigate(`/book/${entry.bookId}`)}
                 >
                   <span className="icon-badge" style={{ background: `${category.color}22`, fontSize: 22 }}>{category.emoji}</span>
                   <div className="book-select-body">
-                    <div className="book-select-title">{category.label}</div>
+                    <div className="book-select-title">{entry.label}</div>
                     <div className="book-select-desc">{done}/{total}개 답변 완료</div>
                   </div>
                   {locked ? <Lock size={16} color="var(--text-secondary)" /> : <ChevronRight size={16} className="menu-row-chevron" />}
